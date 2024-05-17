@@ -1056,7 +1056,7 @@ En el ámbito epidemiológico habitualmente se aplica una fórmula clásica prop
 
 $$n = 10*(k+1)$$
 
-Se ha sugerido asimismo que la variable dicotómica de respuesta debe tener al menos 10 casos para cada uno de los valores (0 y 1). Si esto no sucede las estimaciones no son confiables.
+Se ha sugerido asimismo que la variable dicotómica de respuesta debe tener al menos 10 casos para cada uno de los valores (0 y 1). Si esto no sucede las estimaciones no son confiables..
 
 Podemos decir que nuestro ejemplo supera ampliamente los requisitos del tamaño muestral, dado que la tabla caminar tiene 800 observaciones (419 SI y 381 NO) y el modelo con más variables propuesto (`modI`) incluye 4 variables independientes (lo que define 50 observaciones mínimas.)
 
