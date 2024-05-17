@@ -3,11 +3,7 @@ title: "Errores y advertencias en R"
 format: html
 editor: visual
 toc: true
-<<<<<<< HEAD
 theme: "../../custom.scss"
-=======
-theme: "custom.scss"
->>>>>>> 45aca30c50978a773e1caf49c88b9837a7ea9b1a
 ---
 
 ```{r}
