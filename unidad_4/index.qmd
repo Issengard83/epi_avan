@@ -802,16 +802,14 @@ El test de bondad de ajuste de Hosmer y Lemeshow nos da un *p*-valor para el **m
 En R podemos graficar la **curva ROC** que es una herramienta más específica de modelos predictivos para comparar diferentes modelos. La función `performance_roc()` del paquete `performance` se aplica de la siguiente manera:
 
 ```{r}
-performance_roc(mod6) %>% # calcula área bajo la curva
-  plot() # muestra el gráfico
-```
-
-Si quisiéramos editar el gráfico de la curva ROC entonces debemos agregar el siguiente código:
-
-```{r}
 performance_roc(mod6) %>% 
+  # Genera gráfico
   plot() +
+  
+  # Cambiamos nombres de los ejes
   labs(y = "Sensibilidad", x = "1 - Especificidad") +
+  
+  # Cambiamos color de fondo
   theme_minimal()
 ```
 
@@ -870,7 +868,7 @@ La función `tbl_regression()` del paquete `gtsummary` nos muestra los coeficien
 tbl_regression(mod6, exponentiate = T)
 ```
 
-Se puede presentar gráficamente la regresión usando los paquetes `broom` y `ggplot2` incluídos en `tidyverse`:
+Se puede presentar gráficamente la regresión usando `tidyverse`. Primero convertimos a dataframe la salida del modelo usando la función `tidy` del paquete `broom`:
 
 ```{r}
 #| message: false
@@ -881,33 +879,54 @@ Se puede presentar gráficamente la regresión usando los paquetes `broom` y `gg
 mod6_df <- mod6 %>% 
   broom::tidy(exponentiate = T, conf.int = T) 
 
+# exploramos nombres de columnas
+names(mod6_df)
+```
+
+A continuación, creamos un gráfico en `ggplot2` los siguientes parámetros para los ejes x e y:
+
+```{r}
+#| eval: false
 
 # Genera gráfico
 mod6_df %>% 
      ggplot(mapping = aes(x = estimate, y = term,
+                xmin = conf.low, xmax = conf.high)) 
+```
+
+Al ejecutar el código anterior nos aparecerá una ventana vacía en el panel de gráficos de R, procederemos a añadir la primer capa al gráfico, representando la línea vertical de la significancia con el comando `geom_vline()`:
+
+```{r}
+# Genera gráfico
+mod6_df %>% 
+     ggplot(mapping = aes(x = estimate, y = term,
                 xmin = conf.low, xmax = conf.high)) +
-  geom_vline(xintercept = 1, linetype = "dashed", color = pal[6]) +
-  geom_pointrange(color = pal[3]) +
-  labs(x = "Estimación", y = NULL) +
-  theme_minimal()
+  
+  # añade línea vertical
+  geom_vline(xintercept = 1, 
+             linetype = "dashed", 
+             color = "#073966")
      
 ```
 
-También podemos generar un gráfico similar usando los paquetes `parameters` y `see`:
+Ahora añadimos los estimadores para cada variable independiente y sus intervalos de confianza al 95% usando el comando `geom_pointrange()`. Si quisiéramos cambiar el gris del fondo del gráfico por un fondo en blanco añadimos el comando `theme_minimal()`:
 
 ```{r}
-#| message: false
-#| warning: false
-#| fig-align: center
-
-library(parameters)
-library(see)
-
-mod6 %>%  
-  model_parameters(exponentiate = T) %>% 
+# Genera gráfico
+mod6_df %>% 
+     ggplot(mapping = aes(x = estimate, y = term,
+                xmin = conf.low, xmax = conf.high)) +
   
-  plot(show_labels = T, 
-       size_text = 4)
+  # añade línea vertical
+  geom_vline(xintercept = 1, 
+             linetype = "dashed", 
+             color = "#073966") +
+  
+  # añade estimadores
+  geom_pointrange(color = "#418A80") +
+  
+  # cambia color de fondo
+  theme_minimal()
 ```
 
 ### Residuales
@@ -1004,7 +1023,9 @@ mod6b <- datos %>%
   filter(pareja_est == "Si") %>% 
   glm(camina ~ lacto_180 + edad_dias, data = ., family = binomial)
 
-compare_models(mod6a, mod6b, exponentiate = T)
+tbl_regression(mod6a, exponentiate = T)
+
+tbl_regression(mod6b, exponentiate = T)
 ```
 
 Observamos en la comparación del modelo aplicado a los dos estratos que la variable `edad_dias` se mantiene igual en ambos, pero la variable `lacto_180`posee OR´s bien diferentes.
@@ -1020,7 +1041,9 @@ mod7 <- glm(camina ~  edad_dias + lacto_180 * pareja_est,
 
 
 ## comparación del modelo sin y con el termino de interacción
-compare_models(mod6, mod7, exponentiate = T)
+tbl_regression(mod6, exponentiate = T)
+
+tbl_regression(mod7, exponentiate = T)
 ```
 
 Observamos en los resultados que la interacción es estadísticamente significativa con un AIC global menor al modelo sin interacción (`r round(AIC(mod7),2)` contra `r round(AIC(mod6),2)`).
