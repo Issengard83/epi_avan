@@ -3,7 +3,7 @@ title: "Estudios de casos y controles"
 format: html
 editor: visual
 toc: true
-theme: minty
+theme: "../../custom.scss"
 ---
 
 ```{r}
