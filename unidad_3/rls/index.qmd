@@ -91,15 +91,11 @@ Ejemplo: [Air pollution and emergency hospital admissions for cardiovascular dis
 
 Algunos autores presentan la perspectiva que mostramos en la Tabla 2, para una comprensión más rápida de las distintas posibilidades de los diseños ecológicos:
 
-+-------------------+---------------------------------------------------------------------+-----------------------------------------------+
 | Tipo              | Diseño                                                              | Marco de tiempo                               |
-+===================+=====================================================================+===============================================+
+|-------------------|---------------------------------------------------------------------|-----------------------------------------------|
 | Transversal       | A lo largo de diferentes comunidades                                | Mismo período                                 |
-+-------------------+---------------------------------------------------------------------+-----------------------------------------------+
 | Series temporales | Dentro de la misma comunidad                                        | A lo largo del tiempo                         |
-+-------------------+---------------------------------------------------------------------+-----------------------------------------------+
 | Descriptivo       | A lo largo de diferentes comunidades o dentro de la misma comunidad | Un punto en el tiempo o a lo largo del tiempo |
-+-------------------+---------------------------------------------------------------------+-----------------------------------------------+
 
 ## Análisis de estudios ecológicos
 
