@@ -16,6 +16,7 @@ pacman::p_load(
   scico,
   MASS,
   cowplot,
+  flextable,
   tidyverse
 )
 
@@ -33,19 +34,34 @@ Por definición, un estudio ecológico es aquel en el cual las unidades de anál
 
 Repasemos las principales ventajas y desventajas de este diseño:
 
-+-------------------------------------------------------+---------------------------------------------------------------------------------------+
-| Ventajas                                              | Desventajas                                                                           |
-+=======================================================+=======================================================================================+
-| Se pueden estudiar grandes grupos poblacionales\      | No se tiene información del individuo,\                                               |
-| \                                                     | por lo que no se puede ajustar por diferencias a nivel individual.                    |
-| Relativamente fáciles de realizar\                    |                                                                                       |
-| \                                                     | No se puede saber quién sí está expuesto o quién sí desarrolló el evento de interés.\ |
-| Aumenta el poder estadístico\                         | \                                                                                     |
-| \                                                     | No se tiene información sobre factores de confusión y no se puede corregir por esto.  |
-| Aumenta la variabilidad en exposición\                |                                                                                       |
-| \                                                     |                                                                                       |
-| Se puede utilizar información de estadísticas vitales |                                                                                       |
-+-------------------------------------------------------+---------------------------------------------------------------------------------------+
+```{r}
+#| echo: false
+#| message: false
+#| tbl-cap: "Tabla 1. ventajas y desventajas de los estudios ecológicos."
+
+### Genera tabla
+tibble(
+  Ventajas = c(
+  "Se pueden estudiar grandes grupos poblacionales",
+  "Relativamente fáciles de realizar", 
+  "Aumenta el poder estadístico", 
+  "Aumenta la variabilidad en exposición",
+  "Se puede utilizar información de estadísticas vitales"),
+  Desventajas = c(
+         "No se tiene información del individuo,por lo que no se puede ajustar por diferencias a nivel individual",
+         "No se puede saber quién sí está expuesto o quién sí desarrolló el evento de interés",
+         "No se tiene información sobre factores de confusión y no se puede corregir por esto",
+         "", ""
+       )) %>% 
+  flextable() %>% 
+  
+  ### Formato tabla
+  font(fontname = "Calibri", part = "all") %>% 
+  fontsize(size = 12, part = "all") %>% 
+  bold(part = "header") %>% 
+  set_table_properties(layout = "autofit")
+  
+```
 
 Recordemos también que puede incurrirse en la llamada *falacia ecológica*.
 
@@ -89,13 +105,32 @@ Ejemplo: [Air pollution and emergency hospital admissions for cardiovascular dis
 
 **Estudios mixtos**: En esta categoría se incluyen los estudios de series de tiempo combinadas con la evaluación de grupos múltiples.
 
-Algunos autores presentan la perspectiva que mostramos en la Tabla 2, para una comprensión más rápida de las distintas posibilidades de los diseños ecológicos:
+Algunos autores presentan la perspectiva que mostramos en la siguiente tabla, para una comprensión más rápida de las distintas posibilidades de los diseños ecológicos:
 
-| Tipo              | Diseño                                                              | Marco de tiempo                               |
-|-------------------|---------------------------------------------------------------------|-----------------------------------------------|
-| Transversal       | A lo largo de diferentes comunidades                                | Mismo período                                 |
-| Series temporales | Dentro de la misma comunidad                                        | A lo largo del tiempo                         |
-| Descriptivo       | A lo largo de diferentes comunidades o dentro de la misma comunidad | Un punto en el tiempo o a lo largo del tiempo |
+```{r}
+#| echo: false
+#| message: false
+#| tbl-cap: "Tabla 2. Clasificación de estudios ecológicos."
+
+### Genera tabla
+tibble(
+  Tipo = c("Transversal", 
+           "Series temporales", 
+           "Descriptivo"),
+  Diseño = c("A lo largo de diferentes comunidades",
+             "Dentro de la misma comunidad",
+             "A lo largo de diferentes comunidades o dentro de la misma comunidad"),
+  `Marco de tiempo` = c("Mismo período",
+                        "A lo largo del tiempo",
+                        "Un punto en el tiempo o a lo largo del tiempo")) %>% 
+  flextable() %>% 
+  
+  ### Formato tabla
+  font(fontname = "Calibri", part = "all") %>% 
+  fontsize(size = 12, part = "all") %>%
+  bold(part = "header") %>% 
+  set_table_properties(layout = "autofit")
+```
 
 ## Análisis de estudios ecológicos
 
@@ -353,6 +388,7 @@ bebe %>%
   geom_point(color = pal[3], size = 3, alpha = .8) +
   labs(x = "Edad en semanas", y = "Peso en gramos") +
   theme_minimal()
+
 ```
 
 Como puede observarse existe una fuerte relación lineal positiva, donde a medida que aumenta la edad aumenta el peso, si bien se observan algunos casos que lo hacen con cierta variación.
@@ -384,6 +420,10 @@ bebe %>%
                          round(summary(fit)$adj.r.squared, 3))) +
   labs(x = "Edad en semanas", y = "Peso en gramos") +
   theme_minimal()
+
+
+# Limpia environment
+rm(list = setdiff(ls(), "pal"))
 ```
 
 La pendiente de la recta nos está indicando la magnitud y sentido de la variación del peso en función de su edad para este grupo de lactantes. En la ecuación, tanto la pendiente como el origen de la recta, se ponen de manifiesto mediante los coeficientes. Un poco más adelante veremos cómo se calculan y cómo se interpretan.
@@ -510,6 +550,9 @@ data4 %>%
   theme(axis.text = element_blank()),
 nrow = 2, ncol = 2)
 
+
+# Limpia environment
+rm(list = setdiff(ls(), "pal"))
 ```
 
 Podemos observar que cuanto mayor es la varianza en una muestra:
@@ -644,11 +687,15 @@ Para visualizar simulaciones al respecto pueden visitar [Viendo la teoría. Una 
 
 ## Ejemplo práctico en lenguaje R
 
-Para llevar a cabo el análisis en R y presentar las funciones y paquetes que nos pueden ayudar en la tarea vamos a trabajar con un set de datos llamado **cancer_rlm** que contiene información sobre la tasa de mortalidad por cáncer cada 100.000 habitantes de distintos condados de Estados Unidos.
+Para llevar a cabo el análisis en R y presentar las funciones y paquetes que nos pueden ayudar en la tarea vamos a trabajar con un set de datos llamado `cancer_rls` que contiene información sobre la tasa de mortalidad por cáncer cada 100.000 habitantes de distintos condados de Estados Unidos.
 
 El dataset contiene datos agregados sobre la tasa de mortalidad por cáncer, el porcentaje de personas con cobertura pública de salud, el porcentaje de personas bajo la línea de pobreza y la mediana de edad. Para el ejemplo de regresión linear simple, evaluaremos la asociación entre cobertura pública de salud y mortalidad por cáncer.
 
 ```{r}
+#| warning: false
+#| message: false
+
+
 ### Carga paquetes
 # tablas salida del modelo
 library(gtsummary)
@@ -679,7 +726,7 @@ La estructura de la tabla es:
 glimpse(datos)
 ```
 
-La variable dependiente es la tasa de mortalidad (**target_death_rate**) y la independiente el % de cobertura pública de salud (**pct_public_coverage**).
+La variable dependiente es la tasa de mortalidad (`target_death_rate`) y la independiente la mediana de edad (`median_age`).
 
 ### Diagrama de dispersión
 
@@ -687,7 +734,7 @@ Para dibujar gráficos de dispersión podemos utilizar funciones de ggplot2.
 
 ```{r}
 datos %>% 
-  ggplot(aes(x = pct_public_coverage, y = target_death_rate)) +
+  ggplot(aes(x = median_age, y = target_death_rate)) +
   geom_point(color = pal[3]) +
   theme_light()
 ```
@@ -696,25 +743,25 @@ En todos los casos, lo que observamos en el gráfico es una clara relación inve
 
 ### Correlación
 
-La función `cor()` estima la correlación entre dos variables. El método predeterminado devuelve la correlación de Pearson, pero puede modificarse el argumento **method** para obtener la correlación de Kendall o Spearman.
+La función `cor()` estima la correlación entre dos variables. El método predeterminado devuelve la correlación de Pearson, pero puede modificarse el argumento `method` para obtener la correlación de Kendall o Spearman.
 
 ```{r}
-cor(datos$pct_public_coverage, datos$target_death_rate,
+cor(datos$median_age, datos$target_death_rate,
     method = "pearson")
 ```
 
-El valor es elevado y negativo, lo que confirma lo observado en la nube de puntos anterior.
+El valor es negativo, lo que confirma lo observado en la nube de puntos anterior.
 
 **Significación de la correlación**
 
 Hasta ahora obtuvimos dos elementos de la correlación, la magnitud y el signo.
 
-Para poder descartar que esta **correlación negativa de valor 0,93** se debe al azar, debemos calcular su significancia.
+Para poder descartar que esta **correlación negativa** se debe al azar, debemos calcular su significancia.
 
 La función `cor.test()` determina si la prueba de correlación de Pearson calculada es significativa y lo realiza mediante el estadístico $t$ de Student.
 
 ```{r}
-cor.test(datos$pct_public_coverage, datos$target_death_rate)
+cor.test(datos$median_age, datos$target_death_rate)
 ```
 
 Los resultados de la función son:
@@ -732,7 +779,7 @@ Los argumentos predeterminados para la función `cor.test()` son:
 
 `method = "pearson"` - especifíca el tipo de test de correlación. También permite `"kendall"` o `"spearman".`
 
-El *p*-valor de la correlación para este ejemplo es menor a 0,05 (*p*-value: 2.2e-16), por lo tanto significativa.
+El *p*-valor de la correlación para este ejemplo es menor a 0,05 (*p*-value: `r cor.test(datos$median_age, datos$target_death_rate)$p.value`), por lo tanto significativa.
 
 ### Presupuestos
 
@@ -776,23 +823,25 @@ La estructura sintáctica es:
 La función que recibe esta estructura tipo fórmula es `lm()` cuyas letras vienen de "linear models" (modelos lineales).
 
 ```{r}
-lm(target_death_rate ~ pct_public_coverage, data = datos)
+lm(target_death_rate ~ median_age, data = datos)
 ```
 
 La función muestra resultados básicos, tales como la relación entre las variables que son parte del modelo y los coeficientes.
 
-**Intercept** es el valor de *ciclistas* cuando *cardiopatias* vale cero (Ordenada en el origen) y el coeficiente de **ciclistas** representa la pendiente de la recta.
+**Intercept** es el valor de `median_age` cuando `target_death_rate` vale cero (Ordenada en el origen) y el coeficiente de `median_age`representa la pendiente de la recta.
 
 Estos resultados obtenidos y aplicados en la fórmula del modelo simple quedarían así:
 
-$$\operatorname{cardiopatias} = \alpha + \beta_{1}(\operatorname{ciclistas}) + \epsilon $$
+$$\operatorname{target death rate} = \alpha + \beta_{1}(\operatorname{median age}) + \epsilon $$
 
-$$\operatorname{cardiopatias} = 44.0776 + -0.8974*\operatorname{ciclistas} + \epsilon$$
+$$
+\operatorname{target death rate} = 201.3229 + -0.5682*\operatorname{median age} + \epsilon
+$$
 
 Habitualmente `lm()` suele asignarse a un objeto de regresión para que contenga todos los resultados producto del ajuste.
 
 ```{r}
-modelo <- lm(target_death_rate ~ pct_public_coverage, data = datos)
+modelo <- lm(target_death_rate ~ median_age, data = datos)
 ```
 
 Los resultados se almacenan en forma de lista y sus componentes pueden ser llamados en resúmenes más completos, mediante `summary()` o por separado, por ejemplo para evaluar los residuos.
@@ -807,7 +856,7 @@ Con `summary()` observamos que los resultados son numerosos y comprenden a:
 
 **Residuals**: distribución de los residuos (mediana, mínimo, máximo y percentilos 25-75)
 
-**Coefficients**: valores del intercepto y de la pendiente. Además se agregan los errores estandar y el estadístico $t$ con el p-valor de probabilidad dada la hipótesis nula que los coeficientes sean iguales a cero. (Lo que se pretende mediante estos contrastes es determinar si los efectos de la constante intercepto y de la variable independiente son realmente importantes para explicar la variable dependiente o si, por el contario, pueden considerarse nulos.)
+**Coefficients**: valores del intercepto y de la pendiente. Además se agregan los errores estandar y el estadístico $t$ con el *p*-valor de probabilidad dada la hipótesis nula que los coeficientes sean iguales a cero. (Lo que se pretende mediante estos contrastes es determinar si los efectos de la constante intercepto y de la variable independiente son realmente importantes para explicar la variable dependiente o si, por el contario, pueden considerarse nulos.)
 
 **Residual standard error**: Error estándar de los residuos con sus grados de libertad
 
@@ -823,13 +872,24 @@ Como elemento extra, notese que la salida en R tiene unos códigos que ayudan a 
 
 Debajo de la tabla de coeficientes se encuentra la referencia del significado de los códigos, que van desde el 0 hasta el 1 como posible resultado del valor de probabilidad, y donde:
 
-| Código |    Rango     |
-|:------:|:------------:|
-| \*\*\* |  0 a 0,001   |
-|  \*\*  | 0,001 a 0,01 |
-|   \*   | 0,01 a 0,05  |
-|   .    |  0,05 a 0,1  |
-|        |   0,1 a 1    |
+```{r}
+#| echo: false
+#| message: false
+
+### Genera tabla
+tibble(
+  `Código` = c("***", "**", "*", ".", ""),
+    Rango = c("0 a 0,001", "0,001 a 0,01", "0,01 a 0,05", "0,05 a 0,1", "0,1 a 1")
+  ) %>% 
+  flextable() %>% 
+  
+  ### Formato tabla
+  font(fontname = "Calibri", part = "all") %>% 
+  fontsize(size = 12, part = "all") %>% 
+  bold(part = "header") %>% 
+  set_table_properties(layout = "autofit")
+
+```
 
 #### Estructura del objeto resultado de regresión
 
@@ -872,7 +932,7 @@ tbl_regression(modelo,
 
 **residuals**
 
-Los residuales o residuos para cada valor que surgen de la diferencia entre los valores predictivos calculados por el modelo y los valores reales.
+Los residuos o residuales para cada valor que surgen de la diferencia entre los valores predictivos calculados por el modelo y los valores reales.
 
 Se visualizan desde el objeto resultado de la regresión:
 
@@ -933,11 +993,11 @@ confint(modelo, level = 0.99)
 
 ### Agregar la recta de regresión al diagrama de dispersión
 
-Retomando la cuestión gráfica, podemos dibujar la recta de regresión lineal sobre el diagrama de dispersión hecho con `ggplot2` adicionando una capa más al gráfico mediante `geom_smooth()` e indicando "lm" como método. Además de la recta se puede ver el IC (zona gris alrededor de ella).
+Retomando la cuestión gráfica, podemos dibujar la recta de regresión lineal sobre el diagrama de dispersión hecho con `ggplot2` adicionando una capa más al gráfico mediante `geom_smooth()` e indicando `method = "lm"` como método. Además de la recta se puede ver el IC (zona gris alrededor de ella).
 
 ```{r}
 datos %>% 
-  ggplot(aes(x = pct_public_coverage, y = target_death_rate)) +
+  ggplot(aes(x = median_age, y = target_death_rate)) +
   geom_point(color = pal[3]) +
   # Añade línea de regresión
   geom_smooth(method = "lm", color = pal[6]) + 
@@ -946,19 +1006,19 @@ datos %>%
 
 ### Residuales
 
-El residual o residuo de una estimación se define como la diferencia entre el valor observado y el valor calculado por el modelo de regresión.
+El residuo o residual de una estimación se define como la diferencia entre el valor observado y el valor calculado por el modelo de regresión.
 
 A la hora de resumir el conjunto de residuales hay dos posibilidades:
 
 -   La sumatoria del valor absoluto de cada residual.
 
--   La sumatoria del cuadrado de cada residual (RSS). Esta es la aproximación más empleada (mínimos cuadrados) ya que magnifica las desviaciones extremas.
+-   La sumatoria del cuadrado de cada residuo (RSS). Esta es la aproximación más empleada (mínimos cuadrados) ya que magnifica las desviaciones extremas.
 
-En R vimos que estos residuales quedan almacenados dentro del objeto de regresión y pueden ser llamados mediante la expresión *nombre_del_objeto_de_regresion*`$residuals`
+En R vimos que estos residuos quedan almacenados dentro del objeto de regresión y pueden ser llamados mediante la expresión `nombre_del_objeto_de_regresion$residuals`
 
 Cuanto mayor es la sumatoria del cuadrado de los residuales menor la precisión con la que el modelo puede predecir el valor de la variable dependiente a partir de la variable predictora. Los residuales son muy importantes puesto que en ellos se basan las diferentes medidas de la bondad de ajuste del modelo y con ellos se determina el cumplimiento de los supuestos de los modelos lineales.
 
-Un análisis visual de estos residuales se puede obtener fácilmente aplicando la función `plot()` al objeto de regresión modelado. La salida presentará 4 gráficas automáticas.
+Un análisis visual de estos residuos se puede obtener fácilmente aplicando la función `plot()` al objeto de regresión modelado. La salida presentará 4 gráficas automáticas.
 
 ```{r}
 par(mfrow = c(2,2))
@@ -993,7 +1053,7 @@ El argumento `check` nos permite seleccionar cuales gráficos de residuales quer
 check_model(modelo, check = c("normality","qq", "linearity",                       "homogeneity", "outliers"))
 ```
 
-Además del análisis gráfico/visual de residuales se pueden aplicar test analíticos.
+Además del análisis gráfico/visual de residuos se pueden aplicar test analíticos.
 
 **Linealidad**
 
@@ -1087,8 +1147,8 @@ Observamos que existen residuales atípicos que se repiten en las tres gráficas
 Si pretendiésemos conocer que valores tienen las variables de la observación con residual mayor a 3 desvíos estándar, basta con hacer lo siguiente:
 
 ```{r}
-# detectamos la observación mayor a 3 ds
-rstudent(modelo)[rstudent(modelo) > 3]
+# detectamos observaciones mayor a 3 ds
+table(rstudent(modelo) > 3)
 ```
 
 El hecho de que un valor sea atípico o con alto grado de *leverage* no implica que sea influyente en el conjunto del modelo. Sin embargo, si un valor es influyente, suele ser o atípico o de alto *leverage*. Existen diferentes formas de evaluar la influencia de las observaciones:
@@ -1135,11 +1195,11 @@ $R^2$ oscila entre 0 y 1, de manera que, valores de $R^2$ próximos a 1 indican 
 
 En nuestro ejemplo, $R^2$ = `r r2(modelo)$R2` y $R^2$ ajustado = `r r2(modelo)$R2_adjusted`; por lo que podemos concluir que el modelo lineal simple no se ajusta demasiado bien a nuestros datos.
 
-Esto indica que aproximadamente el 6,1 % de la variación en la tasa de mortalidad por cáncer se puede explicar por el modelo que solo contiene las proporciones de personas con acceso a la salud pública como variable explicativa. Es bajo, por lo que las predicciones de la ecuación de regresión son bastante poco confiables, ya que también significa que hay otro 93.9 % de la variación que aún no se explica, por lo que quizás agregar otras variables independientes podría mejorar el ajuste del modelo.
+Esto indica que aproximadamente el 1,4 % de la variación en la tasa de mortalidad por cáncer se puede explicar por el modelo que solo contiene la mediana de edad como variable explicativa. Es bajo, por lo que las predicciones de la ecuación de regresión son bastante poco confiables, ya que también significa que hay otro 98.6 % de la variación que aún no se explica, por lo que quizás agregar otras variables independientes podría mejorar el ajuste del modelo.
 
 La última línea de la salida de `summary(modelo)` incluye un estadístico de distribución continua $F$ *de Snedecor* (Test F) y el *valor* $p$ correspondiente que se utilizan para resolver lo que se conoce habitualmente como contraste ómnibus. Mediante este contraste se comprueba si, de forma global, el modelo lineal es apropiado para modelizar los datos.
 
-En nuestro ejemplo, el p-valor asociado a este contraste es inferior a 0,05 por lo que, al 95% de confianza podemos rechazar la hipótesis nula y afirmar que, efectivamente, el modelo lineal es adecuado para nuestro conjunto de datos.
+En nuestro ejemplo, el *p*-valor asociado a este contraste es inferior a 0,05 por lo que, al 95% de confianza podemos rechazar la hipótesis nula y afirmar que, efectivamente, el modelo lineal es adecuado para nuestro conjunto de datos.
 
 Cuando el modelo de regresión tiene una única variable explicativa, el contraste de la regresión es equivalente al contraste del parámetro $\beta_1$ (ciclistas).
 
@@ -1149,17 +1209,17 @@ Otra manera de verificar, en forma independiente, la significación del modelo d
 anova(modelo)
 ```
 
-La tabla de analisis de varianza muestra el mismo resultado que el bloque final de `summary(modelo)` con un valor F de `r summary(modelo)$fstatistic[1] %>% round(.,1)` y un valor $p$ significativo \<0,001.
+La tabla de analisis de varianza muestra el mismo resultado que el bloque final de `summary(modelo)` con un valor F de `r summary(modelo)$fstatistic[1] %>% round(.,1)` y un *p*-valor significativo.
 
 #### Resumen del resultado del ejemplo
 
-Se llevó a cabo una regresión lineal simple para analizar la relación entre la proporción de personas con acceso al sistema de salud público y la tasa de mortalidad por cáncer en 236 condados de Estados Unidos.
+Se llevó a cabo una regresión lineal simple para analizar la relación entre la mediana de edad y la tasa de mortalidad por cáncer en 236 condados de Estados Unidos.
 
-El diagrama de dispersión mostró una fuerte relación lineal negativa entre los dos, que se confirmó con un coeficiente de correlación de Pearson de `r cor(datos$pct_public_coverage, datos$target_death_rate, method = "pearson") %>% round(., 2)` . La regresión lineal simple mostró una relación significativa entre las variables (t = 3,89 p \< 0,001).
+El diagrama de dispersión mostró una relación lineal negativa moderada entre los dos, que se confirmó con un coeficiente de correlación de Pearson de `r cor(datos$pct_public_coverage, datos$target_death_rate, method = "pearson") %>% round(., 2)` . La regresión lineal simple mostró una relación significativa entre las variables (t = `r summary(modelo)$coefficients [2,3] %>% round(.,2)` *p* = `r summary(modelo)$coefficients [2,4] %>% round(.,3)`).
 
-El coeficiente de pendiente de la recta para la proporción de ciclistas fue de 0,73 por lo que la tasa de mortalidad por cáncer aumenta 0,7 % por cada 1 % que sube la proporción de personas que solo tienen acceso al sistema público de salud.
+El coeficiente de pendiente de la recta para la mediana de edad fue de `r summary(modelo)$coefficients [2,1] %>% round(.,2)`, por lo que la tasa de mortalidad por cáncer disminuye aproximadamente 0,6 % por cada unidad que sube la mediana de edad de los pacientes.
 
-El valor $R^2$ mostró que el 5,7 % de la variación en la tasa de mortalidad por cáncer se puede explicar por el modelo que solo contiene acceso al sistema público de salud.
+El valor $R^2$ mostró que el 1.4 % de la variación en la tasa de mortalidad por cáncer se puede explicar por el modelo que solo contiene la mediana de edad.
 
 La gráfica de dispersión de los valores pronosticados estandarizados frente a los residuos estandarizados, mostró que los datos cumplían los supuestos de homogeneidad de varianza y linealidad y que los residuos se distribuían aproximadamente de forma normal.
 

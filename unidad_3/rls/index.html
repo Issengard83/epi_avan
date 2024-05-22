@@ -67,6 +67,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="index_files/libs/bootstrap/bootstrap.min.js"></script>
 <link href="index_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="index_files/libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<link href="index_files/libs/tabwid-1.1.3/tabwid.css" rel="stylesheet">
+
+<script src="index_files/libs/tabwid-1.1.3/tabwid.js"></script>
+
 
   <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
@@ -154,36 +158,11 @@ window.Quarto = {
 <h2 class="anchored" data-anchor-id="introducción">Introducción</h2>
 <p>Por definición, un estudio ecológico es aquel en el cual las unidades de análisis son poblaciones o agrupamientos de individuos, no los individuos propiamente dichos. Estos conglomerados pueden estar definidos en un contexto espacial (ciudad, provincia, país, región, etc), institucional (hospitales, escuelas, etc), social, temporal, etc. La característica principal de este tipo de diseños es que se cuenta con información sobre la exposición y el evento para el conglomerado en su totalidad, pero se desconoce la información a escala individual. En este tipo de estudios se asigna la misma exposición (generalmente una exposición promedio) a todo el conglomerado. Algo similar ocurre con el evento considerado, tenemos un número de eventos correspondiente al conglomerado, pero no se sabe si los individuos expuestos son los que tienen el evento.</p>
 <p>Repasemos las principales ventajas y desventajas de este diseño:</p>
-<table class="table">
-<colgroup>
-<col style="width: 38%">
-<col style="width: 61%">
-</colgroup>
-<thead>
-<tr class="header">
-<th>Ventajas</th>
-<th>Desventajas</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Se pueden estudiar grandes grupos poblacionales<br>
-<br>
-Relativamente fáciles de realizar<br>
-<br>
-Aumenta el poder estadístico<br>
-<br>
-Aumenta la variabilidad en exposición<br>
-<br>
-Se puede utilizar información de estadísticas vitales</td>
-<td><p>No se tiene información del individuo,<br>
-por lo que no se puede ajustar por diferencias a nivel individual.</p>
-<p>No se puede saber quién sí está expuesto o quién sí desarrolló el evento de interés.<br>
-<br>
-No se tiene información sobre factores de confusión y no se puede corregir por esto.</p></td>
-</tr>
-</tbody>
-</table>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="tabwid"><style>.cl-0543940c{table-layout:auto;}.cl-053cd89c{font-family:'Calibri';font-size:12pt;font-weight:bold;font-style:normal;text-decoration:none;color:rgba(0, 0, 0, 1.00);background-color:transparent;}.cl-053cd8a6{font-family:'Calibri';font-size:12pt;font-weight:normal;font-style:normal;text-decoration:none;color:rgba(0, 0, 0, 1.00);background-color:transparent;}.cl-053f6a26{margin:0;text-align:left;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);padding-bottom:5pt;padding-top:5pt;padding-left:5pt;padding-right:5pt;line-height: 1;background-color:transparent;}.cl-053f7908{background-color:transparent;vertical-align: middle;border-bottom: 1.5pt solid rgba(102, 102, 102, 1.00);border-top: 1.5pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-053f7912{background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-053f7913{background-color:transparent;vertical-align: middle;border-bottom: 1.5pt solid rgba(102, 102, 102, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}</style><table data-quarto-disable-processing="true" class="cl-0543940c"><caption><p>Tabla 1. ventajas y desventajas de los estudios ecológicos.</p></caption><thead><tr style="overflow-wrap:break-word;"><th class="cl-053f7908"><p class="cl-053f6a26"><span class="cl-053cd89c">Ventajas</span></p></th><th class="cl-053f7908"><p class="cl-053f6a26"><span class="cl-053cd89c">Desventajas</span></p></th></tr></thead><tbody><tr style="overflow-wrap:break-word;"><td class="cl-053f7912"><p class="cl-053f6a26"><span class="cl-053cd8a6">Se pueden estudiar grandes grupos poblacionales</span></p></td><td class="cl-053f7912"><p class="cl-053f6a26"><span class="cl-053cd8a6">No se tiene información del individuo,por lo que no se puede ajustar por diferencias a nivel individual</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-053f7912"><p class="cl-053f6a26"><span class="cl-053cd8a6">Relativamente fáciles de realizar</span></p></td><td class="cl-053f7912"><p class="cl-053f6a26"><span class="cl-053cd8a6">No se puede saber quién sí está expuesto o quién sí desarrolló el evento de interés</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-053f7912"><p class="cl-053f6a26"><span class="cl-053cd8a6">Aumenta el poder estadístico</span></p></td><td class="cl-053f7912"><p class="cl-053f6a26"><span class="cl-053cd8a6">No se tiene información sobre factores de confusión y no se puede corregir por esto</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-053f7912"><p class="cl-053f6a26"><span class="cl-053cd8a6">Aumenta la variabilidad en exposición</span></p></td><td class="cl-053f7912"><p class="cl-053f6a26"><span class="cl-053cd8a6"></span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-053f7913"><p class="cl-053f6a26"><span class="cl-053cd8a6">Se puede utilizar información de estadísticas vitales</span></p></td><td class="cl-053f7913"><p class="cl-053f6a26"><span class="cl-053cd8a6"></span></p></td></tr></tbody></table></div>
+</div>
+</div>
 <p>Recordemos también que puede incurrirse en la llamada <em>falacia ecológica</em>.</p>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
@@ -219,38 +198,12 @@ Falacia ecológica (<em>ecological fallacy</em>)
 <p><strong>Estudios de series temporales</strong>: Se comparan las variaciones temporales de los niveles de exposición con otra serie de tiempo que refleja los cambios en la frecuencia de la enfermedad en la población de un área geográfica determinada.</p>
 <p>Ejemplo: <a href="https://jech.bmj.com/content/55/1/57.long">Air pollution and emergency hospital admissions for cardiovascular diseases in Valencia, Spain</a></p>
 <p><strong>Estudios mixtos</strong>: En esta categoría se incluyen los estudios de series de tiempo combinadas con la evaluación de grupos múltiples.</p>
-<p>Algunos autores presentan la perspectiva que mostramos en la Tabla 2, para una comprensión más rápida de las distintas posibilidades de los diseños ecológicos:</p>
-<table class="table">
-<colgroup>
-<col style="width: 14%">
-<col style="width: 51%">
-<col style="width: 34%">
-</colgroup>
-<thead>
-<tr class="header">
-<th>Tipo</th>
-<th>Diseño</th>
-<th>Marco de tiempo</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Transversal</td>
-<td>A lo largo de diferentes comunidades</td>
-<td>Mismo período</td>
-</tr>
-<tr class="even">
-<td>Series temporales</td>
-<td>Dentro de la misma comunidad</td>
-<td>A lo largo del tiempo</td>
-</tr>
-<tr class="odd">
-<td>Descriptivo</td>
-<td>A lo largo de diferentes comunidades o dentro de la misma comunidad</td>
-<td>Un punto en el tiempo o a lo largo del tiempo</td>
-</tr>
-</tbody>
-</table>
+<p>Algunos autores presentan la perspectiva que mostramos en la siguiente tabla, para una comprensión más rápida de las distintas posibilidades de los diseños ecológicos:</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="tabwid"><style>.cl-055c631a{table-layout:auto;}.cl-0555f872{font-family:'Calibri';font-size:12pt;font-weight:bold;font-style:normal;text-decoration:none;color:rgba(0, 0, 0, 1.00);background-color:transparent;}.cl-0555f87c{font-family:'Calibri';font-size:12pt;font-weight:normal;font-style:normal;text-decoration:none;color:rgba(0, 0, 0, 1.00);background-color:transparent;}.cl-05583bfa{margin:0;text-align:left;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);padding-bottom:5pt;padding-top:5pt;padding-left:5pt;padding-right:5pt;line-height: 1;background-color:transparent;}.cl-05584bea{background-color:transparent;vertical-align: middle;border-bottom: 1.5pt solid rgba(102, 102, 102, 1.00);border-top: 1.5pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-05584bf4{background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-05584bf5{background-color:transparent;vertical-align: middle;border-bottom: 1.5pt solid rgba(102, 102, 102, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}</style><table data-quarto-disable-processing="true" class="cl-055c631a"><caption><p>Tabla 2. Clasificación de estudios ecológicos.</p></caption><thead><tr style="overflow-wrap:break-word;"><th class="cl-05584bea"><p class="cl-05583bfa"><span class="cl-0555f872">Tipo</span></p></th><th class="cl-05584bea"><p class="cl-05583bfa"><span class="cl-0555f872">Diseño</span></p></th><th class="cl-05584bea"><p class="cl-05583bfa"><span class="cl-0555f872">Marco de tiempo</span></p></th></tr></thead><tbody><tr style="overflow-wrap:break-word;"><td class="cl-05584bf4"><p class="cl-05583bfa"><span class="cl-0555f87c">Transversal</span></p></td><td class="cl-05584bf4"><p class="cl-05583bfa"><span class="cl-0555f87c">A lo largo de diferentes comunidades</span></p></td><td class="cl-05584bf4"><p class="cl-05583bfa"><span class="cl-0555f87c">Mismo período</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-05584bf4"><p class="cl-05583bfa"><span class="cl-0555f87c">Series temporales</span></p></td><td class="cl-05584bf4"><p class="cl-05583bfa"><span class="cl-0555f87c">Dentro de la misma comunidad</span></p></td><td class="cl-05584bf4"><p class="cl-05583bfa"><span class="cl-0555f87c">A lo largo del tiempo</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-05584bf5"><p class="cl-05583bfa"><span class="cl-0555f87c">Descriptivo</span></p></td><td class="cl-05584bf5"><p class="cl-05583bfa"><span class="cl-0555f87c">A lo largo de diferentes comunidades o dentro de la misma comunidad</span></p></td><td class="cl-05584bf5"><p class="cl-05583bfa"><span class="cl-0555f87c">Un punto en el tiempo o a lo largo del tiempo</span></p></td></tr></tbody></table></div>
+</div>
+</div>
 </section>
 <section id="análisis-de-estudios-ecológicos" class="level2">
 <h2 class="anchored" data-anchor-id="análisis-de-estudios-ecológicos">Análisis de estudios ecológicos</h2>
@@ -275,7 +228,7 @@ Falacia ecológica (<em>ecological fallacy</em>)
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="index_files/figure-html/unnamed-chunk-2-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="672"></p>
+<p><img src="index_files/figure-html/unnamed-chunk-4-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="672"></p>
 </figure>
 </div>
 </div>
@@ -329,7 +282,7 @@ En resumen
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="index_files/figure-html/unnamed-chunk-3-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="672"></p>
+<p><img src="index_files/figure-html/unnamed-chunk-5-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="672"></p>
 </figure>
 </div>
 </div>
@@ -344,7 +297,7 @@ En resumen
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="index_files/figure-html/unnamed-chunk-4-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="672"></p>
+<p><img src="index_files/figure-html/unnamed-chunk-6-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="672"></p>
 </figure>
 </div>
 </div>
@@ -359,7 +312,7 @@ En resumen
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="index_files/figure-html/unnamed-chunk-5-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="672"></p>
+<p><img src="index_files/figure-html/unnamed-chunk-7-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="672"></p>
 </figure>
 </div>
 </div>
@@ -419,7 +372,7 @@ Y = \underbrace{\beta_0 + \beta_1 X_1}_{Componente \: sistemático} + \underbrac
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="index_files/figure-html/unnamed-chunk-6-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="672"></p>
+<p><img src="index_files/figure-html/unnamed-chunk-8-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="672"></p>
 </figure>
 </div>
 </div>
@@ -449,7 +402,7 @@ Y = \underbrace{\beta_0 + \beta_1 X_1}_{Componente \: sistemático} + \underbrac
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="index_files/figure-html/unnamed-chunk-7-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="672"></p>
+<p><img src="index_files/figure-html/unnamed-chunk-9-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="672"></p>
 </figure>
 </div>
 </div>
@@ -495,7 +448,7 @@ Y = \underbrace{\beta_0 + \beta_1 X_1}_{Componente \: sistemático} + \underbrac
 </section>
 <section id="ejemplo-práctico-en-lenguaje-r" class="level2">
 <h2 class="anchored" data-anchor-id="ejemplo-práctico-en-lenguaje-r">Ejemplo práctico en lenguaje R</h2>
-<p>Para llevar a cabo el análisis en R y presentar las funciones y paquetes que nos pueden ayudar en la tarea vamos a trabajar con un set de datos llamado <strong>cancer_rlm</strong> que contiene información sobre la tasa de mortalidad por cáncer cada 100.000 habitantes de distintos condados de Estados Unidos.</p>
+<p>Para llevar a cabo el análisis en R y presentar las funciones y paquetes que nos pueden ayudar en la tarea vamos a trabajar con un set de datos llamado <code>cancer_rls</code> que contiene información sobre la tasa de mortalidad por cáncer cada 100.000 habitantes de distintos condados de Estados Unidos.</p>
 <p>El dataset contiene datos agregados sobre la tasa de mortalidad por cáncer, el porcentaje de personas con cobertura pública de salud, el porcentaje de personas bajo la línea de pobreza y la mediana de edad. Para el ejemplo de regresión linear simple, evaluaremos la asociación entre cobertura pública de salud y mortalidad por cáncer.</p>
 <div class="cell" data-layout-align="center">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="do">### Carga paquetes</span></span>
@@ -527,25 +480,25 @@ Y = \underbrace{\beta_0 + \beta_1 X_1}_{Componente \: sistemático} + \underbrac
 <div class="cell-output cell-output-stdout">
 <pre><code>Rows: 236
 Columns: 4
-$ target_death_rate   &lt;dbl&gt; 1798, 2177, 1952, 2052, 1731, 2003, 149, 1446, 180…
-$ pct_public_coverage &lt;dbl&gt; 288, 456, 48, 273, 412, 47, 305, 466, 428, 395, 39…
-$ poverty_percent     &lt;dbl&gt; 15, 246, 275, 107, 158, 236, 79, 233, 288, 95, 162…
-$ median_age          &lt;dbl&gt; 391, 396, 45, 41, 322, 408, 454, 565, 379, 428, 41…</code></pre>
+$ target_death_rate   &lt;dbl&gt; 179.8, 217.7, 195.2, 205.2, 173.1, 200.3, 149.0, 1…
+$ pct_public_coverage &lt;dbl&gt; 28.8, 45.6, 48.0, 27.3, 41.2, 47.0, 30.5, 46.6, 42…
+$ poverty_percent     &lt;dbl&gt; 15.0, 24.6, 27.5, 10.7, 15.8, 23.6, 7.9, 23.3, 28.…
+$ median_age          &lt;dbl&gt; 39.1, 39.6, 45.0, 41.0, 32.2, 40.8, 45.4, 56.5, 37…</code></pre>
 </div>
 </div>
-<p>La variable dependiente es la tasa de mortalidad (<strong>target_death_rate</strong>) y la independiente el % de cobertura pública de salud (<strong>pct_public_coverage</strong>).</p>
+<p>La variable dependiente es la tasa de mortalidad (<code>target_death_rate</code>) y la independiente la mediana de edad (<code>median_age</code>).</p>
 <section id="diagrama-de-dispersión" class="level3">
 <h3 class="anchored" data-anchor-id="diagrama-de-dispersión">Diagrama de dispersión</h3>
 <p>Para dibujar gráficos de dispersión podemos utilizar funciones de ggplot2.</p>
 <div class="cell" data-layout-align="center">
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>datos <span class="sc">%&gt;%</span> </span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> pct_public_coverage, <span class="at">y =</span> target_death_rate)) <span class="sc">+</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> median_age, <span class="at">y =</span> target_death_rate)) <span class="sc">+</span></span>
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">color =</span> pal[<span class="dv">3</span>]) <span class="sc">+</span></span>
 <span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_light</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="index_files/figure-html/unnamed-chunk-10-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="672"></p>
+<p><img src="index_files/figure-html/unnamed-chunk-12-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="672"></p>
 </figure>
 </div>
 </div>
@@ -554,33 +507,33 @@ $ median_age          &lt;dbl&gt; 391, 396, 45, 41, 322, 408, 454, 565, 379, 428
 </section>
 <section id="correlación" class="level3">
 <h3 class="anchored" data-anchor-id="correlación">Correlación</h3>
-<p>La función <code>cor()</code> estima la correlación entre dos variables. El método predeterminado devuelve la correlación de Pearson, pero puede modificarse el argumento <strong>method</strong> para obtener la correlación de Kendall o Spearman.</p>
+<p>La función <code>cor()</code> estima la correlación entre dos variables. El método predeterminado devuelve la correlación de Pearson, pero puede modificarse el argumento <code>method</code> para obtener la correlación de Kendall o Spearman.</p>
 <div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cor</span>(datos<span class="sc">$</span>pct_public_coverage, datos<span class="sc">$</span>target_death_rate,</span>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cor</span>(datos<span class="sc">$</span>median_age, datos<span class="sc">$</span>target_death_rate,</span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>    <span class="at">method =</span> <span class="st">"pearson"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] -0.07669315</code></pre>
+<pre><code>[1] -0.1346534</code></pre>
 </div>
 </div>
-<p>El valor es elevado y negativo, lo que confirma lo observado en la nube de puntos anterior.</p>
+<p>El valor es negativo, lo que confirma lo observado en la nube de puntos anterior.</p>
 <p><strong>Significación de la correlación</strong></p>
 <p>Hasta ahora obtuvimos dos elementos de la correlación, la magnitud y el signo.</p>
-<p>Para poder descartar que esta <strong>correlación negativa de valor 0,93</strong> se debe al azar, debemos calcular su significancia.</p>
+<p>Para poder descartar que esta <strong>correlación negativa</strong> se debe al azar, debemos calcular su significancia.</p>
 <p>La función <code>cor.test()</code> determina si la prueba de correlación de Pearson calculada es significativa y lo realiza mediante el estadístico <span class="math inline">\(t\)</span> de Student.</p>
 <div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cor.test</span>(datos<span class="sc">$</span>pct_public_coverage, datos<span class="sc">$</span>target_death_rate)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cor.test</span>(datos<span class="sc">$</span>median_age, datos<span class="sc">$</span>target_death_rate)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>
     Pearson's product-moment correlation
 
-data:  datos$pct_public_coverage and datos$target_death_rate
-t = -1.1766, df = 234, p-value = 0.2405
+data:  datos$median_age and datos$target_death_rate
+t = -2.0787, df = 234, p-value = 0.03873
 alternative hypothesis: true correlation is not equal to 0
 95 percent confidence interval:
- -0.20241127  0.05151183
+ -0.25791890 -0.00707458
 sample estimates:
-        cor 
--0.07669315 </code></pre>
+       cor 
+-0.1346534 </code></pre>
 </div>
 </div>
 <p>Los resultados de la función son:</p>
@@ -594,7 +547,7 @@ sample estimates:
 <p><code>alternative = "two.sided"</code> - indica la hipotesis alternativa, también puede ser <code>"greater"</code> para asociación positiva, <code>"less"</code> para asociación negativa.</p>
 <p><code>conf.level = 0.95</code> - determina el nivel de confianza (se puede modificar).</p>
 <p><code>method = "pearson"</code> - especifíca el tipo de test de correlación. También permite <code>"kendall"</code> o <code>"spearman".</code></p>
-<p>El <em>p</em>-valor de la correlación para este ejemplo es menor a 0,05 (<em>p</em>-value: 2.2e-16), por lo tanto significativa.</p>
+<p>El <em>p</em>-valor de la correlación para este ejemplo es menor a 0,05 (<em>p</em>-value: 0.0387318), por lo tanto significativa.</p>
 </section>
 <section id="presupuestos" class="level3">
 <h3 class="anchored" data-anchor-id="presupuestos">Presupuestos</h3>
@@ -612,7 +565,7 @@ sample estimates:
     Lilliefors (Kolmogorov-Smirnov) normality test
 
 data:  datos$target_death_rate
-D = 0.22085, p-value &lt; 2.2e-16</code></pre>
+D = 0.030015, p-value = 0.8706</code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="do">## QQplot</span></span>
 <span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>datos <span class="sc">%&gt;%</span> </span>
@@ -626,7 +579,7 @@ D = 0.22085, p-value &lt; 2.2e-16</code></pre>
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="index_files/figure-html/unnamed-chunk-13-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="672"></p>
+<p><img src="index_files/figure-html/unnamed-chunk-15-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="672"></p>
 </figure>
 </div>
 </div>
@@ -642,25 +595,27 @@ D = 0.22085, p-value &lt; 2.2e-16</code></pre>
 </blockquote>
 <p>La función que recibe esta estructura tipo fórmula es <code>lm()</code> cuyas letras vienen de “linear models” (modelos lineales).</p>
 <div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="fu">lm</span>(target_death_rate <span class="sc">~</span> pct_public_coverage, <span class="at">data =</span> datos)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="fu">lm</span>(target_death_rate <span class="sc">~</span> median_age, <span class="at">data =</span> datos)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>
 Call:
-lm(formula = target_death_rate ~ pct_public_coverage, data = datos)
+lm(formula = target_death_rate ~ median_age, data = datos)
 
 Coefficients:
-        (Intercept)  pct_public_coverage  
-          1736.6133              -0.3364  </code></pre>
+(Intercept)   median_age  
+   201.3229      -0.5682  </code></pre>
 </div>
 </div>
 <p>La función muestra resultados básicos, tales como la relación entre las variables que son parte del modelo y los coeficientes.</p>
-<p><strong>Intercept</strong> es el valor de <em>ciclistas</em> cuando <em>cardiopatias</em> vale cero (Ordenada en el origen) y el coeficiente de <strong>ciclistas</strong> representa la pendiente de la recta.</p>
+<p><strong>Intercept</strong> es el valor de <code>median_age</code> cuando <code>target_death_rate</code> vale cero (Ordenada en el origen) y el coeficiente de <code>median_age</code>representa la pendiente de la recta.</p>
 <p>Estos resultados obtenidos y aplicados en la fórmula del modelo simple quedarían así:</p>
-<p><span class="math display">\[\operatorname{cardiopatias} = \alpha + \beta_{1}(\operatorname{ciclistas}) + \epsilon \]</span></p>
-<p><span class="math display">\[\operatorname{cardiopatias} = 44.0776 + -0.8974*\operatorname{ciclistas} + \epsilon\]</span></p>
+<p><span class="math display">\[\operatorname{target death rate} = \alpha + \beta_{1}(\operatorname{median age}) + \epsilon \]</span></p>
+<p><span class="math display">\[
+\operatorname{target death rate} = 201.3229 + -0.5682*\operatorname{median age} + \epsilon
+\]</span></p>
 <p>Habitualmente <code>lm()</code> suele asignarse a un objeto de regresión para que contenga todos los resultados producto del ajuste.</p>
 <div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>modelo <span class="ot">&lt;-</span> <span class="fu">lm</span>(target_death_rate <span class="sc">~</span> pct_public_coverage, <span class="at">data =</span> datos)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>modelo <span class="ot">&lt;-</span> <span class="fu">lm</span>(target_death_rate <span class="sc">~</span> median_age, <span class="at">data =</span> datos)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Los resultados se almacenan en forma de lista y sus componentes pueden ser llamados en resúmenes más completos, mediante <code>summary()</code> o por separado, por ejemplo para evaluar los residuos.</p>
 <div class="cell" data-layout-align="center">
@@ -668,28 +623,28 @@ Coefficients:
 <div class="cell-output cell-output-stdout">
 <pre><code>
 Call:
-lm(formula = target_death_rate ~ pct_public_coverage, data = datos)
+lm(formula = target_death_rate ~ median_age, data = datos)
 
 Residuals:
-     Min       1Q   Median       3Q      Max 
--1513.17   -46.22   134.18   268.00   696.10 
+    Min      1Q  Median      3Q     Max 
+-55.317 -15.899   0.176  14.845  52.338 
 
 Coefficients:
-                     Estimate Std. Error t value Pr(&gt;|t|)    
-(Intercept)         1736.6133   102.3985  16.959   &lt;2e-16 ***
-pct_public_coverage   -0.3364     0.2859  -1.177    0.241    
+            Estimate Std. Error t value Pr(&gt;|t|)    
+(Intercept) 201.3229    11.3689  17.708   &lt;2e-16 ***
+median_age   -0.5682     0.2734  -2.079   0.0387 *  
 ---
 Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
 
-Residual standard error: 519.1 on 234 degrees of freedom
-Multiple R-squared:  0.005882,  Adjusted R-squared:  0.001633 
-F-statistic: 1.384 on 1 and 234 DF,  p-value: 0.2405</code></pre>
+Residual standard error: 21.96 on 234 degrees of freedom
+Multiple R-squared:  0.01813,   Adjusted R-squared:  0.01394 
+F-statistic: 4.321 on 1 and 234 DF,  p-value: 0.03873</code></pre>
 </div>
 </div>
 <p>Con <code>summary()</code> observamos que los resultados son numerosos y comprenden a:</p>
 <p><strong>Call</strong>: formula del modelo</p>
 <p><strong>Residuals</strong>: distribución de los residuos (mediana, mínimo, máximo y percentilos 25-75)</p>
-<p><strong>Coefficients</strong>: valores del intercepto y de la pendiente. Además se agregan los errores estandar y el estadístico <span class="math inline">\(t\)</span> con el p-valor de probabilidad dada la hipótesis nula que los coeficientes sean iguales a cero. (Lo que se pretende mediante estos contrastes es determinar si los efectos de la constante intercepto y de la variable independiente son realmente importantes para explicar la variable dependiente o si, por el contario, pueden considerarse nulos.)</p>
+<p><strong>Coefficients</strong>: valores del intercepto y de la pendiente. Además se agregan los errores estandar y el estadístico <span class="math inline">\(t\)</span> con el <em>p</em>-valor de probabilidad dada la hipótesis nula que los coeficientes sean iguales a cero. (Lo que se pretende mediante estos contrastes es determinar si los efectos de la constante intercepto y de la variable independiente son realmente importantes para explicar la variable dependiente o si, por el contario, pueden considerarse nulos.)</p>
 <p><strong>Residual standard error</strong>: Error estándar de los residuos con sus grados de libertad</p>
 <p><strong>Multiple R-squared</strong>: Coeficiente de determinación <span class="math inline">\(R^2\)</span></p>
 <p><strong>Adjusted R-squared</strong>: Coeficiente <span class="math inline">\(R^2\)</span> ajustado</p>
@@ -697,36 +652,11 @@ F-statistic: 1.384 on 1 and 234 DF,  p-value: 0.2405</code></pre>
 <p><strong>p-value</strong>: p-valor del estadistico <span class="math inline">\(F\)</span>.</p>
 <p>Como elemento extra, notese que la salida en R tiene unos códigos que ayudan a realizar la lectura de la significación de los coeficientes. Funciona mediante el uso de asteriscos (*) al extremo derecho de cada parámetro calculado.</p>
 <p>Debajo de la tabla de coeficientes se encuentra la referencia del significado de los códigos, que van desde el 0 hasta el 1 como posible resultado del valor de probabilidad, y donde:</p>
-<table class="table">
-<thead>
-<tr class="header">
-<th style="text-align: center;">Código</th>
-<th style="text-align: center;">Rango</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: center;">***</td>
-<td style="text-align: center;">0 a 0,001</td>
-</tr>
-<tr class="even">
-<td style="text-align: center;">**</td>
-<td style="text-align: center;">0,001 a 0,01</td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;">*</td>
-<td style="text-align: center;">0,01 a 0,05</td>
-</tr>
-<tr class="even">
-<td style="text-align: center;">.</td>
-<td style="text-align: center;">0,05 a 0,1</td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;"></td>
-<td style="text-align: center;">0,1 a 1</td>
-</tr>
-</tbody>
-</table>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="tabwid"><style>.cl-095f6886{table-layout:auto;}.cl-0958a80c{font-family:'Calibri';font-size:12pt;font-weight:bold;font-style:normal;text-decoration:none;color:rgba(0, 0, 0, 1.00);background-color:transparent;}.cl-0958a820{font-family:'Calibri';font-size:12pt;font-weight:normal;font-style:normal;text-decoration:none;color:rgba(0, 0, 0, 1.00);background-color:transparent;}.cl-095b13e4{margin:0;text-align:left;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);padding-bottom:5pt;padding-top:5pt;padding-left:5pt;padding-right:5pt;line-height: 1;background-color:transparent;}.cl-095b238e{background-color:transparent;vertical-align: middle;border-bottom: 1.5pt solid rgba(102, 102, 102, 1.00);border-top: 1.5pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-095b2398{background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-095b2399{background-color:transparent;vertical-align: middle;border-bottom: 1.5pt solid rgba(102, 102, 102, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}</style><table data-quarto-disable-processing="true" class="cl-095f6886"><thead><tr style="overflow-wrap:break-word;"><th class="cl-095b238e"><p class="cl-095b13e4"><span class="cl-0958a80c">Código</span></p></th><th class="cl-095b238e"><p class="cl-095b13e4"><span class="cl-0958a80c">Rango</span></p></th></tr></thead><tbody><tr style="overflow-wrap:break-word;"><td class="cl-095b2398"><p class="cl-095b13e4"><span class="cl-0958a820">***</span></p></td><td class="cl-095b2398"><p class="cl-095b13e4"><span class="cl-0958a820">0 a 0,001</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-095b2398"><p class="cl-095b13e4"><span class="cl-0958a820">**</span></p></td><td class="cl-095b2398"><p class="cl-095b13e4"><span class="cl-0958a820">0,001 a 0,01</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-095b2398"><p class="cl-095b13e4"><span class="cl-0958a820">*</span></p></td><td class="cl-095b2398"><p class="cl-095b13e4"><span class="cl-0958a820">0,01 a 0,05</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-095b2398"><p class="cl-095b13e4"><span class="cl-0958a820">.</span></p></td><td class="cl-095b2398"><p class="cl-095b13e4"><span class="cl-0958a820">0,05 a 0,1</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-095b2399"><p class="cl-095b13e4"><span class="cl-0958a820"></span></p></td><td class="cl-095b2399"><p class="cl-095b13e4"><span class="cl-0958a820">0,1 a 1</span></p></td></tr></tbody></table></div>
+</div>
+</div>
 <section id="estructura-del-objeto-resultado-de-regresión" class="level4">
 <h4 class="anchored" data-anchor-id="estructura-del-objeto-resultado-de-regresión">Estructura del objeto resultado de regresión</h4>
 <p>Todos los ajustes de modelos lineales que produce la función <code>lm()</code> tienen la forma de una lista de 12 componentes.</p>
@@ -742,16 +672,16 @@ F-statistic: 1.384 on 1 and 234 DF,  p-value: 0.2405</code></pre>
 <div class="cell" data-layout-align="center">
 <div class="sourceCode cell-code" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>modelo<span class="sc">$</span>coefficients</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>        (Intercept) pct_public_coverage 
-       1736.6133055          -0.3364259 </code></pre>
+<pre><code>(Intercept)  median_age 
+201.3229258  -0.5682328 </code></pre>
 </div>
 </div>
 <p>O bien utilizar la función <code>coef()</code></p>
 <div class="cell" data-layout-align="center">
 <div class="sourceCode cell-code" id="cb20"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="fu">coef</span>(modelo)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>        (Intercept) pct_public_coverage 
-       1736.6133055          -0.3364259 </code></pre>
+<pre><code>(Intercept)  median_age 
+201.3229258  -0.5682328 </code></pre>
 </div>
 </div>
 <p>La función <code>tbl_regression()</code> del paquete <code>gtsummary</code> también nos permite explorar los coeficientes del modelo, ajustando el nivel de confianza con el argumento <code>conf.level</code> y mostrando u ocultando el intercepto con el argumento <code>intercept</code>.</p>
@@ -1214,15 +1144,15 @@ F-statistic: 1.384 on 1 and 234 DF,  p-value: 0.2405</code></pre>
 <tbody class="gt_table_body">
 <tr class="odd">
 <td class="gt_row gt_left" headers="label">(Intercept)</td>
-<td class="gt_row gt_center" headers="estimate">1,737</td>
-<td class="gt_row gt_center" headers="ci">1,535, 1,938</td>
+<td class="gt_row gt_center" headers="estimate">201</td>
+<td class="gt_row gt_center" headers="ci">179, 224</td>
 <td class="gt_row gt_center" headers="p.value">&lt;0.001</td>
 </tr>
 <tr class="even">
-<td class="gt_row gt_left" headers="label">pct_public_coverage</td>
-<td class="gt_row gt_center" headers="estimate">-0.34</td>
-<td class="gt_row gt_center" headers="ci">-0.90, 0.23</td>
-<td class="gt_row gt_center" headers="p.value">0.2</td>
+<td class="gt_row gt_left" headers="label">median_age</td>
+<td class="gt_row gt_center" headers="estimate">-0.57</td>
+<td class="gt_row gt_center" headers="ci">-1.1, -0.03</td>
+<td class="gt_row gt_center" headers="p.value">0.039</td>
 </tr>
 </tbody><tfoot class="gt_footnotes">
 <tr class="odd">
@@ -1237,7 +1167,7 @@ F-statistic: 1.384 on 1 and 234 DF,  p-value: 0.2405</code></pre>
 </div>
 </div>
 <p><strong>residuals</strong></p>
-<p>Los residuales o residuos para cada valor que surgen de la diferencia entre los valores predictivos calculados por el modelo y los valores reales.</p>
+<p>Los residuos o residuales para cada valor que surgen de la diferencia entre los valores predictivos calculados por el modelo y los valores reales.</p>
 <p>Se visualizan desde el objeto resultado de la regresión:</p>
 <div class="cell" data-layout-align="center">
 <div class="sourceCode cell-code" id="cb23"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a>modelo<span class="sc">$</span>residuals</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -1261,9 +1191,9 @@ F-statistic: 1.384 on 1 and 234 DF,  p-value: 0.2405</code></pre>
 <div class="cell" data-layout-align="center">
 <div class="sourceCode cell-code" id="cb27"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a><span class="fu">confint</span>(modelo)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>                           2.5 %       97.5 %
-(Intercept)         1534.8725867 1938.3540244
-pct_public_coverage   -0.8997314    0.2268796</code></pre>
+<pre><code>                 2.5 %       97.5 %
+(Intercept) 178.924420 223.72143175
+median_age   -1.106785  -0.02968067</code></pre>
 </div>
 </div>
 <p>Si agregamos la función <code>round()</code> podemos redondear los valores con la cantidad de decimales que necesitemos.</p>
@@ -1271,28 +1201,28 @@ pct_public_coverage   -0.8997314    0.2268796</code></pre>
 <div class="sourceCode cell-code" id="cb29"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a><span class="do">## redondeo con 2 decimales</span></span>
 <span id="cb29-2"><a href="#cb29-2" aria-hidden="true" tabindex="-1"></a><span class="fu">round</span>(<span class="fu">confint</span>(modelo),<span class="dv">2</span>)  </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>                      2.5 %  97.5 %
-(Intercept)         1534.87 1938.35
-pct_public_coverage   -0.90    0.23</code></pre>
+<pre><code>             2.5 % 97.5 %
+(Intercept) 178.92 223.72
+median_age   -1.11  -0.03</code></pre>
 </div>
 </div>
 <p>En forma predeterminada los IC se calculan al 95%, pero mediante el argumento <code>level</code> podemos modificarlo, por ejemplo al 99%:</p>
 <div class="cell" data-layout-align="center">
 <div class="sourceCode cell-code" id="cb31"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a><span class="fu">confint</span>(modelo, <span class="at">level =</span> <span class="fl">0.99</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>                         0.5 %      99.5 %
-(Intercept)         1470.68422 2002.542387
-pct_public_coverage   -1.07896    0.406108</code></pre>
+<pre><code>                 0.5 %      99.5 %
+(Intercept) 171.797830 230.8480220
+median_age   -1.278138   0.1416719</code></pre>
 </div>
 </div>
 </section>
 </section>
 <section id="agregar-la-recta-de-regresión-al-diagrama-de-dispersión" class="level3">
 <h3 class="anchored" data-anchor-id="agregar-la-recta-de-regresión-al-diagrama-de-dispersión">Agregar la recta de regresión al diagrama de dispersión</h3>
-<p>Retomando la cuestión gráfica, podemos dibujar la recta de regresión lineal sobre el diagrama de dispersión hecho con <code>ggplot2</code> adicionando una capa más al gráfico mediante <code>geom_smooth()</code> e indicando “lm” como método. Además de la recta se puede ver el IC (zona gris alrededor de ella).</p>
+<p>Retomando la cuestión gráfica, podemos dibujar la recta de regresión lineal sobre el diagrama de dispersión hecho con <code>ggplot2</code> adicionando una capa más al gráfico mediante <code>geom_smooth()</code> e indicando <code>method = "lm"</code> como método. Además de la recta se puede ver el IC (zona gris alrededor de ella).</p>
 <div class="cell" data-layout-align="center">
 <div class="sourceCode cell-code" id="cb33"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a>datos <span class="sc">%&gt;%</span> </span>
-<span id="cb33-2"><a href="#cb33-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> pct_public_coverage, <span class="at">y =</span> target_death_rate)) <span class="sc">+</span></span>
+<span id="cb33-2"><a href="#cb33-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> median_age, <span class="at">y =</span> target_death_rate)) <span class="sc">+</span></span>
 <span id="cb33-3"><a href="#cb33-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">color =</span> pal[<span class="dv">3</span>]) <span class="sc">+</span></span>
 <span id="cb33-4"><a href="#cb33-4" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Añade línea de regresión</span></span>
 <span id="cb33-5"><a href="#cb33-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">"lm"</span>, <span class="at">color =</span> pal[<span class="dv">6</span>]) <span class="sc">+</span> </span>
@@ -1300,7 +1230,7 @@ pct_public_coverage   -1.07896    0.406108</code></pre>
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="index_files/figure-html/unnamed-chunk-28-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="672"></p>
+<p><img src="index_files/figure-html/unnamed-chunk-31-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="672"></p>
 </figure>
 </div>
 </div>
@@ -1308,22 +1238,22 @@ pct_public_coverage   -1.07896    0.406108</code></pre>
 </section>
 <section id="residuales" class="level3">
 <h3 class="anchored" data-anchor-id="residuales">Residuales</h3>
-<p>El residual o residuo de una estimación se define como la diferencia entre el valor observado y el valor calculado por el modelo de regresión.</p>
+<p>El residuo o residual de una estimación se define como la diferencia entre el valor observado y el valor calculado por el modelo de regresión.</p>
 <p>A la hora de resumir el conjunto de residuales hay dos posibilidades:</p>
 <ul>
 <li><p>La sumatoria del valor absoluto de cada residual.</p></li>
-<li><p>La sumatoria del cuadrado de cada residual (RSS). Esta es la aproximación más empleada (mínimos cuadrados) ya que magnifica las desviaciones extremas.</p></li>
+<li><p>La sumatoria del cuadrado de cada residuo (RSS). Esta es la aproximación más empleada (mínimos cuadrados) ya que magnifica las desviaciones extremas.</p></li>
 </ul>
-<p>En R vimos que estos residuales quedan almacenados dentro del objeto de regresión y pueden ser llamados mediante la expresión <em>nombre_del_objeto_de_regresion</em><code>$residuals</code></p>
+<p>En R vimos que estos residuos quedan almacenados dentro del objeto de regresión y pueden ser llamados mediante la expresión <code>nombre_del_objeto_de_regresion$residuals</code></p>
 <p>Cuanto mayor es la sumatoria del cuadrado de los residuales menor la precisión con la que el modelo puede predecir el valor de la variable dependiente a partir de la variable predictora. Los residuales son muy importantes puesto que en ellos se basan las diferentes medidas de la bondad de ajuste del modelo y con ellos se determina el cumplimiento de los supuestos de los modelos lineales.</p>
-<p>Un análisis visual de estos residuales se puede obtener fácilmente aplicando la función <code>plot()</code> al objeto de regresión modelado. La salida presentará 4 gráficas automáticas.</p>
+<p>Un análisis visual de estos residuos se puede obtener fácilmente aplicando la función <code>plot()</code> al objeto de regresión modelado. La salida presentará 4 gráficas automáticas.</p>
 <div class="cell" data-layout-align="center">
 <div class="sourceCode cell-code" id="cb34"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true" tabindex="-1"></a><span class="fu">par</span>(<span class="at">mfrow =</span> <span class="fu">c</span>(<span class="dv">2</span>,<span class="dv">2</span>))</span>
 <span id="cb34-2"><a href="#cb34-2" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(modelo)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="index_files/figure-html/unnamed-chunk-29-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="672"></p>
+<p><img src="index_files/figure-html/unnamed-chunk-32-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="672"></p>
 </figure>
 </div>
 </div>
@@ -1342,7 +1272,7 @@ pct_public_coverage   -1.07896    0.406108</code></pre>
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="index_files/figure-html/unnamed-chunk-30-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="672"></p>
+<p><img src="index_files/figure-html/unnamed-chunk-33-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="672"></p>
 </figure>
 </div>
 </div>
@@ -1353,12 +1283,12 @@ pct_public_coverage   -1.07896    0.406108</code></pre>
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="index_files/figure-html/unnamed-chunk-31-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="672"></p>
+<p><img src="index_files/figure-html/unnamed-chunk-34-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="672"></p>
 </figure>
 </div>
 </div>
 </div>
-<p>Además del análisis gráfico/visual de residuales se pueden aplicar test analíticos.</p>
+<p>Además del análisis gráfico/visual de residuos se pueden aplicar test analíticos.</p>
 <p><strong>Linealidad</strong></p>
 <p>El paquete <code>lmtest</code> implementa el <em>Ramsey’s RESET</em> bajo la función <code>resettest()</code></p>
 <div class="cell" data-layout-align="center">
@@ -1368,11 +1298,11 @@ pct_public_coverage   -1.07896    0.406108</code></pre>
     RESET test
 
 data:  modelo
-RESET = 2.0939, df1 = 2, df2 = 232, p-value = 0.1255</code></pre>
+RESET = 5.0382, df1 = 2, df2 = 232, p-value = 0.007213</code></pre>
 </div>
 </div>
 <p>La hipótesis nula de este test es que las variables se relacionan de modo lineal. Por lo que si el p-valor es menor a 0,05 se rechaza la hipótesis nula, lo que indicaría algún tipo de relación no lineal.</p>
-<p>Aplicado a nuestro modelo da un valor p de 0.126 con lo cual podemos asumir que hay linealidad.</p>
+<p>Aplicado a nuestro modelo da un valor p de 0.007 con lo cual podemos asumir que hay linealidad.</p>
 <p><strong>Normalidad</strong>:</p>
 <p>Otra premisa exige que los residuos se tienen que distribuir de forma normal, con media igual a 0. Como prueba analítica complementaria de los qq-plot ejecutamos el <em>test de lilliefors</em>.</p>
 <div class="cell" data-layout-align="center">
@@ -1382,10 +1312,10 @@ RESET = 2.0939, df1 = 2, df2 = 232, p-value = 0.1255</code></pre>
     Lilliefors (Kolmogorov-Smirnov) normality test
 
 data:  modelo$residuals
-D = 0.22064, p-value &lt; 2.2e-16</code></pre>
+D = 0.045734, p-value = 0.267</code></pre>
 </div>
 </div>
-<p>Los resultados del test nos confirman lo que se intuía en los gráficos anteriores, el valor <span class="math inline">\(p\)</span> es de 0 y no podemos descartar normalidad.</p>
+<p>Los resultados del test nos confirman lo que se intuía en los gráficos anteriores, el valor <span class="math inline">\(p\)</span> es de 0.267 y no podemos descartar normalidad.</p>
 <p><strong>Homocedasticidad</strong>:</p>
 <p>Desde el punto de vista analítico podemos ejecutar el <strong>test de Breush-Pagan</strong>, incluído en los paquetes <code>lmtest</code> y <code>performance</code>. Parte de la hipótesis nula de homocedasticidad o varianza constante en las perturbaciones y la enfrenta a la alternativa de varianza variable, por lo que es válido decir que cumple con el supuesto de homocedasticidad si el valor <span class="math inline">\(p\)</span> es mayor a 0,05</p>
 <div class="cell" data-layout-align="center">
@@ -1396,12 +1326,12 @@ D = 0.22064, p-value &lt; 2.2e-16</code></pre>
     studentized Breusch-Pagan test
 
 data:  modelo
-BP = 4.0346, df = 1, p-value = 0.04458</code></pre>
+BP = 0.048132, df = 1, p-value = 0.8263</code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb43"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb43-1"><a href="#cb43-1" aria-hidden="true" tabindex="-1"></a><span class="co"># paquete performance</span></span>
 <span id="cb43-2"><a href="#cb43-2" aria-hidden="true" tabindex="-1"></a><span class="fu">check_heteroscedasticity</span>(modelo)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>Warning: Heteroscedasticity (non-constant error variance) detected (p = 0.002).</code></pre>
+<pre><code>OK: Error variance appears to be homoscedastic (p = 0.841).</code></pre>
 </div>
 </div>
 <p><strong>Valores atípicos y de alta influencia</strong>:</p>
@@ -1447,7 +1377,7 @@ BP = 4.0346, df = 1, p-value = 0.04458</code></pre>
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="index_files/figure-html/unnamed-chunk-35-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="672"></p>
+<p><img src="index_files/figure-html/unnamed-chunk-38-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="672"></p>
 </figure>
 </div>
 </div>
@@ -1455,10 +1385,12 @@ BP = 4.0346, df = 1, p-value = 0.04458</code></pre>
 <p>Observamos que existen residuales atípicos que se repiten en las tres gráficas, aunque ninguno es mayor o menor a 3 desvíos en el boxplot de los residuos estudentizados.</p>
 <p>Si pretendiésemos conocer que valores tienen las variables de la observación con residual mayor a 3 desvíos estándar, basta con hacer lo siguiente:</p>
 <div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb46"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb46-1"><a href="#cb46-1" aria-hidden="true" tabindex="-1"></a><span class="co"># detectamos la observación mayor a 3 ds</span></span>
-<span id="cb46-2"><a href="#cb46-2" aria-hidden="true" tabindex="-1"></a><span class="fu">rstudent</span>(modelo)[<span class="fu">rstudent</span>(modelo) <span class="sc">&gt;</span> <span class="dv">3</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb46"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb46-1"><a href="#cb46-1" aria-hidden="true" tabindex="-1"></a><span class="co"># detectamos observaciones mayor a 3 ds</span></span>
+<span id="cb46-2"><a href="#cb46-2" aria-hidden="true" tabindex="-1"></a><span class="fu">table</span>(<span class="fu">rstudent</span>(modelo) <span class="sc">&gt;</span> <span class="dv">3</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>named numeric(0)</code></pre>
+<pre><code>
+FALSE 
+  236 </code></pre>
 </div>
 </div>
 <p>El hecho de que un valor sea atípico o con alto grado de <em>leverage</em> no implica que sea influyente en el conjunto del modelo. Sin embargo, si un valor es influyente, suele ser o atípico o de alto <em>leverage</em>. Existen diferentes formas de evaluar la influencia de las observaciones:</p>
@@ -1472,7 +1404,7 @@ BP = 4.0346, df = 1, p-value = 0.04458</code></pre>
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="index_files/figure-html/unnamed-chunk-37-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="672"></p>
+<p><img src="index_files/figure-html/unnamed-chunk-40-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="672"></p>
 </figure>
 </div>
 </div>
@@ -1501,15 +1433,15 @@ BP = 4.0346, df = 1, p-value = 0.04458</code></pre>
 <div class="sourceCode cell-code" id="cb51"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb51-1"><a href="#cb51-1" aria-hidden="true" tabindex="-1"></a><span class="fu">r2</span>(modelo)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># R2 for Linear Regression
-       R2: 0.006
-  adj. R2: 0.002</code></pre>
+       R2: 0.018
+  adj. R2: 0.014</code></pre>
 </div>
 </div>
 <p><span class="math inline">\(R^2\)</span> oscila entre 0 y 1, de manera que, valores de <span class="math inline">\(R^2\)</span> próximos a 1 indican un buen ajuste del modelo lineal a los datos. Por otro lado, <span class="math inline">\(R^2\)</span> ajustado es similar a <span class="math inline">\(R^2\)</span>, pero penaliza la introducción en el modelo de variables independientes poco relevantes a la hora de explicar la variable dependiente (se utiliza en modelos lineales múltiples). Por tanto, <span class="math inline">\(R^2\)</span> ajustado &lt; = <span class="math inline">\(R^2\)</span>.</p>
-<p>En nuestro ejemplo, <span class="math inline">\(R^2\)</span> = 0.0058818 y <span class="math inline">\(R^2\)</span> ajustado = 0.0016335; por lo que podemos concluir que el modelo lineal simple no se ajusta demasiado bien a nuestros datos.</p>
-<p>Esto indica que aproximadamente el 6,1 % de la variación en la tasa de mortalidad por cáncer se puede explicar por el modelo que solo contiene las proporciones de personas con acceso a la salud pública como variable explicativa. Es bajo, por lo que las predicciones de la ecuación de regresión son bastante poco confiables, ya que también significa que hay otro 93.9 % de la variación que aún no se explica, por lo que quizás agregar otras variables independientes podría mejorar el ajuste del modelo.</p>
+<p>En nuestro ejemplo, <span class="math inline">\(R^2\)</span> = 0.0181315 y <span class="math inline">\(R^2\)</span> ajustado = 0.0139355; por lo que podemos concluir que el modelo lineal simple no se ajusta demasiado bien a nuestros datos.</p>
+<p>Esto indica que aproximadamente el 1,4 % de la variación en la tasa de mortalidad por cáncer se puede explicar por el modelo que solo contiene la mediana de edad como variable explicativa. Es bajo, por lo que las predicciones de la ecuación de regresión son bastante poco confiables, ya que también significa que hay otro 98.6 % de la variación que aún no se explica, por lo que quizás agregar otras variables independientes podría mejorar el ajuste del modelo.</p>
 <p>La última línea de la salida de <code>summary(modelo)</code> incluye un estadístico de distribución continua <span class="math inline">\(F\)</span> <em>de Snedecor</em> (Test F) y el <em>valor</em> <span class="math inline">\(p\)</span> correspondiente que se utilizan para resolver lo que se conoce habitualmente como contraste ómnibus. Mediante este contraste se comprueba si, de forma global, el modelo lineal es apropiado para modelizar los datos.</p>
-<p>En nuestro ejemplo, el p-valor asociado a este contraste es inferior a 0,05 por lo que, al 95% de confianza podemos rechazar la hipótesis nula y afirmar que, efectivamente, el modelo lineal es adecuado para nuestro conjunto de datos.</p>
+<p>En nuestro ejemplo, el <em>p</em>-valor asociado a este contraste es inferior a 0,05 por lo que, al 95% de confianza podemos rechazar la hipótesis nula y afirmar que, efectivamente, el modelo lineal es adecuado para nuestro conjunto de datos.</p>
 <p>Cuando el modelo de regresión tiene una única variable explicativa, el contraste de la regresión es equivalente al contraste del parámetro <span class="math inline">\(\beta_1\)</span> (ciclistas).</p>
 <p>Otra manera de verificar, en forma independiente, la significación del modelo de regresión es por medio de la función <code>anova()</code> que plantea el contraste de la regresión mediante el análisis de la varianza.</p>
 <div class="cell" data-layout-align="center">
@@ -1518,18 +1450,20 @@ BP = 4.0346, df = 1, p-value = 0.04458</code></pre>
 <pre><code>Analysis of Variance Table
 
 Response: target_death_rate
-                     Df   Sum Sq Mean Sq F value Pr(&gt;F)
-pct_public_coverage   1   373143  373143  1.3845 0.2405
-Residuals           234 63066718  269516               </code></pre>
+            Df Sum Sq Mean Sq F value  Pr(&gt;F)  
+median_age   1   2084 2083.75  4.3211 0.03873 *
+Residuals  234 112840  482.22                  
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</code></pre>
 </div>
 </div>
-<p>La tabla de analisis de varianza muestra el mismo resultado que el bloque final de <code>summary(modelo)</code> con un valor F de 1.4 y un valor <span class="math inline">\(p\)</span> significativo &lt;0,001.</p>
+<p>La tabla de analisis de varianza muestra el mismo resultado que el bloque final de <code>summary(modelo)</code> con un valor F de 4.3 y un <em>p</em>-valor significativo.</p>
 <section id="resumen-del-resultado-del-ejemplo" class="level4">
 <h4 class="anchored" data-anchor-id="resumen-del-resultado-del-ejemplo">Resumen del resultado del ejemplo</h4>
-<p>Se llevó a cabo una regresión lineal simple para analizar la relación entre la proporción de personas con acceso al sistema de salud público y la tasa de mortalidad por cáncer en 236 condados de Estados Unidos.</p>
-<p>El diagrama de dispersión mostró una fuerte relación lineal negativa entre los dos, que se confirmó con un coeficiente de correlación de Pearson de -0.08 . La regresión lineal simple mostró una relación significativa entre las variables (t = 3,89 p &lt; 0,001).</p>
-<p>El coeficiente de pendiente de la recta para la proporción de ciclistas fue de 0,73 por lo que la tasa de mortalidad por cáncer aumenta 0,7 % por cada 1 % que sube la proporción de personas que solo tienen acceso al sistema público de salud.</p>
-<p>El valor <span class="math inline">\(R^2\)</span> mostró que el 5,7 % de la variación en la tasa de mortalidad por cáncer se puede explicar por el modelo que solo contiene acceso al sistema público de salud.</p>
+<p>Se llevó a cabo una regresión lineal simple para analizar la relación entre la mediana de edad y la tasa de mortalidad por cáncer en 236 condados de Estados Unidos.</p>
+<p>El diagrama de dispersión mostró una relación lineal negativa moderada entre los dos, que se confirmó con un coeficiente de correlación de Pearson de 0.25 . La regresión lineal simple mostró una relación significativa entre las variables (t = -2.08 <em>p</em> = 0.039).</p>
+<p>El coeficiente de pendiente de la recta para la mediana de edad fue de -0.57, por lo que la tasa de mortalidad por cáncer disminuye aproximadamente 0,6 % por cada unidad que sube la mediana de edad de los pacientes.</p>
+<p>El valor <span class="math inline">\(R^2\)</span> mostró que el 1.4 % de la variación en la tasa de mortalidad por cáncer se puede explicar por el modelo que solo contiene la mediana de edad.</p>
 <p>La gráfica de dispersión de los valores pronosticados estandarizados frente a los residuos estandarizados, mostró que los datos cumplían los supuestos de homogeneidad de varianza y linealidad y que los residuos se distribuían aproximadamente de forma normal.</p>
 <p>Se cumplieron todos los presupuestos necesarios para validar la regresión y no se encontraron valores atípicos influyentes.</p>
 </section>
