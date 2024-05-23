@@ -3,6 +3,7 @@ title: "**Estudios ecológicos**"
 format: html
 editor: visual
 toc: true
+toc-title: "Contenidos"
 theme: "../../custom.scss"
 ---
 
@@ -93,17 +94,19 @@ Esta distinción es importante, porque para las dos primeras siempre existe el r
 
 **Exploratorios**: En los estudios exploratorios se comparan las tasas de enfermedad entre muchas regiones durante un mismo periodo, o se compara la frecuencia de la enfermedad a través del tiempo en una misma región. Se podría decir que se buscan patrones regionales o temporales, que pudieran dar origen a alguna hipótesis.
 
-Ejemplo: [Geographical and Temporal Variations in Female Breast Cancer Mortality in the Municipalities of Andalusia (Southern Spain)](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5129372/)
+Ejemplo: [Ocaña-Riola, R., et al. (2016). Geographical and Temporal Variations in Female Breast Cancer Mortality in the Municipalities of Andalusia (Southern Spain). International journal of environmental research and public health, 13(11), 1162.](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5129372/)
 
 **Estudios de grupos múltiples**: Este es el tipo de estudio ecológico más común. Se evalúa la asociación entre los niveles de exposición promedio y la frecuencia de la enfermedad entre varios grupos. La fuente de datos suele ser las estadísticas de morbilidad y mortalidad rutinarias.
 
-Ejemplo: [An Ecologic Analysis of County-Level PM2.5 Concentrations and Lung Cancer Incidence and Mortality](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3138001/)
+Ejemplo: [Vinikoor-Imler, L. C., et al. (2011). An ecologic analysis of county-level PM2.5 concentrations and lung cancer incidence and mortality. International journal of environmental research and public health, 8(6), 1865–1871.](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3138001/)
 
 **Estudios de series temporales**: Se comparan las variaciones temporales de los niveles de exposición con otra serie de tiempo que refleja los cambios en la frecuencia de la enfermedad en la población de un área geográfica determinada.
 
-Ejemplo: [Air pollution and emergency hospital admissions for cardiovascular diseases in Valencia, Spain](https://jech.bmj.com/content/55/1/57.long)
+Ejemplo: [Ballester, F., et al. (2001). Air pollution and emergency hospital admissions for cardiovascular diseases in Valencia, Spain.Journal of Epidemiology & Community Health, 55, 57-65.](https://jech.bmj.com/content/55/1/57.long)
 
 **Estudios mixtos**: En esta categoría se incluyen los estudios de series de tiempo combinadas con la evaluación de grupos múltiples.
+
+Ejemplo: [Schneider, M. C., et al. (2017). Leptospirosis in Latin America: Exploring the first set of regional data. Revista Panamericana de Salud Pública, 41, 1.](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6645204/)
 
 Algunos autores presentan la perspectiva que mostramos en la siguiente tabla, para una comprensión más rápida de las distintas posibilidades de los diseños ecológicos:
 
@@ -166,6 +169,8 @@ Consideremos la nube de puntos formadas por las $n$ parejas de datos ($x_i$, $y_
 
 ```{r}
 #| echo: false
+#| fig-width: 5.5
+#| fig-height: 5.5
 
 # genera datos
 set.seed(124)
@@ -372,6 +377,8 @@ A partir de los datos de peso (medido en gramos) y edad (medida en semanas luego
 
 ```{r}
 #| echo: false
+#| fig-width: 5.5
+#| fig-height: 5.5
 
 # Set seed for reproducibility
 set.seed(123)
@@ -405,6 +412,8 @@ Donde a es el punto de intersección de la recta con el eje $Y$ y $b$ la pendien
 
 ```{r}
 #| echo: false
+#| fig-width: 5.5
+#| fig-height: 5.5
 
 # reg lineal
 fit <- lm(peso ~ semana, data = bebe)
@@ -480,6 +489,8 @@ Ahora vamos a concentrarnos en la relación entre la varianza de la muestra, a t
 
 ```{r}
 #| echo: false
+#| fig-width: 5.5
+#| fig-height: 5.5
 set.seed(123)
 
 # genera datos
@@ -584,6 +595,8 @@ Gráficamente:
 
 ```{r}
 #| echo: false
+#| fig-width: 5.5
+#| fig-height: 5.5
 
 dat <- tibble(x = c(1, 2, 3, 4, 5, 6, 7),
               y = c(2500, 4000, 3000, 5000, 4000, 5500, 3500))
@@ -733,6 +746,9 @@ La variable dependiente es la tasa de mortalidad (`target_death_rate`) y la inde
 Para dibujar gráficos de dispersión podemos utilizar funciones de ggplot2.
 
 ```{r}
+#| fig-width: 5.5
+#| fig-height: 5.5
+
 datos %>% 
   ggplot(aes(x = median_age, y = target_death_rate)) +
   geom_point(color = pal[3]) +
@@ -796,6 +812,9 @@ La homocedasticidad es conveniente definirla a partir del modelo realizado, dond
 Finalmente para la normalidad utilizamos el mismo análisis previo visto en la unidad anterior (ver [ANOVA - Unidad 2](https://cballejo.github.io/R_Epi_Avanzada/Unidad2/Anova/))
 
 ```{r}
+#| fig-width: 5.5
+#| fig-height: 5.5
+
 ## Test normalidad
 lillie.test(datos$target_death_rate)
 
