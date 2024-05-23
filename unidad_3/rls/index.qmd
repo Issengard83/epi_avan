@@ -403,10 +403,9 @@ $$Y = a + bx$$
 
 Donde a es el punto de intersección de la recta con el eje $Y$ y $b$ la pendiente de la recta.
 
-**Gráfico 2.** Función lineal. Edad y peso en 100 lactantes de sexo femenino.
-
 ```{r}
 #| echo: false
+#| fig-cap: "Gráfico 2. Función lineal. Edad y peso en 100 lactantes de sexo femenino."
 
 # reg lineal
 fit <- lm(peso ~ semana, data = bebe)
@@ -1202,9 +1201,9 @@ r2(modelo)
 
 $R^2$ oscila entre 0 y 1, de manera que, valores de $R^2$ próximos a 1 indican un buen ajuste del modelo lineal a los datos. Por otro lado, $R^2$ ajustado es similar a $R^2$, pero penaliza la introducción en el modelo de variables independientes poco relevantes a la hora de explicar la variable dependiente (se utiliza en modelos lineales múltiples). Por tanto, $R^2$ ajustado \< = $R^2$.
 
-En nuestro ejemplo, $R^2$ = `r r2(modelo)$R2` y $R^2$ ajustado = `r r2(modelo)$R2_adjusted`; por lo que podemos concluir que el modelo lineal simple no se ajusta demasiado bien a nuestros datos.
+En nuestro ejemplo, $R^2$ = `r r2(modelo)$R2 %>% round(., 3)` y $R^2$ ajustado = `r r2(modelo)$R2_adjusted %>% round(., 3)`; por lo que podemos concluir que el modelo lineal simple no se ajusta demasiado bien a nuestros datos.
 
-Esto indica que aproximadamente el 1,4 % de la variación en la tasa de mortalidad por cáncer se puede explicar por el modelo que solo contiene la mediana de edad como variable explicativa. Es bajo, por lo que las predicciones de la ecuación de regresión son bastante poco confiables, ya que también significa que hay otro 98.6 % de la variación que aún no se explica, por lo que quizás agregar otras variables independientes podría mejorar el ajuste del modelo.
+Esto indica que aproximadamente el 1.4 % de la variación en la tasa de mortalidad por cáncer se puede explicar por el modelo que solo contiene la mediana de edad como variable explicativa. Es bajo, por lo que las predicciones de la ecuación de regresión son bastante poco confiables, ya que también significa que hay otro 98.6 % de la variación que aún no se explica, por lo que quizás agregar otras variables independientes podría mejorar el ajuste del modelo.
 
 La última línea de la salida de `summary(modelo)` incluye un estadístico de distribución continua $F$ *de Snedecor* (Test F) y el *valor* $p$ correspondiente que se utilizan para resolver lo que se conoce habitualmente como contraste ómnibus. Mediante este contraste se comprueba si, de forma global, el modelo lineal es apropiado para modelizar los datos.
 
@@ -1218,7 +1217,7 @@ Otra manera de verificar, en forma independiente, la significación del modelo d
 anova(modelo)
 ```
 
-La tabla de analisis de varianza muestra el mismo resultado que el bloque final de `summary(modelo)` con un valor F de `r summary(modelo)$fstatistic[1] %>% round(.,1)` y un *p*-valor significativo.
+La tabla de analisis de varianza muestra el mismo resultado que el bloque final de `summary(modelo)` con un valor F de `r summary(modelo)$fstatistic[1] %>% round(.,2)` y un *p*-valor significativo.
 
 #### Resumen del resultado del ejemplo
 
