@@ -403,10 +403,9 @@ $$Y = a + bx$$
 
 Donde a es el punto de intersección de la recta con el eje $Y$ y $b$ la pendiente de la recta.
 
-**Gráfico 2.** Función lineal. Edad y peso en 100 lactantes de sexo femenino.
-
 ```{r}
 #| echo: false
+#| fig-cap: "Gráfico 2. Función lineal. Edad y peso en 100 lactantes de sexo femenino."
 
 # reg lineal
 fit <- lm(peso ~ semana, data = bebe)
@@ -1218,7 +1217,7 @@ Otra manera de verificar, en forma independiente, la significación del modelo d
 anova(modelo)
 ```
 
-La tabla de analisis de varianza muestra el mismo resultado que el bloque final de `summary(modelo)` con un valor F de `r summary(modelo)$fstatistic[1] %>% round(.,1)` y un *p*-valor significativo.
+La tabla de analisis de varianza muestra el mismo resultado que el bloque final de `summary(modelo)` con un valor F de `r summary(modelo)$fstatistic[1] %>% round(.,2)` y un *p*-valor significativo.
 
 #### Resumen del resultado del ejemplo
 
