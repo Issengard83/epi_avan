@@ -14,7 +14,6 @@ knitr::opts_chunk$set(message = F, warning = F,
 
 ### Carga paquetes
 pacman::p_load(
-  scico,
   MASS,
   cowplot,
   flextable,
@@ -22,7 +21,7 @@ pacman::p_load(
 )
 
 ### paleta colorblind
-pal <- scico(n = 8, categorical = T, palette = "navia")
+pal <- scico::scico(n = 12, palette = "navia")
 ```
 
 [Este material es parte de la **Unidad 3 del Curso de Epidemiología - Nivel Avanzado del Instituto Nacional de Epidemiología “Dr. Juan H. Jara” - ANLIS**]{.text style="display: block; text-align: center;"}
@@ -57,9 +56,11 @@ tibble(
   flextable() %>% 
   
   ### Formato tabla
-  font(fontname = "Calibri", part = "all") %>% 
+  font(fontname = "Helvetica", part = "all") %>% 
   fontsize(size = 12, part = "all") %>% 
   bold(part = "header") %>% 
+  bg(bg = pal[6], part = "header") %>% 
+  color(color = "white", part = "header") %>% 
   set_table_properties(layout = "autofit")
   
 ```
@@ -129,9 +130,11 @@ tibble(
   flextable() %>% 
   
   ### Formato tabla
-  font(fontname = "Calibri", part = "all") %>% 
-  fontsize(size = 12, part = "all") %>%
+  font(fontname = "Helvetica", part = "all") %>% 
+  fontsize(size = 12, part = "all") %>% 
   bold(part = "header") %>% 
+  bg(bg = pal[6], part = "header") %>% 
+  color(color = "white", part = "header") %>% 
   set_table_properties(layout = "autofit")
 ```
 
@@ -184,36 +187,46 @@ neg <- tibble(
 # Genera plots
 # covarianza positiva
 g1 <- pos %>% ggplot(mapping = aes(x = X, y = Y)) +
+  
   # puntos
-    geom_point(color = pal[3], size = 2, alpha = .8) +
-    geom_smooth(method = "lm", se = F, color = pal[6]) +
+    geom_point(color = pal[7], size = 2, alpha = .8) +
+    geom_smooth(method = "lm", se = F, color = pal[4]) +
+  
   # líneas de referencia
   geom_vline(xintercept = mean(pos$X), linetype = "dashed") +
   geom_hline(yintercept = mean(pos$Y), linetype = "dashed") +
+  
   # ejes
   scale_x_continuous(limits = c(0,10)) +
   scale_y_continuous(limits = c(3,15), breaks = c(3, 6, 9, 12, 15)) +
+  
   # texto
   labs(title = "Covarianza positiva", 
        caption = "Cuando crece X, crece Y, casi todos los puntos \n pertenecen a los cuadrantes primero y tercero") +
+  
   # tema
     theme_minimal() +
   theme(title = element_text(size = 11))
 
   
 g2 <- neg %>% ggplot(mapping = aes(x = X, y = Y)) +
+  
   # puntos
-    geom_point(color = pal[3], size = 2, alpha = .8) +
-    geom_smooth(method = "lm", se = F, color = pal[6]) +
+     geom_point(color = pal[7], size = 2, alpha = .8) +
+    geom_smooth(method = "lm", se = F, color = pal[4]) +
+  
   # líneas de referencia
   geom_vline(xintercept = mean(neg$X), linetype = "dashed") +
   geom_hline(yintercept = mean(neg$Y), linetype = "dashed") +
+  
   # ejes
   scale_x_continuous(limits = c(0,10)) +
   scale_y_continuous(limits = c(-6,6)) +
+  
   # texto
   labs(title = "Covarianza negativa", 
        caption = "Cuando crece X, decrece Y, casi todos los puntos \n pertenecen a los cuadrantes segundo y cuarto") +
+  
   # tema
     theme_minimal() +
   theme(title = element_text(size = 11))
@@ -275,9 +288,13 @@ cor1 <- tibble(
   x = 1:100,
   y = x + rnorm(100, mean = 0, sd = 10)
 ) %>% 
+  
   ggplot(mapping = aes(x = x, y = y)) +
-  geom_point(color = pal[3], size = 2, alpha = .8) +
+  
+  geom_point(color = pal[7], size = 2, alpha = .8) +
+  
   labs(caption = "Correlación positiva entre x e y") +
+  
   theme_minimal() +
   theme(title = element_text(size = 9), axis.text = element_text(size = 9))
 
@@ -285,9 +302,11 @@ cor2 <- tibble(
   x = 1:100,
   y = x + rnorm(100, mean = 0, sd = 5)
 ) %>% 
+  
   ggplot(mapping = aes(x = x, y = y)) +
-  geom_point(color = pal[3], size = 2, alpha = .8) +
+  geom_point(color = pal[7], size = 2, alpha = .8) +
   labs(caption =  "Correlación positiva fuerte entre x e y") +
+  
   theme_minimal() +
  theme(title = element_text(size = 9), axis.text = element_text(size = 9))
 
@@ -295,9 +314,13 @@ cor3 <- tibble(
   x = 1:100,
   y = x
 ) %>% 
+  
   ggplot(mapping = aes(x = x, y = y)) +
-  geom_point(color = pal[3], size = 2, alpha = .8) +
+  
+  geom_point(color = pal[7], size = 2, alpha = .8) +
+  
   labs(caption = "Correlación positiva perfecta entre x e y") +
+  
   theme_minimal() +
   theme(title = element_text(size = 9), axis.text = element_text(size = 9))
 
@@ -306,9 +329,13 @@ cor4 <- tibble(
   x = 1:100,
   y = -x + rnorm(100, mean = 0, sd = 10)
 ) %>% 
+  
   ggplot(mapping = aes(x = x, y = y)) +
-  geom_point(color = pal[3], size = 2, alpha = .8) +
+  
+  geom_point(color = pal[7], size = 2, alpha = .8) +
+  
   labs(caption = "Correlación negativa entre x e y") +
+  
   theme_minimal() +
   theme(title = element_text(size = 9), axis.text = element_text(size = 9))
 
@@ -316,9 +343,13 @@ cor5 <- tibble(
   x = 1:100,
   y = -x + rnorm(100, mean = 0, sd = 5)
 ) %>% 
+  
   ggplot(mapping = aes(x = x, y = y)) +
-  geom_point(color = pal[3], size = 2, alpha = .8)  +
+  
+  geom_point(color = pal[7], size = 2, alpha = .8)  +
+  
   labs(caption = "Correlación negativa fuerte entre x e y") +
+  
   theme_minimal() +
   theme(title = element_text(size = 9), axis.text = element_text(size = 9))
 
@@ -327,7 +358,7 @@ cor6 <- tibble(
   y = -x
 ) %>% 
   ggplot(mapping = aes(x = x, y = y)) +
-  geom_point(color = pal[3], size = 2, alpha = .8) +
+  geom_point(color = pal[7], size = 2, alpha = .8) +
   labs(caption = "Correlación negativa perfecta entre x e y") +
   theme_minimal() +
   theme(title = element_text(size = 9), axis.text = element_text(size = 9))
@@ -338,7 +369,7 @@ cor7 <- tibble(
   y = rnorm(100, mean = 0, sd = 10)
 ) %>% 
   ggplot(mapping = aes(x = x, y = y)) +
-  geom_point(color = pal[3], size = 2, alpha = .8) +
+  geom_point(color = pal[7], size = 2, alpha = .8) +
   labs(caption = "Sin correlación entre x e y") +
   theme_minimal() +
   theme(title = element_text(size = 9), axis.text = element_text(size = 9))
@@ -349,7 +380,7 @@ cor8 <- tibble(
   y = -x^2 + rnorm(length(x), mean = 0, sd = 20)
 ) %>% 
   ggplot(mapping = aes(x = x, y = y)) +
-  geom_point(color = pal[3], size = 2, alpha = .8) +
+  geom_point(color = pal[7], size = 2, alpha = .8) +
   labs(caption = "Relación no lineal entre x e y") +
   theme_minimal() +
   theme(title = element_text(size = 9), axis.text = element_text(size = 9))
@@ -365,7 +396,7 @@ La correlación más usada para variables cuantitativas es la **correlación de 
 
 Si no se cumple la normalidad o si las variables son ordinales es más apropiado usar la **correlación de Spearman** o la **correlación de Kendall**.
 
-Para explicar la forma de esta correlación e incluso predecir los valores que puede alcanzar una variable (dependiente) en función de la otra (independiente) podemos utilizar la regresión lineal. Cuando el análisis lo realizamos con 2 variables (una dependiente y otra independiente) utilizamos la regresión lineal simple. Cuando el problema es más complejo y queremos incorporar al análisis más de una variable independiente utilizamos la regresión lineal múltiple, que veremos más adelante.
+Para explicar la forma de esta correlación e incluso predecir los valores que puede alcanzar una variable (dependiente) en función de la otra (independiente) podemos utilizar la **regresión lineal**. Cuando el análisis lo realizamos con dos variables (una dependiente y otra independiente) utilizamos la **regresión lineal simple**. Cuando el problema es más complejo y queremos incorporar al análisis más de una variable independiente utilizamos la **regresión lineal múltiple**, que veremos más adelante.
 
 Veamos un ejemplo:
 
@@ -387,7 +418,7 @@ bebe <- tibble(
 # Plot
 bebe %>% 
   ggplot(mapping = aes(x = semana, y = peso)) +
-  geom_point(color = pal[3], size = 3, alpha = .8) +
+  geom_point(color = pal[7], size = 3, alpha = .8) +
   labs(x = "Edad en semanas", y = "Peso en gramos") +
   theme_minimal()
 
@@ -413,8 +444,8 @@ fit <- lm(peso ~ semana, data = bebe)
 # plot
 bebe %>% 
   ggplot(mapping = aes(x = semana, y = peso)) +
-  geom_point(color = pal[3], size = 3, alpha = .8) +
-  geom_smooth(method = "lm", se = F, color = pal[6]) +
+  geom_point(color = pal[7], size = 3, alpha = .8) +
+  geom_smooth(method = "lm", se = F, color = pal[4]) +
   annotate(geom = "text", x = 20, y = 2000,
            label = paste("Y = ", round(coefficients(fit)[1], 1), "+",
                          round(coefficients(fit)[2], 1), "\n R2 = ",
@@ -520,32 +551,32 @@ data4 <- as_tibble(mvrnorm(n = 100, mu = c(0, 0),
 plot_grid(
 data1 %>% 
   ggplot(mapping = aes(x = x, y = y)) +
-   geom_point(color = pal[3], size = 3, alpha = .8) +
-  geom_smooth(method = "lm", se = F, color = pal[6]) +
+   geom_point(color = pal[7], size = 3, alpha = .8) +
+  geom_smooth(method = "lm", se = F, color = pal[4]) +
   labs(caption = "ds = 1000, r = 0,99") +
   theme_minimal() +
   theme(axis.text = element_blank())
 ,
 data2 %>% 
   ggplot(mapping = aes(x = x, y = y)) +
-   geom_point(color = pal[3], size = 3, alpha = .8) +
-  geom_smooth(method = "lm", se = F, color = pal[6]) +
+   geom_point(color = pal[7], size = 3, alpha = .8) +
+  geom_smooth(method = "lm", se = F, color = pal[4]) +
   labs(caption = "ds = 1300, r = 0,89") +
   theme_minimal() +
   theme(axis.text = element_blank())
 ,
 data3 %>% 
   ggplot(mapping = aes(x = x, y = y)) +
-   geom_point(color = pal[3], size = 3, alpha = .8) +
-  geom_smooth(method = "lm", se = F, color = pal[6]) +
+   geom_point(color = pal[7], size = 3, alpha = .8) +
+  geom_smooth(method = "lm", se = F, color = pal[4]) +
   labs(caption = "ds = 1500, r = 0,59") +
   theme_minimal() +
   theme(axis.text = element_blank())
 ,
 data4 %>% 
   ggplot(mapping = aes(x = x, y = y)) +
-   geom_point(color = pal[3], size = 3, alpha = .8) +
-  geom_smooth(method = "lm", se = F, color = pal[6]) +
+   geom_point(color = pal[7], size = 3, alpha = .8) +
+  geom_smooth(method = "lm", se = F, color = pal[4]) +
   labs(caption = "ds = 1700, r = 0,28") +
   theme_minimal() +
   theme(axis.text = element_blank()),
@@ -595,10 +626,10 @@ fit <- lm(y ~ x, data = dat)
 dat %>% 
   ggplot(mapping = aes(x = x, y = y)) +
   # geoms
-  geom_point(color = pal[3], size = 4, alpha = .8) +
-  geom_smooth(method = "lm", se = F, color = pal[6]) +
+  geom_point(color = pal[7], size = 4, alpha = .8) +
+  geom_smooth(method = "lm", se = F, color = pal[4]) +
   geom_segment(mapping = aes(x = x, y = y, xend = x, yend = predict(fit)), 
-               color = pal[3], linetype = "dashed") +
+               color = pal[7], linetype = "dashed") +
   # ejes
   scale_x_continuous(limits = c(0, max(dat$x) + 1)) +
   scale_y_continuous(limits = c(0, 6000)) +
@@ -705,12 +736,6 @@ library(performance)
 library(lmtest) 
 library(nortest)
 
-# correlación
-library(ggstatsplot)
-
-# une gráficos de ggplot
-library(cowplot)
-
 # manejo de datos
 library(tidyverse) 
 
@@ -732,13 +757,12 @@ La variable dependiente es la tasa de mortalidad (`target_death_rate`) y la inde
 Para dibujar gráficos de dispersión podemos utilizar funciones del paquete `ggplot2`.
 
 ```{r}
-#| echo: false
 datos %>% 
   
   ggplot(aes(x = median_age, y = target_death_rate)) +
   
   # gráfico de dispersión
-  geom_point(color = "#418A80") + 
+  geom_point(color = "#49917A") + 
   
   # modifico color de fondo
   theme_minimal()
@@ -807,8 +831,12 @@ lillie.test(datos$target_death_rate)
 ## QQplot
 datos %>% 
   ggplot(mapping = aes(sample = target_death_rate)) +
+  
+  # añade qqplot
   stat_qq() +
   stat_qq_line() +
+  
+  # cambia nombres de los ejes X e Y
   labs(title = "QQplot", 
        x = "Theoretical Quantiles", 
        y = "Sample Quantiles") +
@@ -1005,9 +1033,14 @@ Retomando la cuestión gráfica, podemos dibujar la recta de regresión lineal s
 ```{r}
 datos %>% 
   ggplot(aes(x = median_age, y = target_death_rate)) +
-  geom_point(color = pal[3]) +
-  # Añade línea de regresión
-  geom_smooth(method = "lm", color = "#073966") + 
+  
+ # diagrama de dispersión
+   geom_point(color = "#49917A") +
+  
+  # añade línea de regresión
+  geom_smooth(method = "lm", color = "#1E6590") + 
+  
+  # cambia color de fondo
   theme_minimal()
 ```
 
@@ -1132,19 +1165,19 @@ cowplot::plot_grid(
   # Residuales
   residuales %>% 
     ggplot(mapping = aes(y = residuales)) +
-    geom_boxplot(fill = "#418A80") +
+    geom_boxplot(fill = "#49917A") +
     theme_minimal(),
   
   # Residuales normalizados
   residuales %>% 
     ggplot(mapping = aes(y = resid_normalizados)) +
-    geom_boxplot(fill = "#1B608F") +
+    geom_boxplot(fill = "#1E6590") +
     theme_minimal(),
   
   # Residuales estudentizados
   residuales %>% 
     ggplot(mapping = aes(y = resid_estudentizados)) +
-    geom_boxplot(fill = "#87C269") +
+    geom_boxplot(fill = "#B2D680") +
     theme_minimal(),
   ncol = 3
 )
