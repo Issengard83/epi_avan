@@ -10,7 +10,7 @@ theme: "../../custom.scss"
 ```{r}
 #| echo: false
 knitr::opts_chunk$set(message = F, warning = F,
-                      fig.align = "center")
+                      fig.align = "center", dpi = 300)
 
 ### Carga paquetes
 pacman::p_load(
@@ -169,8 +169,6 @@ Consideremos la nube de puntos formadas por las $n$ parejas de datos ($x_i$, $y_
 
 ```{r}
 #| echo: false
-#| fig-width: 5.5
-#| fig-height: 5.5
 
 # genera datos
 set.seed(124)
@@ -280,7 +278,7 @@ cor1 <- tibble(
   ggplot(mapping = aes(x = x, y = y)) +
   geom_point(color = pal[3], size = 2, alpha = .8) +
   labs(caption = "Correlación positiva entre x e y") +
-  theme_minimal_grid() +
+  theme_minimal() +
   theme(title = element_text(size = 9), axis.text = element_text(size = 9))
 
 cor2 <- tibble(
@@ -290,7 +288,7 @@ cor2 <- tibble(
   ggplot(mapping = aes(x = x, y = y)) +
   geom_point(color = pal[3], size = 2, alpha = .8) +
   labs(caption =  "Correlación positiva fuerte entre x e y") +
-  theme_minimal_grid() +
+  theme_minimal() +
  theme(title = element_text(size = 9), axis.text = element_text(size = 9))
 
 cor3 <- tibble(
@@ -300,7 +298,7 @@ cor3 <- tibble(
   ggplot(mapping = aes(x = x, y = y)) +
   geom_point(color = pal[3], size = 2, alpha = .8) +
   labs(caption = "Correlación positiva perfecta entre x e y") +
-  theme_minimal_grid() +
+  theme_minimal() +
   theme(title = element_text(size = 9), axis.text = element_text(size = 9))
 
 ### Correlaciones negativas
@@ -311,7 +309,7 @@ cor4 <- tibble(
   ggplot(mapping = aes(x = x, y = y)) +
   geom_point(color = pal[3], size = 2, alpha = .8) +
   labs(caption = "Correlación negativa entre x e y") +
-  theme_minimal_grid() +
+  theme_minimal() +
   theme(title = element_text(size = 9), axis.text = element_text(size = 9))
 
 cor5 <- tibble(
@@ -321,7 +319,7 @@ cor5 <- tibble(
   ggplot(mapping = aes(x = x, y = y)) +
   geom_point(color = pal[3], size = 2, alpha = .8)  +
   labs(caption = "Correlación negativa fuerte entre x e y") +
-  theme_minimal_grid() +
+  theme_minimal() +
   theme(title = element_text(size = 9), axis.text = element_text(size = 9))
 
 cor6 <- tibble(
@@ -331,7 +329,7 @@ cor6 <- tibble(
   ggplot(mapping = aes(x = x, y = y)) +
   geom_point(color = pal[3], size = 2, alpha = .8) +
   labs(caption = "Correlación negativa perfecta entre x e y") +
-  theme_minimal_grid() +
+  theme_minimal() +
   theme(title = element_text(size = 9), axis.text = element_text(size = 9))
 
 # Sin correlación
@@ -342,7 +340,7 @@ cor7 <- tibble(
   ggplot(mapping = aes(x = x, y = y)) +
   geom_point(color = pal[3], size = 2, alpha = .8) +
   labs(caption = "Sin correlación entre x e y") +
-  theme_minimal_grid() +
+  theme_minimal() +
   theme(title = element_text(size = 9), axis.text = element_text(size = 9))
 
 # Relación no lineal
@@ -353,7 +351,7 @@ cor8 <- tibble(
   ggplot(mapping = aes(x = x, y = y)) +
   geom_point(color = pal[3], size = 2, alpha = .8) +
   labs(caption = "Relación no lineal entre x e y") +
-  theme_minimal_grid() +
+  theme_minimal() +
   theme(title = element_text(size = 9), axis.text = element_text(size = 9))
 
 ### Une gráficos
@@ -373,12 +371,9 @@ Veamos un ejemplo:
 
 A partir de los datos de peso (medido en gramos) y edad (medida en semanas luego del nacimiento) de un set de datos ficticio con información de 100 niñas menores de 6 meses se realizó un diagrama de dispersión (*"scatter plot"*).
 
-**Gráfico 1.** Edad y peso en 100 lactantes de sexo femenino.
-
 ```{r}
 #| echo: false
-#| fig-width: 5.5
-#| fig-height: 5.5
+#| fig-cap: "Gráfico 1. Edad y peso en 100 lactantes de sexo femenino."
 
 # Set seed for reproducibility
 set.seed(123)
@@ -412,8 +407,6 @@ Donde a es el punto de intersección de la recta con el eje $Y$ y $b$ la pendien
 
 ```{r}
 #| echo: false
-#| fig-width: 5.5
-#| fig-height: 5.5
 
 # reg lineal
 fit <- lm(peso ~ semana, data = bebe)
@@ -489,8 +482,6 @@ Ahora vamos a concentrarnos en la relación entre la varianza de la muestra, a t
 
 ```{r}
 #| echo: false
-#| fig-width: 5.5
-#| fig-height: 5.5
 set.seed(123)
 
 # genera datos
@@ -533,7 +524,7 @@ data1 %>%
    geom_point(color = pal[3], size = 3, alpha = .8) +
   geom_smooth(method = "lm", se = F, color = pal[6]) +
   labs(caption = "ds = 1000, r = 0,99") +
-  theme_minimal_grid() +
+  theme_minimal() +
   theme(axis.text = element_blank())
 ,
 data2 %>% 
@@ -541,7 +532,7 @@ data2 %>%
    geom_point(color = pal[3], size = 3, alpha = .8) +
   geom_smooth(method = "lm", se = F, color = pal[6]) +
   labs(caption = "ds = 1300, r = 0,89") +
-  theme_minimal_grid() +
+  theme_minimal() +
   theme(axis.text = element_blank())
 ,
 data3 %>% 
@@ -549,7 +540,7 @@ data3 %>%
    geom_point(color = pal[3], size = 3, alpha = .8) +
   geom_smooth(method = "lm", se = F, color = pal[6]) +
   labs(caption = "ds = 1500, r = 0,59") +
-  theme_minimal_grid() +
+  theme_minimal() +
   theme(axis.text = element_blank())
 ,
 data4 %>% 
@@ -557,7 +548,7 @@ data4 %>%
    geom_point(color = pal[3], size = 3, alpha = .8) +
   geom_smooth(method = "lm", se = F, color = pal[6]) +
   labs(caption = "ds = 1700, r = 0,28") +
-  theme_minimal_grid() +
+  theme_minimal() +
   theme(axis.text = element_blank()),
 nrow = 2, ncol = 2)
 
@@ -595,8 +586,6 @@ Gráficamente:
 
 ```{r}
 #| echo: false
-#| fig-width: 5.5
-#| fig-height: 5.5
 
 dat <- tibble(x = c(1, 2, 3, 4, 5, 6, 7),
               y = c(2500, 4000, 3000, 5000, 4000, 5500, 3500))
@@ -623,7 +612,7 @@ dat %>%
   annotate(geom = "text", x = 7, y = 3000, label = expression(y[7])) + 
   annotate(geom = "text", x = 7, y = 5000, label = expression(hat(y)[7])) +
   # tema
-  theme_light()
+  theme_minimal()
 ```
 
 Donde:
@@ -708,7 +697,6 @@ El dataset contiene datos agregados sobre la tasa de mortalidad por cáncer, el 
 #| warning: false
 #| message: false
 
-
 ### Carga paquetes
 # tablas salida del modelo
 library(gtsummary)
@@ -719,7 +707,6 @@ library(lmtest)
 library(nortest)
 
 # correlación
-library(dlookr)
 library(ggstatsplot)
 
 # une gráficos de ggplot
@@ -743,16 +730,19 @@ La variable dependiente es la tasa de mortalidad (`target_death_rate`) y la inde
 
 ### Diagrama de dispersión
 
-Para dibujar gráficos de dispersión podemos utilizar funciones de ggplot2.
+Para dibujar gráficos de dispersión podemos utilizar funciones del paquete `ggplot2`.
 
 ```{r}
-#| fig-width: 5.5
-#| fig-height: 5.5
-
+#| echo: false
 datos %>% 
+  
   ggplot(aes(x = median_age, y = target_death_rate)) +
-  geom_point(color = pal[3]) +
-  theme_light()
+  
+  # gráfico de dispersión
+  geom_point(color = "#418A80") + 
+  
+  # modifico color de fondo
+  theme_minimal()
 ```
 
 En todos los casos, lo que observamos en el gráfico es una clara relación inversa entre las variables, dado que las ciudades que tienen altos valores en porcentajes de ciclistas tiene bajos valores en porcentajes de cardiopatías y viceversa.
@@ -812,9 +802,6 @@ La homocedasticidad es conveniente definirla a partir del modelo realizado, dond
 Finalmente para la normalidad utilizamos el mismo análisis previo visto en la unidad anterior (ver [ANOVA - Unidad 2](https://cballejo.github.io/R_Epi_Avanzada/Unidad2/Anova/))
 
 ```{r}
-#| fig-width: 5.5
-#| fig-height: 5.5
-
 ## Test normalidad
 lillie.test(datos$target_death_rate)
 
@@ -826,7 +813,9 @@ datos %>%
   labs(title = "QQplot", 
        x = "Theoretical Quantiles", 
        y = "Sample Quantiles") +
-  theme_classic()
+  
+  # modifico color de fondo
+  theme_minimal()
 ```
 
 Tanto el test de hipótesis como los gráficos de cuantiles nos informan que las distribuciones de la variable dependiente cumple con el criterio de "normalidad".
@@ -1020,7 +1009,7 @@ datos %>%
   geom_point(color = pal[3]) +
   # Añade línea de regresión
   geom_smooth(method = "lm", color = pal[6]) + 
-  theme_classic()
+  theme_minimal()
 ```
 
 ### Residuales
@@ -1069,7 +1058,8 @@ check_model(modelo)
 El argumento `check` nos permite seleccionar cuales gráficos de residuales queremos visualizar (opciones: `"all"`, `"vif"`, `"qq"`, `"normality"`, `"linearity"`, `"ncv"`, `"homogeneity"`, `"outliers"`, `"reqq"`, `"pp_check"`, `"binned_residuals"`, `"overdispersion"`).
 
 ```{r}
-check_model(modelo, check = c("normality","qq", "linearity",                       "homogeneity", "outliers"))
+check_model(modelo, check = c("normality","qq", "linearity",
+                              "homogeneity", "outliers"))
 ```
 
 Además del análisis gráfico/visual de residuos se pueden aplicar test analíticos.
@@ -1144,19 +1134,19 @@ cowplot::plot_grid(
   residuales %>% 
     ggplot(mapping = aes(y = residuales)) +
     geom_boxplot(fill = pal[3]) +
-    theme_classic(),
+    theme_minimal(),
   
   # Residuales normalizados
   residuales %>% 
     ggplot(mapping = aes(y = resid_normalizados)) +
     geom_boxplot(fill = pal[4]) +
-    theme_classic(),
+    theme_minimal(),
   
   # Residuales estudentizados
   residuales %>% 
     ggplot(mapping = aes(y = resid_estudentizados)) +
     geom_boxplot(fill = pal[5]) +
-    theme_classic(),
+    theme_minimal(),
   ncol = 3
 )
 ```
