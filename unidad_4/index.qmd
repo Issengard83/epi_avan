@@ -855,12 +855,6 @@ coef(mod6) %>%
   round(2)
 ```
 
-Podemos llegar al mismo resultado usando el paquete `gtsummary`:
-
-```{r}
-tbl_regression(mod6, exponentiate = T)
-```
-
 Cuando estamos frente a una regresión logística múltiple como en este caso, nos permite obtener las odds-ratio ajustadas por otras variables.
 
 La interpretación sería:
