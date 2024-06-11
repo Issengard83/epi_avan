@@ -144,8 +144,8 @@ window.Quarto = {
   <ul class="collapse">
   <li><a href="#construcción-de-un-modelo-de-regresión-de-poisson-en-r" id="toc-construcción-de-un-modelo-de-regresión-de-poisson-en-r" class="nav-link" data-scroll-target="#construcción-de-un-modelo-de-regresión-de-poisson-en-r">Construcción de un modelo de regresión de Poisson en R</a></li>
   <li><a href="#ejemplo-práctico" id="toc-ejemplo-práctico" class="nav-link" data-scroll-target="#ejemplo-práctico">Ejemplo práctico</a></li>
-  <li><a href="#bibliografía" id="toc-bibliografía" class="nav-link" data-scroll-target="#bibliografía">Bibliografía</a></li>
   </ul></li>
+  <li><a href="#bibliografía" id="toc-bibliografía" class="nav-link" data-scroll-target="#bibliografía">Bibliografía</a></li>
   </ul>
 </nav>
 </div>
@@ -197,7 +197,7 @@ window.Quarto = {
 <p>En la siguiente tabla se remarcan ventajas y desventajas de estos estudios:</p>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
-<div class="tabwid"><style>.cl-30b629f8{table-layout:auto;}.cl-30af9606{font-family:'Helvetica';font-size:12pt;font-weight:bold;font-style:normal;text-decoration:none;color:rgba(255, 255, 255, 1.00);background-color:transparent;}.cl-30af9610{font-family:'Helvetica';font-size:12pt;font-weight:normal;font-style:normal;text-decoration:none;color:rgba(0, 0, 0, 1.00);background-color:transparent;}.cl-30b21c3c{margin:0;text-align:left;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);padding-bottom:5pt;padding-top:5pt;padding-left:5pt;padding-right:5pt;line-height: 1;background-color:transparent;}.cl-30b22c0e{background-color:rgba(57, 131, 132, 1.00);vertical-align: middle;border-bottom: 1.5pt solid rgba(102, 102, 102, 1.00);border-top: 1.5pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-30b22c18{background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-30b22c19{background-color:transparent;vertical-align: middle;border-bottom: 1.5pt solid rgba(102, 102, 102, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}</style><table data-quarto-disable-processing="true" class="cl-30b629f8"><caption><p>Tabla 1. ventajas y desventajas de los estudios de cohorte.</p></caption><thead><tr style="overflow-wrap:break-word;"><th class="cl-30b22c0e"><p class="cl-30b21c3c"><span class="cl-30af9606">Ventajas</span></p></th><th class="cl-30b22c0e"><p class="cl-30b21c3c"><span class="cl-30af9606">Desventajas</span></p></th></tr></thead><tbody><tr style="overflow-wrap:break-word;"><td class="cl-30b22c18"><p class="cl-30b21c3c"><span class="cl-30af9610">Más cercanos a un experimento</span></p></td><td class="cl-30b22c18"><p class="cl-30b21c3c"><span class="cl-30af9610">Cuando se trata de eventos poco frecuentes la complejidad y el costo pueden aumentar considerablemente</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-30b22c18"><p class="cl-30b21c3c"><span class="cl-30af9610">La relación temporal causa efecto es verificable</span></p></td><td class="cl-30b22c18"><p class="cl-30b21c3c"><span class="cl-30af9610">Requiere estudiar y seguir un número grande de participantes</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-30b22c18"><p class="cl-30b21c3c"><span class="cl-30af9610">Se pueden estimar medidas de incidencia</span></p></td><td class="cl-30b22c18"><p class="cl-30b21c3c"><span class="cl-30af9610">Son estudios difíciles de realizar</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-30b22c18"><p class="cl-30b21c3c"><span class="cl-30af9610">Eficientes para evaluar exposiciones poco frecuentes</span></p></td><td class="cl-30b22c18"><p class="cl-30b21c3c"><span class="cl-30af9610"></span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-30b22c18"><p class="cl-30b21c3c"><span class="cl-30af9610">Se pueden estudiar varios eventos</span></p></td><td class="cl-30b22c18"><p class="cl-30b21c3c"><span class="cl-30af9610"></span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-30b22c18"><p class="cl-30b21c3c"><span class="cl-30af9610">Se pueden fijar criterios de calidad en la medición del evento</span></p></td><td class="cl-30b22c18"><p class="cl-30b21c3c"><span class="cl-30af9610"></span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-30b22c19"><p class="cl-30b21c3c"><span class="cl-30af9610">Bajo riesgo de sesgo de selección (en especial en estudios prospectivos)</span></p></td><td class="cl-30b22c19"><p class="cl-30b21c3c"><span class="cl-30af9610"></span></p></td></tr></tbody></table></div>
+<div class="tabwid"><style>.cl-b1c9fa56{table-layout:auto;}.cl-b1c2f904{font-family:'Helvetica';font-size:12pt;font-weight:bold;font-style:normal;text-decoration:none;color:rgba(255, 255, 255, 1.00);background-color:transparent;}.cl-b1c2f918{font-family:'Helvetica';font-size:12pt;font-weight:normal;font-style:normal;text-decoration:none;color:rgba(0, 0, 0, 1.00);background-color:transparent;}.cl-b1c5a2a8{margin:0;text-align:left;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);padding-bottom:5pt;padding-top:5pt;padding-left:5pt;padding-right:5pt;line-height: 1;background-color:transparent;}.cl-b1c5b2a2{background-color:rgba(57, 131, 132, 1.00);vertical-align: middle;border-bottom: 1.5pt solid rgba(102, 102, 102, 1.00);border-top: 1.5pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-b1c5b2ac{background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-b1c5b2ad{background-color:transparent;vertical-align: middle;border-bottom: 1.5pt solid rgba(102, 102, 102, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}</style><table data-quarto-disable-processing="true" class="cl-b1c9fa56"><caption><p>Tabla 1. ventajas y desventajas de los estudios de cohorte.</p></caption><thead><tr style="overflow-wrap:break-word;"><th class="cl-b1c5b2a2"><p class="cl-b1c5a2a8"><span class="cl-b1c2f904">Ventajas</span></p></th><th class="cl-b1c5b2a2"><p class="cl-b1c5a2a8"><span class="cl-b1c2f904">Desventajas</span></p></th></tr></thead><tbody><tr style="overflow-wrap:break-word;"><td class="cl-b1c5b2ac"><p class="cl-b1c5a2a8"><span class="cl-b1c2f918">Más cercanos a un experimento</span></p></td><td class="cl-b1c5b2ac"><p class="cl-b1c5a2a8"><span class="cl-b1c2f918">Cuando se trata de eventos poco frecuentes la complejidad y el costo pueden aumentar considerablemente</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-b1c5b2ac"><p class="cl-b1c5a2a8"><span class="cl-b1c2f918">La relación temporal causa efecto es verificable</span></p></td><td class="cl-b1c5b2ac"><p class="cl-b1c5a2a8"><span class="cl-b1c2f918">Requiere estudiar y seguir un número grande de participantes</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-b1c5b2ac"><p class="cl-b1c5a2a8"><span class="cl-b1c2f918">Se pueden estimar medidas de incidencia</span></p></td><td class="cl-b1c5b2ac"><p class="cl-b1c5a2a8"><span class="cl-b1c2f918">Son estudios difíciles de realizar</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-b1c5b2ac"><p class="cl-b1c5a2a8"><span class="cl-b1c2f918">Eficientes para evaluar exposiciones poco frecuentes</span></p></td><td class="cl-b1c5b2ac"><p class="cl-b1c5a2a8"><span class="cl-b1c2f918"></span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-b1c5b2ac"><p class="cl-b1c5a2a8"><span class="cl-b1c2f918">Se pueden estudiar varios eventos</span></p></td><td class="cl-b1c5b2ac"><p class="cl-b1c5a2a8"><span class="cl-b1c2f918"></span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-b1c5b2ac"><p class="cl-b1c5a2a8"><span class="cl-b1c2f918">Se pueden fijar criterios de calidad en la medición del evento</span></p></td><td class="cl-b1c5b2ac"><p class="cl-b1c5a2a8"><span class="cl-b1c2f918"></span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-b1c5b2ad"><p class="cl-b1c5a2a8"><span class="cl-b1c2f918">Bajo riesgo de sesgo de selección (en especial en estudios prospectivos)</span></p></td><td class="cl-b1c5b2ad"><p class="cl-b1c5a2a8"><span class="cl-b1c2f918"></span></p></td></tr></tbody></table></div>
 </div>
 </div>
 <section id="cómo-analizar-un-estudio-de-cohortes" class="level3">
@@ -209,7 +209,7 @@ window.Quarto = {
 <p>A modo de resumen, compartimos esta tabla, extraída del libro de <span class="citation" data-cites="hernández-ávila2011">Hernández-Ávila (<a href="#ref-hernández-ávila2011" role="doc-biblioref">2011</a>)</span>:</p>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
-<div class="tabwid"><style>.cl-30e31396{table-layout:auto;}.cl-30db3cde{font-family:'Helvetica';font-size:12pt;font-weight:bold;font-style:normal;text-decoration:none;color:rgba(255, 255, 255, 1.00);background-color:transparent;}.cl-30db3ce8{font-family:'Helvetica';font-size:12pt;font-weight:normal;font-style:normal;text-decoration:none;color:rgba(0, 0, 0, 1.00);background-color:transparent;}.cl-30df1d2c{margin:0;text-align:left;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);padding-bottom:5pt;padding-top:5pt;padding-left:5pt;padding-right:5pt;line-height: 1;background-color:transparent;}.cl-30df2b50{background-color:rgba(57, 131, 132, 1.00);vertical-align: middle;border-bottom: 1.5pt solid rgba(102, 102, 102, 1.00);border-top: 1.5pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-30df2b5a{background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-30df2b5b{background-color:transparent;vertical-align: middle;border-bottom: 1.5pt solid rgba(102, 102, 102, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}</style><table data-quarto-disable-processing="true" class="cl-30e31396"><caption><p>Tabla 1. ventajas y desventajas de los estudios de cohorte.</p></caption><thead><tr style="overflow-wrap:break-word;"><th class="cl-30df2b50"><p class="cl-30df1d2c"><span class="cl-30db3cde">Aspecto</span></p></th><th class="cl-30df2b50"><p class="cl-30df1d2c"><span class="cl-30db3cde">Análisis de supervivencia</span></p></th><th class="cl-30df2b50"><p class="cl-30df1d2c"><span class="cl-30db3cde">Análisis basado en tiempo-persona</span></p></th></tr></thead><tbody><tr style="overflow-wrap:break-word;"><td class="cl-30df2b5a"><p class="cl-30df1d2c"><span class="cl-30db3ce8">Tamaño de la muestra</span></p></td><td class="cl-30df2b5a"><p class="cl-30df1d2c"><span class="cl-30db3ce8">Relativamente pequeño</span></p></td><td class="cl-30df2b5a"><p class="cl-30df1d2c"><span class="cl-30db3ce8">Relativamente grande</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-30df2b5a"><p class="cl-30df1d2c"><span class="cl-30db3ce8">Tipo de eventos</span></p></td><td class="cl-30df2b5a"><p class="cl-30df1d2c"><span class="cl-30db3ce8">Frecuentes</span></p></td><td class="cl-30df2b5a"><p class="cl-30df1d2c"><span class="cl-30db3ce8">Raros</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-30df2b5a"><p class="cl-30df1d2c"><span class="cl-30db3ce8">Escala temporal</span></p></td><td class="cl-30df2b5a"><p class="cl-30df1d2c"><span class="cl-30db3ce8">Única</span></p></td><td class="cl-30df2b5a"><p class="cl-30df1d2c"><span class="cl-30db3ce8">Única o múltiple</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-30df2b5a"><p class="cl-30df1d2c"><span class="cl-30db3ce8">Tipos de medida</span></p></td><td class="cl-30df2b5a"><p class="cl-30df1d2c"><span class="cl-30db3ce8">Probabilidad (condicional y acumulada)</span></p></td><td class="cl-30df2b5a"><p class="cl-30df1d2c"><span class="cl-30db3ce8">Tasa (densidad)</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-30df2b5a"><p class="cl-30df1d2c"><span class="cl-30db3ce8">Análisis bivariado</span></p></td><td class="cl-30df2b5a"><p class="cl-30df1d2c"><span class="cl-30db3ce8">Comparación de curvas de supervivencia</span></p></td><td class="cl-30df2b5a"><p class="cl-30df1d2c"><span class="cl-30db3ce8">Comparación de tasas</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-30df2b5a"><p class="cl-30df1d2c"><span class="cl-30db3ce8"></span></p></td><td class="cl-30df2b5a"><p class="cl-30df1d2c"><span class="cl-30db3ce8">Log-rank test</span></p></td><td class="cl-30df2b5a"><p class="cl-30df1d2c"><span class="cl-30db3ce8">Razón de tasas</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-30df2b5a"><p class="cl-30df1d2c"><span class="cl-30db3ce8"></span></p></td><td class="cl-30df2b5a"><p class="cl-30df1d2c"><span class="cl-30db3ce8">Razón de riesgos</span></p></td><td class="cl-30df2b5a"><p class="cl-30df1d2c"><span class="cl-30db3ce8">REM</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-30df2b5b"><p class="cl-30df1d2c"><span class="cl-30db3ce8">Análisis multivariado</span></p></td><td class="cl-30df2b5b"><p class="cl-30df1d2c"><span class="cl-30db3ce8">Regresión de Cox</span></p></td><td class="cl-30df2b5b"><p class="cl-30df1d2c"><span class="cl-30db3ce8">Regresión de Poisson</span></p></td></tr></tbody></table></div>
+<div class="tabwid"><style>.cl-b1f91836{table-layout:auto;}.cl-b1f18364{font-family:'Helvetica';font-size:12pt;font-weight:bold;font-style:normal;text-decoration:none;color:rgba(255, 255, 255, 1.00);background-color:transparent;}.cl-b1f1836e{font-family:'Helvetica';font-size:12pt;font-weight:normal;font-style:normal;text-decoration:none;color:rgba(0, 0, 0, 1.00);background-color:transparent;}.cl-b1f52da2{margin:0;text-align:left;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);padding-bottom:5pt;padding-top:5pt;padding-left:5pt;padding-right:5pt;line-height: 1;background-color:transparent;}.cl-b1f53bf8{background-color:rgba(57, 131, 132, 1.00);vertical-align: middle;border-bottom: 1.5pt solid rgba(102, 102, 102, 1.00);border-top: 1.5pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-b1f53bf9{background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-b1f53bfa{background-color:transparent;vertical-align: middle;border-bottom: 1.5pt solid rgba(102, 102, 102, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}</style><table data-quarto-disable-processing="true" class="cl-b1f91836"><caption><p>Tabla 1. ventajas y desventajas de los estudios de cohorte.</p></caption><thead><tr style="overflow-wrap:break-word;"><th class="cl-b1f53bf8"><p class="cl-b1f52da2"><span class="cl-b1f18364">Aspecto</span></p></th><th class="cl-b1f53bf8"><p class="cl-b1f52da2"><span class="cl-b1f18364">Análisis de supervivencia</span></p></th><th class="cl-b1f53bf8"><p class="cl-b1f52da2"><span class="cl-b1f18364">Análisis basado en tiempo-persona</span></p></th></tr></thead><tbody><tr style="overflow-wrap:break-word;"><td class="cl-b1f53bf9"><p class="cl-b1f52da2"><span class="cl-b1f1836e">Tamaño de la muestra</span></p></td><td class="cl-b1f53bf9"><p class="cl-b1f52da2"><span class="cl-b1f1836e">Relativamente pequeño</span></p></td><td class="cl-b1f53bf9"><p class="cl-b1f52da2"><span class="cl-b1f1836e">Relativamente grande</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-b1f53bf9"><p class="cl-b1f52da2"><span class="cl-b1f1836e">Tipo de eventos</span></p></td><td class="cl-b1f53bf9"><p class="cl-b1f52da2"><span class="cl-b1f1836e">Frecuentes</span></p></td><td class="cl-b1f53bf9"><p class="cl-b1f52da2"><span class="cl-b1f1836e">Raros</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-b1f53bf9"><p class="cl-b1f52da2"><span class="cl-b1f1836e">Escala temporal</span></p></td><td class="cl-b1f53bf9"><p class="cl-b1f52da2"><span class="cl-b1f1836e">Única</span></p></td><td class="cl-b1f53bf9"><p class="cl-b1f52da2"><span class="cl-b1f1836e">Única o múltiple</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-b1f53bf9"><p class="cl-b1f52da2"><span class="cl-b1f1836e">Tipos de medida</span></p></td><td class="cl-b1f53bf9"><p class="cl-b1f52da2"><span class="cl-b1f1836e">Probabilidad (condicional y acumulada)</span></p></td><td class="cl-b1f53bf9"><p class="cl-b1f52da2"><span class="cl-b1f1836e">Tasa (densidad)</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-b1f53bf9"><p class="cl-b1f52da2"><span class="cl-b1f1836e">Análisis bivariado</span></p></td><td class="cl-b1f53bf9"><p class="cl-b1f52da2"><span class="cl-b1f1836e">Comparación de curvas de supervivencia</span></p></td><td class="cl-b1f53bf9"><p class="cl-b1f52da2"><span class="cl-b1f1836e">Comparación de tasas</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-b1f53bf9"><p class="cl-b1f52da2"><span class="cl-b1f1836e"></span></p></td><td class="cl-b1f53bf9"><p class="cl-b1f52da2"><span class="cl-b1f1836e">Log-rank test</span></p></td><td class="cl-b1f53bf9"><p class="cl-b1f52da2"><span class="cl-b1f1836e">Razón de tasas</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-b1f53bf9"><p class="cl-b1f52da2"><span class="cl-b1f1836e"></span></p></td><td class="cl-b1f53bf9"><p class="cl-b1f52da2"><span class="cl-b1f1836e">Razón de riesgos</span></p></td><td class="cl-b1f53bf9"><p class="cl-b1f52da2"><span class="cl-b1f1836e">REM</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-b1f53bfa"><p class="cl-b1f52da2"><span class="cl-b1f1836e">Análisis multivariado</span></p></td><td class="cl-b1f53bfa"><p class="cl-b1f52da2"><span class="cl-b1f1836e">Regresión de Cox</span></p></td><td class="cl-b1f53bfa"><p class="cl-b1f52da2"><span class="cl-b1f1836e">Regresión de Poisson</span></p></td></tr></tbody></table></div>
 </div>
 </div>
 </section>
@@ -384,7 +384,7 @@ $ arsenico     &lt;chr&gt; "&lt;1 año", "1-4 años", "5-14 años", "15+ años",
 <span id="cb12-7"><a href="#cb12-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">flextable</span>() <span class="sc">|&gt;</span> </span>
 <span id="cb12-8"><a href="#cb12-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">autofit</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<div class="tabwid"><style>.cl-317eaffe{}.cl-31786482{font-family:'Arial';font-size:11pt;font-weight:normal;font-style:normal;text-decoration:none;color:rgba(0, 0, 0, 1.00);background-color:transparent;}.cl-317aab34{margin:0;text-align:left;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);padding-bottom:5pt;padding-top:5pt;padding-left:5pt;padding-right:5pt;line-height: 1;background-color:transparent;}.cl-317aab35{margin:0;text-align:right;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);padding-bottom:5pt;padding-top:5pt;padding-left:5pt;padding-right:5pt;line-height: 1;background-color:transparent;}.cl-317abaf2{width:1.016in;background-color:transparent;vertical-align: middle;border-bottom: 1.5pt solid rgba(102, 102, 102, 1.00);border-top: 1.5pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-317abafc{width:0.837in;background-color:transparent;vertical-align: middle;border-bottom: 1.5pt solid rgba(102, 102, 102, 1.00);border-top: 1.5pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-317abafd{width:0.752in;background-color:transparent;vertical-align: middle;border-bottom: 1.5pt solid rgba(102, 102, 102, 1.00);border-top: 1.5pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-317abafe{width:1.016in;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-317abb06{width:0.837in;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-317abb07{width:0.752in;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-317abb08{width:1.016in;background-color:transparent;vertical-align: middle;border-bottom: 1.5pt solid rgba(102, 102, 102, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-317abb10{width:0.837in;background-color:transparent;vertical-align: middle;border-bottom: 1.5pt solid rgba(102, 102, 102, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-317abb11{width:0.752in;background-color:transparent;vertical-align: middle;border-bottom: 1.5pt solid rgba(102, 102, 102, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}</style><table data-quarto-disable-processing="true" class="cl-317eaffe"><thead><tr style="overflow-wrap:break-word;"><th class="cl-317abaf2"><p class="cl-317aab34"><span class="cl-31786482">periodo</span></p></th><th class="cl-317abafc"><p class="cl-317aab35"><span class="cl-31786482">40-49</span></p></th><th class="cl-317abafc"><p class="cl-317aab35"><span class="cl-31786482">50-59</span></p></th><th class="cl-317abafd"><p class="cl-317aab35"><span class="cl-31786482">60-69</span></p></th><th class="cl-317abafd"><p class="cl-317aab35"><span class="cl-31786482">70-79</span></p></th></tr></thead><tbody><tr style="overflow-wrap:break-word;"><td class="cl-317abafe"><p class="cl-317aab34"><span class="cl-31786482">1938-1949</span></p></td><td class="cl-317abb06"><p class="cl-317aab35"><span class="cl-31786482">92,171</span></p></td><td class="cl-317abb06"><p class="cl-317aab35"><span class="cl-31786482">64,211</span></p></td><td class="cl-317abb07"><p class="cl-317aab35"><span class="cl-31786482">40,056</span></p></td><td class="cl-317abb07"><p class="cl-317aab35"><span class="cl-31786482">15,072</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-317abafe"><p class="cl-317aab34"><span class="cl-31786482">1950-1959</span></p></td><td class="cl-317abb06"><p class="cl-317aab35"><span class="cl-31786482">149,493</span></p></td><td class="cl-317abb06"><p class="cl-317aab35"><span class="cl-31786482">102,234</span></p></td><td class="cl-317abb07"><p class="cl-317aab35"><span class="cl-31786482">48,960</span></p></td><td class="cl-317abb07"><p class="cl-317aab35"><span class="cl-31786482">18,511</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-317abafe"><p class="cl-317aab34"><span class="cl-31786482">1960-1969</span></p></td><td class="cl-317abb06"><p class="cl-317aab35"><span class="cl-31786482">161,234</span></p></td><td class="cl-317abb06"><p class="cl-317aab35"><span class="cl-31786482">136,627</span></p></td><td class="cl-317abb07"><p class="cl-317aab35"><span class="cl-31786482">75,552</span></p></td><td class="cl-317abb07"><p class="cl-317aab35"><span class="cl-31786482">27,240</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-317abb08"><p class="cl-317aab34"><span class="cl-31786482">1970-1977</span></p></td><td class="cl-317abb10"><p class="cl-317aab35"><span class="cl-31786482">90,730</span></p></td><td class="cl-317abb10"><p class="cl-317aab35"><span class="cl-31786482">115,040</span></p></td><td class="cl-317abb11"><p class="cl-317aab35"><span class="cl-31786482">79,366</span></p></td><td class="cl-317abb11"><p class="cl-317aab35"><span class="cl-31786482">33,410</span></p></td></tr></tbody></table></div>
+<div class="tabwid"><style>.cl-b29679aa{}.cl-b29032b6{font-family:'Arial';font-size:11pt;font-weight:normal;font-style:normal;text-decoration:none;color:rgba(0, 0, 0, 1.00);background-color:transparent;}.cl-b2927e54{margin:0;text-align:left;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);padding-bottom:5pt;padding-top:5pt;padding-left:5pt;padding-right:5pt;line-height: 1;background-color:transparent;}.cl-b2927e5e{margin:0;text-align:right;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);padding-bottom:5pt;padding-top:5pt;padding-left:5pt;padding-right:5pt;line-height: 1;background-color:transparent;}.cl-b2928e08{width:1.016in;background-color:transparent;vertical-align: middle;border-bottom: 1.5pt solid rgba(102, 102, 102, 1.00);border-top: 1.5pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-b2928e09{width:0.837in;background-color:transparent;vertical-align: middle;border-bottom: 1.5pt solid rgba(102, 102, 102, 1.00);border-top: 1.5pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-b2928e0a{width:0.752in;background-color:transparent;vertical-align: middle;border-bottom: 1.5pt solid rgba(102, 102, 102, 1.00);border-top: 1.5pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-b2928e12{width:1.016in;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-b2928e13{width:0.837in;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-b2928e14{width:0.752in;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-b2928e1c{width:1.016in;background-color:transparent;vertical-align: middle;border-bottom: 1.5pt solid rgba(102, 102, 102, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-b2928e1d{width:0.837in;background-color:transparent;vertical-align: middle;border-bottom: 1.5pt solid rgba(102, 102, 102, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-b2928e1e{width:0.752in;background-color:transparent;vertical-align: middle;border-bottom: 1.5pt solid rgba(102, 102, 102, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}</style><table data-quarto-disable-processing="true" class="cl-b29679aa"><thead><tr style="overflow-wrap:break-word;"><th class="cl-b2928e08"><p class="cl-b2927e54"><span class="cl-b29032b6">periodo</span></p></th><th class="cl-b2928e09"><p class="cl-b2927e5e"><span class="cl-b29032b6">40-49</span></p></th><th class="cl-b2928e09"><p class="cl-b2927e5e"><span class="cl-b29032b6">50-59</span></p></th><th class="cl-b2928e0a"><p class="cl-b2927e5e"><span class="cl-b29032b6">60-69</span></p></th><th class="cl-b2928e0a"><p class="cl-b2927e5e"><span class="cl-b29032b6">70-79</span></p></th></tr></thead><tbody><tr style="overflow-wrap:break-word;"><td class="cl-b2928e12"><p class="cl-b2927e54"><span class="cl-b29032b6">1938-1949</span></p></td><td class="cl-b2928e13"><p class="cl-b2927e5e"><span class="cl-b29032b6">92,171</span></p></td><td class="cl-b2928e13"><p class="cl-b2927e5e"><span class="cl-b29032b6">64,211</span></p></td><td class="cl-b2928e14"><p class="cl-b2927e5e"><span class="cl-b29032b6">40,056</span></p></td><td class="cl-b2928e14"><p class="cl-b2927e5e"><span class="cl-b29032b6">15,072</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-b2928e12"><p class="cl-b2927e54"><span class="cl-b29032b6">1950-1959</span></p></td><td class="cl-b2928e13"><p class="cl-b2927e5e"><span class="cl-b29032b6">149,493</span></p></td><td class="cl-b2928e13"><p class="cl-b2927e5e"><span class="cl-b29032b6">102,234</span></p></td><td class="cl-b2928e14"><p class="cl-b2927e5e"><span class="cl-b29032b6">48,960</span></p></td><td class="cl-b2928e14"><p class="cl-b2927e5e"><span class="cl-b29032b6">18,511</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-b2928e12"><p class="cl-b2927e54"><span class="cl-b29032b6">1960-1969</span></p></td><td class="cl-b2928e13"><p class="cl-b2927e5e"><span class="cl-b29032b6">161,234</span></p></td><td class="cl-b2928e13"><p class="cl-b2927e5e"><span class="cl-b29032b6">136,627</span></p></td><td class="cl-b2928e14"><p class="cl-b2927e5e"><span class="cl-b29032b6">75,552</span></p></td><td class="cl-b2928e14"><p class="cl-b2927e5e"><span class="cl-b29032b6">27,240</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-b2928e1c"><p class="cl-b2927e54"><span class="cl-b29032b6">1970-1977</span></p></td><td class="cl-b2928e1d"><p class="cl-b2927e5e"><span class="cl-b29032b6">90,730</span></p></td><td class="cl-b2928e1d"><p class="cl-b2927e5e"><span class="cl-b29032b6">115,040</span></p></td><td class="cl-b2928e1e"><p class="cl-b2927e5e"><span class="cl-b29032b6">79,366</span></p></td><td class="cl-b2928e1e"><p class="cl-b2927e5e"><span class="cl-b29032b6">33,410</span></p></td></tr></tbody></table></div>
 </div>
 </div>
 <p>Ahora hacemos lo mismo para el número de muertes y calculamos la incidencia por 10000 personas-año para cada celda:</p>
@@ -406,7 +406,7 @@ $ arsenico     &lt;chr&gt; "&lt;1 año", "1-4 años", "5-14 años", "15+ años",
 <span id="cb13-15"><a href="#cb13-15" aria-hidden="true" tabindex="-1"></a>  <span class="fu">flextable</span>() <span class="sc">|&gt;</span> </span>
 <span id="cb13-16"><a href="#cb13-16" aria-hidden="true" tabindex="-1"></a>  <span class="fu">autofit</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<div class="tabwid"><style>.cl-31abe654{}.cl-31a50582{font-family:'Arial';font-size:11pt;font-weight:normal;font-style:normal;text-decoration:none;color:rgba(0, 0, 0, 1.00);background-color:transparent;}.cl-31a75b7a{margin:0;text-align:left;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);padding-bottom:5pt;padding-top:5pt;padding-left:5pt;padding-right:5pt;line-height: 1;background-color:transparent;}.cl-31a75b84{margin:0;text-align:right;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);padding-bottom:5pt;padding-top:5pt;padding-left:5pt;padding-right:5pt;line-height: 1;background-color:transparent;}.cl-31a76a84{width:1.016in;background-color:transparent;vertical-align: middle;border-bottom: 1.5pt solid rgba(102, 102, 102, 1.00);border-top: 1.5pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-31a76a85{width:1.101in;background-color:transparent;vertical-align: middle;border-bottom: 1.5pt solid rgba(102, 102, 102, 1.00);border-top: 1.5pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-31a76a8e{width:0.965in;background-color:transparent;vertical-align: middle;border-bottom: 1.5pt solid rgba(102, 102, 102, 1.00);border-top: 1.5pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-31a76a8f{width:1.016in;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-31a76a90{width:1.101in;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-31a76a91{width:0.965in;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-31a76a98{width:1.016in;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-31a76a99{width:1.101in;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-31a76a9a{width:0.965in;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-31a76aa2{width:1.016in;background-color:transparent;vertical-align: middle;border-bottom: 1.5pt solid rgba(102, 102, 102, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-31a76aa3{width:1.101in;background-color:transparent;vertical-align: middle;border-bottom: 1.5pt solid rgba(102, 102, 102, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-31a76aa4{width:0.965in;background-color:transparent;vertical-align: middle;border-bottom: 1.5pt solid rgba(102, 102, 102, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}</style><table data-quarto-disable-processing="true" class="cl-31abe654"><thead><tr style="overflow-wrap:break-word;"><th class="cl-31a76a84"><p class="cl-31a75b7a"><span class="cl-31a50582">periodo</span></p></th><th class="cl-31a76a85"><p class="cl-31a75b7a"><span class="cl-31a50582">grupo_edad</span></p></th><th class="cl-31a76a8e"><p class="cl-31a75b84"><span class="cl-31a50582">incidencia</span></p></th></tr></thead><tbody><tr style="overflow-wrap:break-word;"><td class="cl-31a76a8f"><p class="cl-31a75b7a"><span class="cl-31a50582">1938-1949</span></p></td><td class="cl-31a76a90"><p class="cl-31a75b7a"><span class="cl-31a50582">40-49</span></p></td><td class="cl-31a76a91"><p class="cl-31a75b84"><span class="cl-31a50582">0.54</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-31a76a8f"><p class="cl-31a75b7a"><span class="cl-31a50582">1938-1949</span></p></td><td class="cl-31a76a90"><p class="cl-31a75b7a"><span class="cl-31a50582">50-59</span></p></td><td class="cl-31a76a91"><p class="cl-31a75b84"><span class="cl-31a50582">1.71</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-31a76a8f"><p class="cl-31a75b7a"><span class="cl-31a50582">1938-1949</span></p></td><td class="cl-31a76a90"><p class="cl-31a75b7a"><span class="cl-31a50582">60-69</span></p></td><td class="cl-31a76a91"><p class="cl-31a75b84"><span class="cl-31a50582">3.50</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-31a76a8f"><p class="cl-31a75b7a"><span class="cl-31a50582">1938-1949</span></p></td><td class="cl-31a76a90"><p class="cl-31a75b7a"><span class="cl-31a50582">70-79</span></p></td><td class="cl-31a76a91"><p class="cl-31a75b84"><span class="cl-31a50582">2.65</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-31a76a8f"><p class="cl-31a75b7a"><span class="cl-31a50582">1950-1959</span></p></td><td class="cl-31a76a90"><p class="cl-31a75b7a"><span class="cl-31a50582">40-49</span></p></td><td class="cl-31a76a91"><p class="cl-31a75b84"><span class="cl-31a50582">0.33</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-31a76a8f"><p class="cl-31a75b7a"><span class="cl-31a50582">1950-1959</span></p></td><td class="cl-31a76a90"><p class="cl-31a75b7a"><span class="cl-31a50582">50-59</span></p></td><td class="cl-31a76a91"><p class="cl-31a75b84"><span class="cl-31a50582">2.35</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-31a76a98"><p class="cl-31a75b7a"><span class="cl-31a50582">1950-1959</span></p></td><td class="cl-31a76a99"><p class="cl-31a75b7a"><span class="cl-31a50582">60-69</span></p></td><td class="cl-31a76a9a"><p class="cl-31a75b84"><span class="cl-31a50582">4.90</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-31a76a98"><p class="cl-31a75b7a"><span class="cl-31a50582">1950-1959</span></p></td><td class="cl-31a76a99"><p class="cl-31a75b7a"><span class="cl-31a50582">70-79</span></p></td><td class="cl-31a76a9a"><p class="cl-31a75b84"><span class="cl-31a50582">6.48</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-31a76a8f"><p class="cl-31a75b7a"><span class="cl-31a50582">1960-1969</span></p></td><td class="cl-31a76a90"><p class="cl-31a75b7a"><span class="cl-31a50582">40-49</span></p></td><td class="cl-31a76a91"><p class="cl-31a75b84"><span class="cl-31a50582">0.43</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-31a76a98"><p class="cl-31a75b7a"><span class="cl-31a50582">1960-1969</span></p></td><td class="cl-31a76a99"><p class="cl-31a75b7a"><span class="cl-31a50582">50-59</span></p></td><td class="cl-31a76a9a"><p class="cl-31a75b84"><span class="cl-31a50582">2.05</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-31a76a98"><p class="cl-31a75b7a"><span class="cl-31a50582">1960-1969</span></p></td><td class="cl-31a76a99"><p class="cl-31a75b7a"><span class="cl-31a50582">60-69</span></p></td><td class="cl-31a76a9a"><p class="cl-31a75b84"><span class="cl-31a50582">5.82</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-31a76a98"><p class="cl-31a75b7a"><span class="cl-31a50582">1960-1969</span></p></td><td class="cl-31a76a99"><p class="cl-31a75b7a"><span class="cl-31a50582">70-79</span></p></td><td class="cl-31a76a9a"><p class="cl-31a75b84"><span class="cl-31a50582">5.51</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-31a76a98"><p class="cl-31a75b7a"><span class="cl-31a50582">1970-1977</span></p></td><td class="cl-31a76a99"><p class="cl-31a75b7a"><span class="cl-31a50582">40-49</span></p></td><td class="cl-31a76a9a"><p class="cl-31a75b84"><span class="cl-31a50582">0.44</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-31a76a98"><p class="cl-31a75b7a"><span class="cl-31a50582">1970-1977</span></p></td><td class="cl-31a76a99"><p class="cl-31a75b7a"><span class="cl-31a50582">50-59</span></p></td><td class="cl-31a76a9a"><p class="cl-31a75b84"><span class="cl-31a50582">1.48</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-31a76a98"><p class="cl-31a75b7a"><span class="cl-31a50582">1970-1977</span></p></td><td class="cl-31a76a99"><p class="cl-31a75b7a"><span class="cl-31a50582">60-69</span></p></td><td class="cl-31a76a9a"><p class="cl-31a75b84"><span class="cl-31a50582">4.41</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-31a76aa2"><p class="cl-31a75b7a"><span class="cl-31a50582">1970-1977</span></p></td><td class="cl-31a76aa3"><p class="cl-31a75b7a"><span class="cl-31a50582">70-79</span></p></td><td class="cl-31a76aa4"><p class="cl-31a75b84"><span class="cl-31a50582">8.08</span></p></td></tr></tbody></table></div>
+<div class="tabwid"><style>.cl-b2c2794c{}.cl-b2bb9ec4{font-family:'Arial';font-size:11pt;font-weight:normal;font-style:normal;text-decoration:none;color:rgba(0, 0, 0, 1.00);background-color:transparent;}.cl-b2bdea62{margin:0;text-align:left;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);padding-bottom:5pt;padding-top:5pt;padding-left:5pt;padding-right:5pt;line-height: 1;background-color:transparent;}.cl-b2bdea6c{margin:0;text-align:right;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);padding-bottom:5pt;padding-top:5pt;padding-left:5pt;padding-right:5pt;line-height: 1;background-color:transparent;}.cl-b2bdfa16{width:1.016in;background-color:transparent;vertical-align: middle;border-bottom: 1.5pt solid rgba(102, 102, 102, 1.00);border-top: 1.5pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-b2bdfa17{width:1.101in;background-color:transparent;vertical-align: middle;border-bottom: 1.5pt solid rgba(102, 102, 102, 1.00);border-top: 1.5pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-b2bdfa20{width:0.965in;background-color:transparent;vertical-align: middle;border-bottom: 1.5pt solid rgba(102, 102, 102, 1.00);border-top: 1.5pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-b2bdfa21{width:1.016in;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-b2bdfa22{width:1.101in;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-b2bdfa2a{width:0.965in;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-b2bdfa2b{width:1.016in;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-b2bdfa2c{width:1.101in;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-b2bdfa2d{width:0.965in;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-b2bdfa2e{width:1.016in;background-color:transparent;vertical-align: middle;border-bottom: 1.5pt solid rgba(102, 102, 102, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-b2bdfa34{width:1.101in;background-color:transparent;vertical-align: middle;border-bottom: 1.5pt solid rgba(102, 102, 102, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-b2bdfa35{width:0.965in;background-color:transparent;vertical-align: middle;border-bottom: 1.5pt solid rgba(102, 102, 102, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}</style><table data-quarto-disable-processing="true" class="cl-b2c2794c"><thead><tr style="overflow-wrap:break-word;"><th class="cl-b2bdfa16"><p class="cl-b2bdea62"><span class="cl-b2bb9ec4">periodo</span></p></th><th class="cl-b2bdfa17"><p class="cl-b2bdea62"><span class="cl-b2bb9ec4">grupo_edad</span></p></th><th class="cl-b2bdfa20"><p class="cl-b2bdea6c"><span class="cl-b2bb9ec4">incidencia</span></p></th></tr></thead><tbody><tr style="overflow-wrap:break-word;"><td class="cl-b2bdfa21"><p class="cl-b2bdea62"><span class="cl-b2bb9ec4">1938-1949</span></p></td><td class="cl-b2bdfa22"><p class="cl-b2bdea62"><span class="cl-b2bb9ec4">40-49</span></p></td><td class="cl-b2bdfa2a"><p class="cl-b2bdea6c"><span class="cl-b2bb9ec4">0.54</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-b2bdfa21"><p class="cl-b2bdea62"><span class="cl-b2bb9ec4">1938-1949</span></p></td><td class="cl-b2bdfa22"><p class="cl-b2bdea62"><span class="cl-b2bb9ec4">50-59</span></p></td><td class="cl-b2bdfa2a"><p class="cl-b2bdea6c"><span class="cl-b2bb9ec4">1.71</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-b2bdfa21"><p class="cl-b2bdea62"><span class="cl-b2bb9ec4">1938-1949</span></p></td><td class="cl-b2bdfa22"><p class="cl-b2bdea62"><span class="cl-b2bb9ec4">60-69</span></p></td><td class="cl-b2bdfa2a"><p class="cl-b2bdea6c"><span class="cl-b2bb9ec4">3.50</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-b2bdfa21"><p class="cl-b2bdea62"><span class="cl-b2bb9ec4">1938-1949</span></p></td><td class="cl-b2bdfa22"><p class="cl-b2bdea62"><span class="cl-b2bb9ec4">70-79</span></p></td><td class="cl-b2bdfa2a"><p class="cl-b2bdea6c"><span class="cl-b2bb9ec4">2.65</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-b2bdfa21"><p class="cl-b2bdea62"><span class="cl-b2bb9ec4">1950-1959</span></p></td><td class="cl-b2bdfa22"><p class="cl-b2bdea62"><span class="cl-b2bb9ec4">40-49</span></p></td><td class="cl-b2bdfa2a"><p class="cl-b2bdea6c"><span class="cl-b2bb9ec4">0.33</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-b2bdfa21"><p class="cl-b2bdea62"><span class="cl-b2bb9ec4">1950-1959</span></p></td><td class="cl-b2bdfa22"><p class="cl-b2bdea62"><span class="cl-b2bb9ec4">50-59</span></p></td><td class="cl-b2bdfa2a"><p class="cl-b2bdea6c"><span class="cl-b2bb9ec4">2.35</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-b2bdfa2b"><p class="cl-b2bdea62"><span class="cl-b2bb9ec4">1950-1959</span></p></td><td class="cl-b2bdfa2c"><p class="cl-b2bdea62"><span class="cl-b2bb9ec4">60-69</span></p></td><td class="cl-b2bdfa2d"><p class="cl-b2bdea6c"><span class="cl-b2bb9ec4">4.90</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-b2bdfa2b"><p class="cl-b2bdea62"><span class="cl-b2bb9ec4">1950-1959</span></p></td><td class="cl-b2bdfa2c"><p class="cl-b2bdea62"><span class="cl-b2bb9ec4">70-79</span></p></td><td class="cl-b2bdfa2d"><p class="cl-b2bdea6c"><span class="cl-b2bb9ec4">6.48</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-b2bdfa21"><p class="cl-b2bdea62"><span class="cl-b2bb9ec4">1960-1969</span></p></td><td class="cl-b2bdfa22"><p class="cl-b2bdea62"><span class="cl-b2bb9ec4">40-49</span></p></td><td class="cl-b2bdfa2a"><p class="cl-b2bdea6c"><span class="cl-b2bb9ec4">0.43</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-b2bdfa2b"><p class="cl-b2bdea62"><span class="cl-b2bb9ec4">1960-1969</span></p></td><td class="cl-b2bdfa2c"><p class="cl-b2bdea62"><span class="cl-b2bb9ec4">50-59</span></p></td><td class="cl-b2bdfa2d"><p class="cl-b2bdea6c"><span class="cl-b2bb9ec4">2.05</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-b2bdfa2b"><p class="cl-b2bdea62"><span class="cl-b2bb9ec4">1960-1969</span></p></td><td class="cl-b2bdfa2c"><p class="cl-b2bdea62"><span class="cl-b2bb9ec4">60-69</span></p></td><td class="cl-b2bdfa2d"><p class="cl-b2bdea6c"><span class="cl-b2bb9ec4">5.82</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-b2bdfa2b"><p class="cl-b2bdea62"><span class="cl-b2bb9ec4">1960-1969</span></p></td><td class="cl-b2bdfa2c"><p class="cl-b2bdea62"><span class="cl-b2bb9ec4">70-79</span></p></td><td class="cl-b2bdfa2d"><p class="cl-b2bdea6c"><span class="cl-b2bb9ec4">5.51</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-b2bdfa2b"><p class="cl-b2bdea62"><span class="cl-b2bb9ec4">1970-1977</span></p></td><td class="cl-b2bdfa2c"><p class="cl-b2bdea62"><span class="cl-b2bb9ec4">40-49</span></p></td><td class="cl-b2bdfa2d"><p class="cl-b2bdea6c"><span class="cl-b2bb9ec4">0.44</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-b2bdfa2b"><p class="cl-b2bdea62"><span class="cl-b2bb9ec4">1970-1977</span></p></td><td class="cl-b2bdfa2c"><p class="cl-b2bdea62"><span class="cl-b2bb9ec4">50-59</span></p></td><td class="cl-b2bdfa2d"><p class="cl-b2bdea6c"><span class="cl-b2bb9ec4">1.48</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-b2bdfa2b"><p class="cl-b2bdea62"><span class="cl-b2bb9ec4">1970-1977</span></p></td><td class="cl-b2bdfa2c"><p class="cl-b2bdea62"><span class="cl-b2bb9ec4">60-69</span></p></td><td class="cl-b2bdfa2d"><p class="cl-b2bdea6c"><span class="cl-b2bb9ec4">4.41</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-b2bdfa2e"><p class="cl-b2bdea62"><span class="cl-b2bb9ec4">1970-1977</span></p></td><td class="cl-b2bdfa34"><p class="cl-b2bdea62"><span class="cl-b2bb9ec4">70-79</span></p></td><td class="cl-b2bdfa35"><p class="cl-b2bdea6c"><span class="cl-b2bb9ec4">8.08</span></p></td></tr></tbody></table></div>
 </div>
 </div>
 <p>Podemos verlo mejor en un gráfico, por razones de extensión omitiremos el código, pero si tienen interés pueden solicitarlo al equipo docente:</p>
@@ -583,23 +583,23 @@ Number of Fisher Scoring iterations: 5</code></pre>
 <div class="cell" data-layout-align="center">
 <div class="sourceCode cell-code" id="cb29"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a><span class="fu">tbl_regression</span>(mod3, <span class="at">exponentiate =</span> T)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<div id="ljlzhhhzgr" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#ljlzhhhzgr table {
+<div id="idtgbymygg" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#idtgbymygg table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#ljlzhhhzgr thead, #ljlzhhhzgr tbody, #ljlzhhhzgr tfoot, #ljlzhhhzgr tr, #ljlzhhhzgr td, #ljlzhhhzgr th {
+#idtgbymygg thead, #idtgbymygg tbody, #idtgbymygg tfoot, #idtgbymygg tr, #idtgbymygg td, #idtgbymygg th {
   border-style: none;
 }
 
-#ljlzhhhzgr p {
+#idtgbymygg p {
   margin: 0;
   padding: 0;
 }
 
-#ljlzhhhzgr .gt_table {
+#idtgbymygg .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -625,12 +625,12 @@ Number of Fisher Scoring iterations: 5</code></pre>
   border-left-color: #D3D3D3;
 }
 
-#ljlzhhhzgr .gt_caption {
+#idtgbymygg .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#ljlzhhhzgr .gt_title {
+#idtgbymygg .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -642,7 +642,7 @@ Number of Fisher Scoring iterations: 5</code></pre>
   border-bottom-width: 0;
 }
 
-#ljlzhhhzgr .gt_subtitle {
+#idtgbymygg .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -654,7 +654,7 @@ Number of Fisher Scoring iterations: 5</code></pre>
   border-top-width: 0;
 }
 
-#ljlzhhhzgr .gt_heading {
+#idtgbymygg .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -666,13 +666,13 @@ Number of Fisher Scoring iterations: 5</code></pre>
   border-right-color: #D3D3D3;
 }
 
-#ljlzhhhzgr .gt_bottom_border {
+#idtgbymygg .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#ljlzhhhzgr .gt_col_headings {
+#idtgbymygg .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -687,7 +687,7 @@ Number of Fisher Scoring iterations: 5</code></pre>
   border-right-color: #D3D3D3;
 }
 
-#ljlzhhhzgr .gt_col_heading {
+#idtgbymygg .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -707,7 +707,7 @@ Number of Fisher Scoring iterations: 5</code></pre>
   overflow-x: hidden;
 }
 
-#ljlzhhhzgr .gt_column_spanner_outer {
+#idtgbymygg .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -719,15 +719,15 @@ Number of Fisher Scoring iterations: 5</code></pre>
   padding-right: 4px;
 }
 
-#ljlzhhhzgr .gt_column_spanner_outer:first-child {
+#idtgbymygg .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#ljlzhhhzgr .gt_column_spanner_outer:last-child {
+#idtgbymygg .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#ljlzhhhzgr .gt_column_spanner {
+#idtgbymygg .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -739,11 +739,11 @@ Number of Fisher Scoring iterations: 5</code></pre>
   width: 100%;
 }
 
-#ljlzhhhzgr .gt_spanner_row {
+#idtgbymygg .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#ljlzhhhzgr .gt_group_heading {
+#idtgbymygg .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -769,7 +769,7 @@ Number of Fisher Scoring iterations: 5</code></pre>
   text-align: left;
 }
 
-#ljlzhhhzgr .gt_empty_group_heading {
+#idtgbymygg .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -784,15 +784,15 @@ Number of Fisher Scoring iterations: 5</code></pre>
   vertical-align: middle;
 }
 
-#ljlzhhhzgr .gt_from_md > :first-child {
+#idtgbymygg .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#ljlzhhhzgr .gt_from_md > :last-child {
+#idtgbymygg .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#ljlzhhhzgr .gt_row {
+#idtgbymygg .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -811,7 +811,7 @@ Number of Fisher Scoring iterations: 5</code></pre>
   overflow-x: hidden;
 }
 
-#ljlzhhhzgr .gt_stub {
+#idtgbymygg .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -824,7 +824,7 @@ Number of Fisher Scoring iterations: 5</code></pre>
   padding-right: 5px;
 }
 
-#ljlzhhhzgr .gt_stub_row_group {
+#idtgbymygg .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -838,15 +838,15 @@ Number of Fisher Scoring iterations: 5</code></pre>
   vertical-align: top;
 }
 
-#ljlzhhhzgr .gt_row_group_first td {
+#idtgbymygg .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#ljlzhhhzgr .gt_row_group_first th {
+#idtgbymygg .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#ljlzhhhzgr .gt_summary_row {
+#idtgbymygg .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -856,16 +856,16 @@ Number of Fisher Scoring iterations: 5</code></pre>
   padding-right: 5px;
 }
 
-#ljlzhhhzgr .gt_first_summary_row {
+#idtgbymygg .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#ljlzhhhzgr .gt_first_summary_row.thick {
+#idtgbymygg .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#ljlzhhhzgr .gt_last_summary_row {
+#idtgbymygg .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -875,7 +875,7 @@ Number of Fisher Scoring iterations: 5</code></pre>
   border-bottom-color: #D3D3D3;
 }
 
-#ljlzhhhzgr .gt_grand_summary_row {
+#idtgbymygg .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -885,7 +885,7 @@ Number of Fisher Scoring iterations: 5</code></pre>
   padding-right: 5px;
 }
 
-#ljlzhhhzgr .gt_first_grand_summary_row {
+#idtgbymygg .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -895,7 +895,7 @@ Number of Fisher Scoring iterations: 5</code></pre>
   border-top-color: #D3D3D3;
 }
 
-#ljlzhhhzgr .gt_last_grand_summary_row_top {
+#idtgbymygg .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -905,11 +905,11 @@ Number of Fisher Scoring iterations: 5</code></pre>
   border-bottom-color: #D3D3D3;
 }
 
-#ljlzhhhzgr .gt_striped {
+#idtgbymygg .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#ljlzhhhzgr .gt_table_body {
+#idtgbymygg .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -918,7 +918,7 @@ Number of Fisher Scoring iterations: 5</code></pre>
   border-bottom-color: #D3D3D3;
 }
 
-#ljlzhhhzgr .gt_footnotes {
+#idtgbymygg .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -932,7 +932,7 @@ Number of Fisher Scoring iterations: 5</code></pre>
   border-right-color: #D3D3D3;
 }
 
-#ljlzhhhzgr .gt_footnote {
+#idtgbymygg .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -941,7 +941,7 @@ Number of Fisher Scoring iterations: 5</code></pre>
   padding-right: 5px;
 }
 
-#ljlzhhhzgr .gt_sourcenotes {
+#idtgbymygg .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -955,7 +955,7 @@ Number of Fisher Scoring iterations: 5</code></pre>
   border-right-color: #D3D3D3;
 }
 
-#ljlzhhhzgr .gt_sourcenote {
+#idtgbymygg .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -963,63 +963,63 @@ Number of Fisher Scoring iterations: 5</code></pre>
   padding-right: 5px;
 }
 
-#ljlzhhhzgr .gt_left {
+#idtgbymygg .gt_left {
   text-align: left;
 }
 
-#ljlzhhhzgr .gt_center {
+#idtgbymygg .gt_center {
   text-align: center;
 }
 
-#ljlzhhhzgr .gt_right {
+#idtgbymygg .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#ljlzhhhzgr .gt_font_normal {
+#idtgbymygg .gt_font_normal {
   font-weight: normal;
 }
 
-#ljlzhhhzgr .gt_font_bold {
+#idtgbymygg .gt_font_bold {
   font-weight: bold;
 }
 
-#ljlzhhhzgr .gt_font_italic {
+#idtgbymygg .gt_font_italic {
   font-style: italic;
 }
 
-#ljlzhhhzgr .gt_super {
+#idtgbymygg .gt_super {
   font-size: 65%;
 }
 
-#ljlzhhhzgr .gt_footnote_marks {
+#idtgbymygg .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#ljlzhhhzgr .gt_asterisk {
+#idtgbymygg .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#ljlzhhhzgr .gt_indent_1 {
+#idtgbymygg .gt_indent_1 {
   text-indent: 5px;
 }
 
-#ljlzhhhzgr .gt_indent_2 {
+#idtgbymygg .gt_indent_2 {
   text-indent: 10px;
 }
 
-#ljlzhhhzgr .gt_indent_3 {
+#idtgbymygg .gt_indent_3 {
   text-indent: 15px;
 }
 
-#ljlzhhhzgr .gt_indent_4 {
+#idtgbymygg .gt_indent_4 {
   text-indent: 20px;
 }
 
-#ljlzhhhzgr .gt_indent_5 {
+#idtgbymygg .gt_indent_5 {
   text-indent: 25px;
 }
 </style>
@@ -1189,23 +1189,23 @@ Number of Fisher Scoring iterations: 5</code></pre>
 <div class="cell" data-layout-align="center">
 <div class="sourceCode cell-code" id="cb36"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb36-1"><a href="#cb36-1" aria-hidden="true" tabindex="-1"></a><span class="fu">tbl_regression</span>(mod5, <span class="at">exponentiate =</span> T)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<div id="glarkqqosl" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#glarkqqosl table {
+<div id="mhlzazzket" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#mhlzazzket table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#glarkqqosl thead, #glarkqqosl tbody, #glarkqqosl tfoot, #glarkqqosl tr, #glarkqqosl td, #glarkqqosl th {
+#mhlzazzket thead, #mhlzazzket tbody, #mhlzazzket tfoot, #mhlzazzket tr, #mhlzazzket td, #mhlzazzket th {
   border-style: none;
 }
 
-#glarkqqosl p {
+#mhlzazzket p {
   margin: 0;
   padding: 0;
 }
 
-#glarkqqosl .gt_table {
+#mhlzazzket .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -1231,12 +1231,12 @@ Number of Fisher Scoring iterations: 5</code></pre>
   border-left-color: #D3D3D3;
 }
 
-#glarkqqosl .gt_caption {
+#mhlzazzket .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#glarkqqosl .gt_title {
+#mhlzazzket .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -1248,7 +1248,7 @@ Number of Fisher Scoring iterations: 5</code></pre>
   border-bottom-width: 0;
 }
 
-#glarkqqosl .gt_subtitle {
+#mhlzazzket .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -1260,7 +1260,7 @@ Number of Fisher Scoring iterations: 5</code></pre>
   border-top-width: 0;
 }
 
-#glarkqqosl .gt_heading {
+#mhlzazzket .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -1272,13 +1272,13 @@ Number of Fisher Scoring iterations: 5</code></pre>
   border-right-color: #D3D3D3;
 }
 
-#glarkqqosl .gt_bottom_border {
+#mhlzazzket .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#glarkqqosl .gt_col_headings {
+#mhlzazzket .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1293,7 +1293,7 @@ Number of Fisher Scoring iterations: 5</code></pre>
   border-right-color: #D3D3D3;
 }
 
-#glarkqqosl .gt_col_heading {
+#mhlzazzket .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1313,7 +1313,7 @@ Number of Fisher Scoring iterations: 5</code></pre>
   overflow-x: hidden;
 }
 
-#glarkqqosl .gt_column_spanner_outer {
+#mhlzazzket .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1325,15 +1325,15 @@ Number of Fisher Scoring iterations: 5</code></pre>
   padding-right: 4px;
 }
 
-#glarkqqosl .gt_column_spanner_outer:first-child {
+#mhlzazzket .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#glarkqqosl .gt_column_spanner_outer:last-child {
+#mhlzazzket .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#glarkqqosl .gt_column_spanner {
+#mhlzazzket .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -1345,11 +1345,11 @@ Number of Fisher Scoring iterations: 5</code></pre>
   width: 100%;
 }
 
-#glarkqqosl .gt_spanner_row {
+#mhlzazzket .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#glarkqqosl .gt_group_heading {
+#mhlzazzket .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1375,7 +1375,7 @@ Number of Fisher Scoring iterations: 5</code></pre>
   text-align: left;
 }
 
-#glarkqqosl .gt_empty_group_heading {
+#mhlzazzket .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -1390,15 +1390,15 @@ Number of Fisher Scoring iterations: 5</code></pre>
   vertical-align: middle;
 }
 
-#glarkqqosl .gt_from_md > :first-child {
+#mhlzazzket .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#glarkqqosl .gt_from_md > :last-child {
+#mhlzazzket .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#glarkqqosl .gt_row {
+#mhlzazzket .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1417,7 +1417,7 @@ Number of Fisher Scoring iterations: 5</code></pre>
   overflow-x: hidden;
 }
 
-#glarkqqosl .gt_stub {
+#mhlzazzket .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1430,7 +1430,7 @@ Number of Fisher Scoring iterations: 5</code></pre>
   padding-right: 5px;
 }
 
-#glarkqqosl .gt_stub_row_group {
+#mhlzazzket .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1444,15 +1444,15 @@ Number of Fisher Scoring iterations: 5</code></pre>
   vertical-align: top;
 }
 
-#glarkqqosl .gt_row_group_first td {
+#mhlzazzket .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#glarkqqosl .gt_row_group_first th {
+#mhlzazzket .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#glarkqqosl .gt_summary_row {
+#mhlzazzket .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1462,16 +1462,16 @@ Number of Fisher Scoring iterations: 5</code></pre>
   padding-right: 5px;
 }
 
-#glarkqqosl .gt_first_summary_row {
+#mhlzazzket .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#glarkqqosl .gt_first_summary_row.thick {
+#mhlzazzket .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#glarkqqosl .gt_last_summary_row {
+#mhlzazzket .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1481,7 +1481,7 @@ Number of Fisher Scoring iterations: 5</code></pre>
   border-bottom-color: #D3D3D3;
 }
 
-#glarkqqosl .gt_grand_summary_row {
+#mhlzazzket .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1491,7 +1491,7 @@ Number of Fisher Scoring iterations: 5</code></pre>
   padding-right: 5px;
 }
 
-#glarkqqosl .gt_first_grand_summary_row {
+#mhlzazzket .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1501,7 +1501,7 @@ Number of Fisher Scoring iterations: 5</code></pre>
   border-top-color: #D3D3D3;
 }
 
-#glarkqqosl .gt_last_grand_summary_row_top {
+#mhlzazzket .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1511,11 +1511,11 @@ Number of Fisher Scoring iterations: 5</code></pre>
   border-bottom-color: #D3D3D3;
 }
 
-#glarkqqosl .gt_striped {
+#mhlzazzket .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#glarkqqosl .gt_table_body {
+#mhlzazzket .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1524,7 +1524,7 @@ Number of Fisher Scoring iterations: 5</code></pre>
   border-bottom-color: #D3D3D3;
 }
 
-#glarkqqosl .gt_footnotes {
+#mhlzazzket .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1538,7 +1538,7 @@ Number of Fisher Scoring iterations: 5</code></pre>
   border-right-color: #D3D3D3;
 }
 
-#glarkqqosl .gt_footnote {
+#mhlzazzket .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -1547,7 +1547,7 @@ Number of Fisher Scoring iterations: 5</code></pre>
   padding-right: 5px;
 }
 
-#glarkqqosl .gt_sourcenotes {
+#mhlzazzket .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1561,7 +1561,7 @@ Number of Fisher Scoring iterations: 5</code></pre>
   border-right-color: #D3D3D3;
 }
 
-#glarkqqosl .gt_sourcenote {
+#mhlzazzket .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -1569,63 +1569,63 @@ Number of Fisher Scoring iterations: 5</code></pre>
   padding-right: 5px;
 }
 
-#glarkqqosl .gt_left {
+#mhlzazzket .gt_left {
   text-align: left;
 }
 
-#glarkqqosl .gt_center {
+#mhlzazzket .gt_center {
   text-align: center;
 }
 
-#glarkqqosl .gt_right {
+#mhlzazzket .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#glarkqqosl .gt_font_normal {
+#mhlzazzket .gt_font_normal {
   font-weight: normal;
 }
 
-#glarkqqosl .gt_font_bold {
+#mhlzazzket .gt_font_bold {
   font-weight: bold;
 }
 
-#glarkqqosl .gt_font_italic {
+#mhlzazzket .gt_font_italic {
   font-style: italic;
 }
 
-#glarkqqosl .gt_super {
+#mhlzazzket .gt_super {
   font-size: 65%;
 }
 
-#glarkqqosl .gt_footnote_marks {
+#mhlzazzket .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#glarkqqosl .gt_asterisk {
+#mhlzazzket .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#glarkqqosl .gt_indent_1 {
+#mhlzazzket .gt_indent_1 {
   text-indent: 5px;
 }
 
-#glarkqqosl .gt_indent_2 {
+#mhlzazzket .gt_indent_2 {
   text-indent: 10px;
 }
 
-#glarkqqosl .gt_indent_3 {
+#mhlzazzket .gt_indent_3 {
   text-indent: 15px;
 }
 
-#glarkqqosl .gt_indent_4 {
+#mhlzazzket .gt_indent_4 {
   text-indent: 20px;
 }
 
-#glarkqqosl .gt_indent_5 {
+#mhlzazzket .gt_indent_5 {
   text-indent: 25px;
 }
 </style>
@@ -1760,23 +1760,23 @@ Number of Fisher Scoring iterations: 5</code></pre>
 <div class="sourceCode cell-code" id="cb41"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb41-1"><a href="#cb41-1" aria-hidden="true" tabindex="-1"></a><span class="fu">tbl_regression</span>(mod5, <span class="at">exponentiate =</span> T,</span>
 <span id="cb41-2"><a href="#cb41-2" aria-hidden="true" tabindex="-1"></a>               <span class="at">include =</span> <span class="st">"arsenico_cat"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<div id="izjqvntkys" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#izjqvntkys table {
+<div id="xezpytpimw" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#xezpytpimw table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#izjqvntkys thead, #izjqvntkys tbody, #izjqvntkys tfoot, #izjqvntkys tr, #izjqvntkys td, #izjqvntkys th {
+#xezpytpimw thead, #xezpytpimw tbody, #xezpytpimw tfoot, #xezpytpimw tr, #xezpytpimw td, #xezpytpimw th {
   border-style: none;
 }
 
-#izjqvntkys p {
+#xezpytpimw p {
   margin: 0;
   padding: 0;
 }
 
-#izjqvntkys .gt_table {
+#xezpytpimw .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -1802,12 +1802,12 @@ Number of Fisher Scoring iterations: 5</code></pre>
   border-left-color: #D3D3D3;
 }
 
-#izjqvntkys .gt_caption {
+#xezpytpimw .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#izjqvntkys .gt_title {
+#xezpytpimw .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -1819,7 +1819,7 @@ Number of Fisher Scoring iterations: 5</code></pre>
   border-bottom-width: 0;
 }
 
-#izjqvntkys .gt_subtitle {
+#xezpytpimw .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -1831,7 +1831,7 @@ Number of Fisher Scoring iterations: 5</code></pre>
   border-top-width: 0;
 }
 
-#izjqvntkys .gt_heading {
+#xezpytpimw .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -1843,13 +1843,13 @@ Number of Fisher Scoring iterations: 5</code></pre>
   border-right-color: #D3D3D3;
 }
 
-#izjqvntkys .gt_bottom_border {
+#xezpytpimw .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#izjqvntkys .gt_col_headings {
+#xezpytpimw .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1864,7 +1864,7 @@ Number of Fisher Scoring iterations: 5</code></pre>
   border-right-color: #D3D3D3;
 }
 
-#izjqvntkys .gt_col_heading {
+#xezpytpimw .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1884,7 +1884,7 @@ Number of Fisher Scoring iterations: 5</code></pre>
   overflow-x: hidden;
 }
 
-#izjqvntkys .gt_column_spanner_outer {
+#xezpytpimw .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1896,15 +1896,15 @@ Number of Fisher Scoring iterations: 5</code></pre>
   padding-right: 4px;
 }
 
-#izjqvntkys .gt_column_spanner_outer:first-child {
+#xezpytpimw .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#izjqvntkys .gt_column_spanner_outer:last-child {
+#xezpytpimw .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#izjqvntkys .gt_column_spanner {
+#xezpytpimw .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -1916,11 +1916,11 @@ Number of Fisher Scoring iterations: 5</code></pre>
   width: 100%;
 }
 
-#izjqvntkys .gt_spanner_row {
+#xezpytpimw .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#izjqvntkys .gt_group_heading {
+#xezpytpimw .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1946,7 +1946,7 @@ Number of Fisher Scoring iterations: 5</code></pre>
   text-align: left;
 }
 
-#izjqvntkys .gt_empty_group_heading {
+#xezpytpimw .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -1961,15 +1961,15 @@ Number of Fisher Scoring iterations: 5</code></pre>
   vertical-align: middle;
 }
 
-#izjqvntkys .gt_from_md > :first-child {
+#xezpytpimw .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#izjqvntkys .gt_from_md > :last-child {
+#xezpytpimw .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#izjqvntkys .gt_row {
+#xezpytpimw .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1988,7 +1988,7 @@ Number of Fisher Scoring iterations: 5</code></pre>
   overflow-x: hidden;
 }
 
-#izjqvntkys .gt_stub {
+#xezpytpimw .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -2001,7 +2001,7 @@ Number of Fisher Scoring iterations: 5</code></pre>
   padding-right: 5px;
 }
 
-#izjqvntkys .gt_stub_row_group {
+#xezpytpimw .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -2015,15 +2015,15 @@ Number of Fisher Scoring iterations: 5</code></pre>
   vertical-align: top;
 }
 
-#izjqvntkys .gt_row_group_first td {
+#xezpytpimw .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#izjqvntkys .gt_row_group_first th {
+#xezpytpimw .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#izjqvntkys .gt_summary_row {
+#xezpytpimw .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -2033,16 +2033,16 @@ Number of Fisher Scoring iterations: 5</code></pre>
   padding-right: 5px;
 }
 
-#izjqvntkys .gt_first_summary_row {
+#xezpytpimw .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#izjqvntkys .gt_first_summary_row.thick {
+#xezpytpimw .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#izjqvntkys .gt_last_summary_row {
+#xezpytpimw .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2052,7 +2052,7 @@ Number of Fisher Scoring iterations: 5</code></pre>
   border-bottom-color: #D3D3D3;
 }
 
-#izjqvntkys .gt_grand_summary_row {
+#xezpytpimw .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -2062,7 +2062,7 @@ Number of Fisher Scoring iterations: 5</code></pre>
   padding-right: 5px;
 }
 
-#izjqvntkys .gt_first_grand_summary_row {
+#xezpytpimw .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2072,7 +2072,7 @@ Number of Fisher Scoring iterations: 5</code></pre>
   border-top-color: #D3D3D3;
 }
 
-#izjqvntkys .gt_last_grand_summary_row_top {
+#xezpytpimw .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2082,11 +2082,11 @@ Number of Fisher Scoring iterations: 5</code></pre>
   border-bottom-color: #D3D3D3;
 }
 
-#izjqvntkys .gt_striped {
+#xezpytpimw .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#izjqvntkys .gt_table_body {
+#xezpytpimw .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -2095,7 +2095,7 @@ Number of Fisher Scoring iterations: 5</code></pre>
   border-bottom-color: #D3D3D3;
 }
 
-#izjqvntkys .gt_footnotes {
+#xezpytpimw .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -2109,7 +2109,7 @@ Number of Fisher Scoring iterations: 5</code></pre>
   border-right-color: #D3D3D3;
 }
 
-#izjqvntkys .gt_footnote {
+#xezpytpimw .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -2118,7 +2118,7 @@ Number of Fisher Scoring iterations: 5</code></pre>
   padding-right: 5px;
 }
 
-#izjqvntkys .gt_sourcenotes {
+#xezpytpimw .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -2132,7 +2132,7 @@ Number of Fisher Scoring iterations: 5</code></pre>
   border-right-color: #D3D3D3;
 }
 
-#izjqvntkys .gt_sourcenote {
+#xezpytpimw .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -2140,63 +2140,63 @@ Number of Fisher Scoring iterations: 5</code></pre>
   padding-right: 5px;
 }
 
-#izjqvntkys .gt_left {
+#xezpytpimw .gt_left {
   text-align: left;
 }
 
-#izjqvntkys .gt_center {
+#xezpytpimw .gt_center {
   text-align: center;
 }
 
-#izjqvntkys .gt_right {
+#xezpytpimw .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#izjqvntkys .gt_font_normal {
+#xezpytpimw .gt_font_normal {
   font-weight: normal;
 }
 
-#izjqvntkys .gt_font_bold {
+#xezpytpimw .gt_font_bold {
   font-weight: bold;
 }
 
-#izjqvntkys .gt_font_italic {
+#xezpytpimw .gt_font_italic {
   font-style: italic;
 }
 
-#izjqvntkys .gt_super {
+#xezpytpimw .gt_super {
   font-size: 65%;
 }
 
-#izjqvntkys .gt_footnote_marks {
+#xezpytpimw .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#izjqvntkys .gt_asterisk {
+#xezpytpimw .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#izjqvntkys .gt_indent_1 {
+#xezpytpimw .gt_indent_1 {
   text-indent: 5px;
 }
 
-#izjqvntkys .gt_indent_2 {
+#xezpytpimw .gt_indent_2 {
   text-indent: 10px;
 }
 
-#izjqvntkys .gt_indent_3 {
+#xezpytpimw .gt_indent_3 {
   text-indent: 15px;
 }
 
-#izjqvntkys .gt_indent_4 {
+#xezpytpimw .gt_indent_4 {
   text-indent: 20px;
 }
 
-#izjqvntkys .gt_indent_5 {
+#xezpytpimw .gt_indent_5 {
   text-indent: 25px;
 }
 </style>
@@ -2280,10 +2280,10 @@ Number of Fisher Scoring iterations: 5</code></pre>
 </div>
 </div>
 </section>
-<section id="bibliografía" class="level3 unnumbered">
-
-
 </section>
+<section id="bibliografía" class="level2 unnumbered">
+
+
 </section>
 
 <div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">Bibliografía</h2><div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">

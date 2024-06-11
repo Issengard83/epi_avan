@@ -5,6 +5,9 @@ editor: visual
 toc: true
 toc-title: "Contenidos"
 theme: "../../custom.scss"
+bibliography: references.bib
+nocite: |
+  @*
 ---
 
 ```{r}
@@ -80,7 +83,7 @@ En los últimos tiempos, se ha profundizado en los aspectos metodológicos de lo
 
 **Estudios de caso-caso**. En esta estrategia se compara la historia de exposición en subgrupos de casos. En el caso de enfermedades infecciosas, es posible conformar diversos subgrupos de enfermedad, partiendo de datos de vigilancia epidemiológica.
 
-Quienes desean profundizar estos tópicos sobre el diseño de los CyC, pueden leer el capítulo correspondiente de *“Epidemiología. Diseño y análisis de estudios”* de Mauricio Hernández Ávila. Comenzaremos ahora con la parte de análisis de estos diseños.
+Quienes desean profundizar estos tópicos sobre el diseño de los CyC, pueden leer el capítulo correspondiente de *“Epidemiología. Diseño y análisis de estudios”* de @hernández-ávila2011. Comenzaremos ahora con la parte de análisis de estos diseños.
 
 **Análisis estadístico**
 
@@ -1081,41 +1084,3 @@ Podemos decir que nuestro ejemplo supera ampliamente los requisitos del tamaño 
 ```
 
 ## Bibliografía
-
-Epidemiología. Diseño y análisis de estudios. Mauricio Hernández Ávila, 2007 - Editorial Médica Panamericana S.A.
-
-Escuela Nacional de Sanidad (ENS). Instituto de Salud Carlos III. Ministerio de Ciencia e Innovación. Manual Docente de la Escuela Nacional de Sanidad .Método epidemiológico. 2009, Madrid
-
-Luis Carlos Silva Ayçaguer. Excursión a la regresión logística en ciencias de la salud. Ediciones Díaz de Santos, 1995.
-
-Thompson WD. Statistical analysis of case-control studies. Epidemiol Rev 1994; 16: 3
-
-Epidat: Material de ayuda programa para análisis epidemiológico de datos. Versión 4.2, julio 2016. Consellería de Sanidade, Xunta de Galicia, España; Organización Panamericana de la salud (OPS-OMS); Universidad CES, Colombia.
-
-Field, A., Miles, J., & Field, Z. Discovering statistics using r (1st edition.). Sage Publications Ltd, 2012
-
-Rothman, Kenneth J. Epidemiology: An Introduction. New York, NY: Oxford University Press, 2012.
-
-Ortega Calvo, Manuel y Cayuela Dominguez, Aurelio. Regresión logística no condicionada y tamaño de muestra: una revisión bibliográfica. Rev. Esp. Salud Publica \[online\]. 2002, vol.76, n.2 \[citado 2021-07-30\], pp.85-93. Disponible en: <http://scielo.isciii.es/scielo.php?script=sci_arttext&pid=S1135-57272002000200002&lng=es&nrm=iso>. ISSN 2173-9110.
-
-R Core Team. R: A language and environment for statistical computing. R Foundation for Statistical Computing, Vienna, Austria, 2021. URL <https://www.R-project.org/>.
-
-Wickham et al. Welcome to the tidyverse. Journal of Open Source Software, 4(43), 1686, Año 2019 <https://doi.org/10.21105/joss.01686>
-
-Achim Zeileis, Torsten Hothorn. Diagnostic Checking in Regression Relationships. R News 2(3), 7-10. Año 2002. URL <https://CRAN.R-project.org/doc/Rnews/>
-
-Lüdecke D, Ben-Shachar M, Patil I, Makowski D (2020). “Extracting, Computing and Exploring the Parameters of Statistical Models using R.” *Journal of Open Source Software*, *5*(53), 2445. doi: 10.21105/joss.02445 (URL: <https://doi.org/10.21105/joss.02445).>
-
-Lüdecke, Patil, Ben-Shachar, Wiernik, Waggoner & Makowski. Visualisation Toolbox for 'easystats' and Extra Geoms, Themes and Color Palettes for 'ggplot2', 2020. CRAN. Available from <https://easystats.github.io/see/>
-
-Andri Signorell et mult. al. DescTools: Tools for descriptive statistics. 2021. R package version 0.99.42.
-
-Achim Zeileis, Torsten Hothorn. Diagnostic Checking in Regression Relationships. R News 2(3), 7-10, 2002. URL <https://CRAN.R-project.org/doc/Rnews/>
-
-Michael Friendly. vcdExtra: 'vcd' Extensions and Additions, 2021. R package version 0.7-5. <https://CRAN.R-project.org/package=vcdExtra>
-
-Xavier Robin, Natacha Turck, Alexandre Hainard, Natalia Tiberti, Frédérique Lisacek, Jean-Charles Sanchez and Markus Müller. pROC: an open-source package for R and S+ to analyze and compare ROC curves. BMC Bioinformatics, 12, p. 77. 2011 DOI: 10.1186/1471-2105-12-77 <http://www.biomedcentral.com/1471-2105/12/77/>
-
-Daniel D. Sjoberg, Michael Curry, Margie Hannum, Joseph Larmarange, Karissa Whiting and Emily C. Zabor. gtsummary: Presentation-Ready Data Summary and Analytic Result Tables. 2021 R package version 1.4.2. <https://CRAN.R-project.org/package=gtsummary>
-
-Elin Waring, Michael Quinn, Amelia McNamara, Eduardo Arino de la Rubia, Hao Zhu and Shannon Ellis (2021). skimr: Compact and Flexible Summaries of Data. R package version 2.1.3. <https://CRAN.R-project.org/package=skimr>
