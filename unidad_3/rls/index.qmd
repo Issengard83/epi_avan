@@ -5,6 +5,9 @@ editor: visual
 toc: true
 toc-title: "Contenidos"
 theme: "../../custom.scss"
+bibliography: references.bib
+nocite: |
+  @*
 ---
 
 ```{r}
@@ -1267,29 +1270,3 @@ La gráfica de dispersión de los valores pronosticados estandarizados frente a 
 Se cumplieron todos los presupuestos necesarios para validar la regresión y no se encontraron valores atípicos influyentes.
 
 ## Bibliografía
-
-Daniel W. Bioestadística: Base para el análisis de las ciencias de la salud. 4° Edición. Ed. Limusa Wiley, 2002.
-
-Ballester F. y Tenías Burrillo J. M. Estudios ecológicos. Quaderns de Salut Pública i Administració de Serveis de Salut 20. Valencia: Escola Valenciana d´Estudis per a la Salut, 2003.
-
-Epidemiología. Diseño y análisis de estudios. Mauricio Hernández Ávila. Editorial Médica Panamericana, 2007.
-
-Escuela Nacional de Sanidad (ENS). Instituto de Salud Carlos III. Ministerio de Ciencia e Innovación. Manual Docente de la Escuela Nacional de Sanidad .Método epidemiológico. Madrid, 2009.
-
-Triola, M. Estadística. 10° Edición. Pearson Educación. México. 2009.
-
-Simon J. Sheather, A Modern Approach to Regression with R. Department of Statistics, College Station, TX, USA, Springer Science+Business Media, LLC, 2009
-
-Sanford Weisberg, Applied Linear Regression. School of Statistics, University of Minnesota. John Wiley & Sons, Inc, 2005
-
-R Core Team. R: A language and environment for statistical computing. R Foundation for Statistical Computing, Vienna, Austria, 2021. URL <https://www.R-project.org/>.
-
-Juergen Gross and Uwe Ligges. nortest: Tests for Normality. R package version 1.0-4. 2015 https://CRAN.R-project.org/package=nortest
-
-Wickham et al. Welcome to the tidyverse. Journal of Open Source Software, 4(43), 1686, Año 2019 https://doi.org/10.21105/joss.01686
-
-Achim Zeileis, Torsten Hothorn. Diagnostic Checking in Regression Relationships. R News 2(3), 7-10. Año 2002. URL https://CRAN.R-project.org/doc/Rnews/
-
-Lüdecke et al., (2021). performance: An R Package for Assessment, Comparison and Testing of Statistical Models. Journal of Open Source Software, 6(60), 3139. https://doi.org/10.21105/joss.03139
-
-Sjoberg DD, Whiting K, Curry M, Lavery JA, Larmarange J. Reproducible summary tables with the gtsummary package. The R Journal 2021;13:570–80. https://doi.org/10.32614/RJ-2021-053.

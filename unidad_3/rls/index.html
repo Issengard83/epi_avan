@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.553">
+<meta name="generator" content="quarto-1.4.555">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -54,7 +54,27 @@ div.sourceCode
 @media screen {
 pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="index_files/libs/clipboard/clipboard.min.js"></script>
@@ -160,7 +180,7 @@ window.Quarto = {
 <p>Repasemos las principales ventajas y desventajas de este diseño:</p>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
-<div class="tabwid"><style>.cl-d1025ab2{table-layout:auto;}.cl-d0fa7d56{font-family:'Helvetica';font-size:12pt;font-weight:bold;font-style:normal;text-decoration:none;color:rgba(255, 255, 255, 1.00);background-color:transparent;}.cl-d0fa7d6a{font-family:'Helvetica';font-size:12pt;font-weight:normal;font-style:normal;text-decoration:none;color:rgba(0, 0, 0, 1.00);background-color:transparent;}.cl-d0fdee0a{margin:0;text-align:left;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);padding-bottom:5pt;padding-top:5pt;padding-left:5pt;padding-right:5pt;line-height: 1;background-color:transparent;}.cl-d0fe000c{background-color:rgba(57, 131, 132, 1.00);vertical-align: middle;border-bottom: 1.5pt solid rgba(102, 102, 102, 1.00);border-top: 1.5pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-d0fe000d{background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-d0fe0016{background-color:transparent;vertical-align: middle;border-bottom: 1.5pt solid rgba(102, 102, 102, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}</style><table data-quarto-disable-processing="true" class="cl-d1025ab2"><caption><p>Tabla 1. ventajas y desventajas de los estudios ecológicos.</p></caption><thead><tr style="overflow-wrap:break-word;"><th class="cl-d0fe000c"><p class="cl-d0fdee0a"><span class="cl-d0fa7d56">Ventajas</span></p></th><th class="cl-d0fe000c"><p class="cl-d0fdee0a"><span class="cl-d0fa7d56">Desventajas</span></p></th></tr></thead><tbody><tr style="overflow-wrap:break-word;"><td class="cl-d0fe000d"><p class="cl-d0fdee0a"><span class="cl-d0fa7d6a">Se pueden estudiar grandes grupos poblacionales</span></p></td><td class="cl-d0fe000d"><p class="cl-d0fdee0a"><span class="cl-d0fa7d6a">No se tiene información del individuo,por lo que no se puede ajustar por diferencias a nivel individual</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-d0fe000d"><p class="cl-d0fdee0a"><span class="cl-d0fa7d6a">Relativamente fáciles de realizar</span></p></td><td class="cl-d0fe000d"><p class="cl-d0fdee0a"><span class="cl-d0fa7d6a">No se puede saber quién sí está expuesto o quién sí desarrolló el evento de interés</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-d0fe000d"><p class="cl-d0fdee0a"><span class="cl-d0fa7d6a">Aumenta el poder estadístico</span></p></td><td class="cl-d0fe000d"><p class="cl-d0fdee0a"><span class="cl-d0fa7d6a">No se tiene información sobre factores de confusión y no se puede corregir por esto</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-d0fe000d"><p class="cl-d0fdee0a"><span class="cl-d0fa7d6a">Aumenta la variabilidad en exposición</span></p></td><td class="cl-d0fe000d"><p class="cl-d0fdee0a"><span class="cl-d0fa7d6a"></span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-d0fe0016"><p class="cl-d0fdee0a"><span class="cl-d0fa7d6a">Se puede utilizar información de estadísticas vitales</span></p></td><td class="cl-d0fe0016"><p class="cl-d0fdee0a"><span class="cl-d0fa7d6a"></span></p></td></tr></tbody></table></div>
+<div class="tabwid"><style>.cl-13bc0544{table-layout:auto;}.cl-13b46992{font-family:'Helvetica';font-size:12pt;font-weight:bold;font-style:normal;text-decoration:none;color:rgba(255, 255, 255, 1.00);background-color:transparent;}.cl-13b4699c{font-family:'Helvetica';font-size:12pt;font-weight:normal;font-style:normal;text-decoration:none;color:rgba(0, 0, 0, 1.00);background-color:transparent;}.cl-13b71548{margin:0;text-align:left;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);padding-bottom:5pt;padding-top:5pt;padding-left:5pt;padding-right:5pt;line-height: 1;background-color:transparent;}.cl-13b726a0{background-color:rgba(57, 131, 132, 1.00);vertical-align: middle;border-bottom: 1.5pt solid rgba(102, 102, 102, 1.00);border-top: 1.5pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-13b726a1{background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-13b726aa{background-color:transparent;vertical-align: middle;border-bottom: 1.5pt solid rgba(102, 102, 102, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}</style><table data-quarto-disable-processing="true" class="cl-13bc0544"><caption><p>Tabla 1. ventajas y desventajas de los estudios ecológicos.</p></caption><thead><tr style="overflow-wrap:break-word;"><th class="cl-13b726a0"><p class="cl-13b71548"><span class="cl-13b46992">Ventajas</span></p></th><th class="cl-13b726a0"><p class="cl-13b71548"><span class="cl-13b46992">Desventajas</span></p></th></tr></thead><tbody><tr style="overflow-wrap:break-word;"><td class="cl-13b726a1"><p class="cl-13b71548"><span class="cl-13b4699c">Se pueden estudiar grandes grupos poblacionales</span></p></td><td class="cl-13b726a1"><p class="cl-13b71548"><span class="cl-13b4699c">No se tiene información del individuo,por lo que no se puede ajustar por diferencias a nivel individual</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-13b726a1"><p class="cl-13b71548"><span class="cl-13b4699c">Relativamente fáciles de realizar</span></p></td><td class="cl-13b726a1"><p class="cl-13b71548"><span class="cl-13b4699c">No se puede saber quién sí está expuesto o quién sí desarrolló el evento de interés</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-13b726a1"><p class="cl-13b71548"><span class="cl-13b4699c">Aumenta el poder estadístico</span></p></td><td class="cl-13b726a1"><p class="cl-13b71548"><span class="cl-13b4699c">No se tiene información sobre factores de confusión y no se puede corregir por esto</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-13b726a1"><p class="cl-13b71548"><span class="cl-13b4699c">Aumenta la variabilidad en exposición</span></p></td><td class="cl-13b726a1"><p class="cl-13b71548"><span class="cl-13b4699c"></span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-13b726aa"><p class="cl-13b71548"><span class="cl-13b4699c">Se puede utilizar información de estadísticas vitales</span></p></td><td class="cl-13b726aa"><p class="cl-13b71548"><span class="cl-13b4699c"></span></p></td></tr></tbody></table></div>
 </div>
 </div>
 <p>Recordemos también que puede incurrirse en la llamada <em>falacia ecológica</em>.</p>
@@ -202,7 +222,7 @@ Falacia ecológica (<em>ecological fallacy</em>)
 <p>Algunos autores presentan la perspectiva que mostramos en la siguiente tabla, para una comprensión más rápida de las distintas posibilidades de los diseños ecológicos:</p>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
-<div class="tabwid"><style>.cl-d1316500{table-layout:auto;}.cl-d12b373e{font-family:'Helvetica';font-size:12pt;font-weight:bold;font-style:normal;text-decoration:none;color:rgba(255, 255, 255, 1.00);background-color:transparent;}.cl-d12b3748{font-family:'Helvetica';font-size:12pt;font-weight:normal;font-style:normal;text-decoration:none;color:rgba(0, 0, 0, 1.00);background-color:transparent;}.cl-d12d8002{margin:0;text-align:left;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);padding-bottom:5pt;padding-top:5pt;padding-left:5pt;padding-right:5pt;line-height: 1;background-color:transparent;}.cl-d12d8de0{background-color:rgba(57, 131, 132, 1.00);vertical-align: middle;border-bottom: 1.5pt solid rgba(102, 102, 102, 1.00);border-top: 1.5pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-d12d8de1{background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-d12d8dea{background-color:transparent;vertical-align: middle;border-bottom: 1.5pt solid rgba(102, 102, 102, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}</style><table data-quarto-disable-processing="true" class="cl-d1316500"><caption><p>Tabla 2. Clasificación de estudios ecológicos.</p></caption><thead><tr style="overflow-wrap:break-word;"><th class="cl-d12d8de0"><p class="cl-d12d8002"><span class="cl-d12b373e">Tipo</span></p></th><th class="cl-d12d8de0"><p class="cl-d12d8002"><span class="cl-d12b373e">Diseño</span></p></th><th class="cl-d12d8de0"><p class="cl-d12d8002"><span class="cl-d12b373e">Marco de tiempo</span></p></th></tr></thead><tbody><tr style="overflow-wrap:break-word;"><td class="cl-d12d8de1"><p class="cl-d12d8002"><span class="cl-d12b3748">Transversal</span></p></td><td class="cl-d12d8de1"><p class="cl-d12d8002"><span class="cl-d12b3748">A lo largo de diferentes comunidades</span></p></td><td class="cl-d12d8de1"><p class="cl-d12d8002"><span class="cl-d12b3748">Mismo período</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-d12d8de1"><p class="cl-d12d8002"><span class="cl-d12b3748">Series temporales</span></p></td><td class="cl-d12d8de1"><p class="cl-d12d8002"><span class="cl-d12b3748">Dentro de la misma comunidad</span></p></td><td class="cl-d12d8de1"><p class="cl-d12d8002"><span class="cl-d12b3748">A lo largo del tiempo</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-d12d8dea"><p class="cl-d12d8002"><span class="cl-d12b3748">Descriptivo</span></p></td><td class="cl-d12d8dea"><p class="cl-d12d8002"><span class="cl-d12b3748">A lo largo de diferentes comunidades o dentro de la misma comunidad</span></p></td><td class="cl-d12d8dea"><p class="cl-d12d8002"><span class="cl-d12b3748">Un punto en el tiempo o a lo largo del tiempo</span></p></td></tr></tbody></table></div>
+<div class="tabwid"><style>.cl-13e6bb18{table-layout:auto;}.cl-13e0aaa2{font-family:'Helvetica';font-size:12pt;font-weight:bold;font-style:normal;text-decoration:none;color:rgba(255, 255, 255, 1.00);background-color:transparent;}.cl-13e0aaac{font-family:'Helvetica';font-size:12pt;font-weight:normal;font-style:normal;text-decoration:none;color:rgba(0, 0, 0, 1.00);background-color:transparent;}.cl-13e2ecd6{margin:0;text-align:left;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);padding-bottom:5pt;padding-top:5pt;padding-left:5pt;padding-right:5pt;line-height: 1;background-color:transparent;}.cl-13e2fa6e{background-color:rgba(57, 131, 132, 1.00);vertical-align: middle;border-bottom: 1.5pt solid rgba(102, 102, 102, 1.00);border-top: 1.5pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-13e2fa6f{background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-13e2fa78{background-color:transparent;vertical-align: middle;border-bottom: 1.5pt solid rgba(102, 102, 102, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}</style><table data-quarto-disable-processing="true" class="cl-13e6bb18"><caption><p>Tabla 2. Clasificación de estudios ecológicos.</p></caption><thead><tr style="overflow-wrap:break-word;"><th class="cl-13e2fa6e"><p class="cl-13e2ecd6"><span class="cl-13e0aaa2">Tipo</span></p></th><th class="cl-13e2fa6e"><p class="cl-13e2ecd6"><span class="cl-13e0aaa2">Diseño</span></p></th><th class="cl-13e2fa6e"><p class="cl-13e2ecd6"><span class="cl-13e0aaa2">Marco de tiempo</span></p></th></tr></thead><tbody><tr style="overflow-wrap:break-word;"><td class="cl-13e2fa6f"><p class="cl-13e2ecd6"><span class="cl-13e0aaac">Transversal</span></p></td><td class="cl-13e2fa6f"><p class="cl-13e2ecd6"><span class="cl-13e0aaac">A lo largo de diferentes comunidades</span></p></td><td class="cl-13e2fa6f"><p class="cl-13e2ecd6"><span class="cl-13e0aaac">Mismo período</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-13e2fa6f"><p class="cl-13e2ecd6"><span class="cl-13e0aaac">Series temporales</span></p></td><td class="cl-13e2fa6f"><p class="cl-13e2ecd6"><span class="cl-13e0aaac">Dentro de la misma comunidad</span></p></td><td class="cl-13e2fa6f"><p class="cl-13e2ecd6"><span class="cl-13e0aaac">A lo largo del tiempo</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-13e2fa78"><p class="cl-13e2ecd6"><span class="cl-13e0aaac">Descriptivo</span></p></td><td class="cl-13e2fa78"><p class="cl-13e2ecd6"><span class="cl-13e0aaac">A lo largo de diferentes comunidades o dentro de la misma comunidad</span></p></td><td class="cl-13e2fa78"><p class="cl-13e2ecd6"><span class="cl-13e0aaac">Un punto en el tiempo o a lo largo del tiempo</span></p></td></tr></tbody></table></div>
 </div>
 </div>
 </section>
@@ -659,7 +679,7 @@ F-statistic: 4.321 on 1 and 234 DF,  p-value: 0.03873</code></pre>
 <p>Debajo de la tabla de coeficientes se encuentra la referencia del significado de los códigos, que van desde el 0 hasta el 1 como posible resultado del valor de probabilidad, y donde:</p>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
-<div class="tabwid"><style>.cl-d650148c{table-layout:auto;}.cl-d649692a{font-family:'Calibri';font-size:12pt;font-weight:bold;font-style:normal;text-decoration:none;color:rgba(0, 0, 0, 1.00);background-color:transparent;}.cl-d649692b{font-family:'Calibri';font-size:12pt;font-weight:normal;font-style:normal;text-decoration:none;color:rgba(0, 0, 0, 1.00);background-color:transparent;}.cl-d64be862{margin:0;text-align:left;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);padding-bottom:5pt;padding-top:5pt;padding-left:5pt;padding-right:5pt;line-height: 1;background-color:transparent;}.cl-d64bf762{background-color:transparent;vertical-align: middle;border-bottom: 1.5pt solid rgba(102, 102, 102, 1.00);border-top: 1.5pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-d64bf76c{background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-d64bf776{background-color:transparent;vertical-align: middle;border-bottom: 1.5pt solid rgba(102, 102, 102, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}</style><table data-quarto-disable-processing="true" class="cl-d650148c"><thead><tr style="overflow-wrap:break-word;"><th class="cl-d64bf762"><p class="cl-d64be862"><span class="cl-d649692a">Código</span></p></th><th class="cl-d64bf762"><p class="cl-d64be862"><span class="cl-d649692a">Rango</span></p></th></tr></thead><tbody><tr style="overflow-wrap:break-word;"><td class="cl-d64bf76c"><p class="cl-d64be862"><span class="cl-d649692b">***</span></p></td><td class="cl-d64bf76c"><p class="cl-d64be862"><span class="cl-d649692b">0 a 0,001</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-d64bf76c"><p class="cl-d64be862"><span class="cl-d649692b">**</span></p></td><td class="cl-d64bf76c"><p class="cl-d64be862"><span class="cl-d649692b">0,001 a 0,01</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-d64bf76c"><p class="cl-d64be862"><span class="cl-d649692b">*</span></p></td><td class="cl-d64bf76c"><p class="cl-d64be862"><span class="cl-d649692b">0,01 a 0,05</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-d64bf76c"><p class="cl-d64be862"><span class="cl-d649692b">.</span></p></td><td class="cl-d64bf76c"><p class="cl-d64be862"><span class="cl-d649692b">0,05 a 0,1</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-d64bf776"><p class="cl-d64be862"><span class="cl-d649692b"></span></p></td><td class="cl-d64bf776"><p class="cl-d64be862"><span class="cl-d649692b">0,1 a 1</span></p></td></tr></tbody></table></div>
+<div class="tabwid"><style>.cl-191d1ac8{table-layout:auto;}.cl-1916f436{font-family:'Calibri';font-size:12pt;font-weight:bold;font-style:normal;text-decoration:none;color:rgba(0, 0, 0, 1.00);background-color:transparent;}.cl-1916f440{font-family:'Calibri';font-size:12pt;font-weight:normal;font-style:normal;text-decoration:none;color:rgba(0, 0, 0, 1.00);background-color:transparent;}.cl-19194902{margin:0;text-align:left;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);padding-bottom:5pt;padding-top:5pt;padding-left:5pt;padding-right:5pt;line-height: 1;background-color:transparent;}.cl-191956c2{background-color:transparent;vertical-align: middle;border-bottom: 1.5pt solid rgba(102, 102, 102, 1.00);border-top: 1.5pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-191956cc{background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-191956cd{background-color:transparent;vertical-align: middle;border-bottom: 1.5pt solid rgba(102, 102, 102, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}</style><table data-quarto-disable-processing="true" class="cl-191d1ac8"><thead><tr style="overflow-wrap:break-word;"><th class="cl-191956c2"><p class="cl-19194902"><span class="cl-1916f436">Código</span></p></th><th class="cl-191956c2"><p class="cl-19194902"><span class="cl-1916f436">Rango</span></p></th></tr></thead><tbody><tr style="overflow-wrap:break-word;"><td class="cl-191956cc"><p class="cl-19194902"><span class="cl-1916f440">***</span></p></td><td class="cl-191956cc"><p class="cl-19194902"><span class="cl-1916f440">0 a 0,001</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-191956cc"><p class="cl-19194902"><span class="cl-1916f440">**</span></p></td><td class="cl-191956cc"><p class="cl-19194902"><span class="cl-1916f440">0,001 a 0,01</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-191956cc"><p class="cl-19194902"><span class="cl-1916f440">*</span></p></td><td class="cl-191956cc"><p class="cl-19194902"><span class="cl-1916f440">0,01 a 0,05</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-191956cc"><p class="cl-19194902"><span class="cl-1916f440">.</span></p></td><td class="cl-191956cc"><p class="cl-19194902"><span class="cl-1916f440">0,05 a 0,1</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-191956cd"><p class="cl-19194902"><span class="cl-1916f440"></span></p></td><td class="cl-191956cd"><p class="cl-19194902"><span class="cl-1916f440">0,1 a 1</span></p></td></tr></tbody></table></div>
 </div>
 </div>
 <section id="estructura-del-objeto-resultado-de-regresión" class="level4">
@@ -695,7 +715,6 @@ F-statistic: 4.321 on 1 and 234 DF,  p-value: 0.03873</code></pre>
 <span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a>               <span class="at">intercept =</span> T, </span>
 <span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a>               <span class="at">conf.level =</span> .<span class="dv">95</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<div>
 <div id="uzrecfvkiv" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
 <style>#uzrecfvkiv table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
@@ -1137,7 +1156,7 @@ F-statistic: 4.321 on 1 and 234 DF,  p-value: 0.03873</code></pre>
 }
 </style>
 
-<table class="gt_table table table-sm table-striped small" data-quarto-postprocess="true" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
+<table class="gt_table caption-top table table-sm table-striped small" data-quarto-postprocess="true" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
 <thead>
 <tr class="header gt_col_headings">
 <th id="<strong>Characteristic</strong>" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" scope="col"><strong>Characteristic</strong></th>
@@ -1167,7 +1186,6 @@ F-statistic: 4.321 on 1 and 234 DF,  p-value: 0.03873</code></pre>
 
 </table>
 
-</div>
 </div>
 </div>
 </div>
@@ -1480,24 +1498,52 @@ Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</code></pre>
 </section>
 </section>
 </section>
-<section id="bibliografía" class="level2">
-<h2 class="anchored" data-anchor-id="bibliografía">Bibliografía</h2>
-<p>Daniel W. Bioestadística: Base para el análisis de las ciencias de la salud. 4° Edición. Ed. Limusa Wiley, 2002.</p>
-<p>Ballester F. y Tenías Burrillo J. M. Estudios ecológicos. Quaderns de Salut Pública i Administració de Serveis de Salut 20. Valencia: Escola Valenciana d´Estudis per a la Salut, 2003.</p>
-<p>Epidemiología. Diseño y análisis de estudios. Mauricio Hernández Ávila. Editorial Médica Panamericana, 2007.</p>
-<p>Escuela Nacional de Sanidad (ENS). Instituto de Salud Carlos III. Ministerio de Ciencia e Innovación. Manual Docente de la Escuela Nacional de Sanidad .Método epidemiológico. Madrid, 2009.</p>
-<p>Triola, M. Estadística. 10° Edición. Pearson Educación. México. 2009.</p>
-<p>Simon J. Sheather, A Modern Approach to Regression with R. Department of Statistics, College Station, TX, USA, Springer Science+Business Media, LLC, 2009</p>
-<p>Sanford Weisberg, Applied Linear Regression. School of Statistics, University of Minnesota. John Wiley &amp; Sons, Inc, 2005</p>
-<p>R Core Team. R: A language and environment for statistical computing. R Foundation for Statistical Computing, Vienna, Austria, 2021. URL <a href="https://www.R-project.org/" class="uri">https://www.R-project.org/</a>.</p>
-<p>Juergen Gross and Uwe Ligges. nortest: Tests for Normality. R package version 1.0-4. 2015 https://CRAN.R-project.org/package=nortest</p>
-<p>Wickham et al.&nbsp;Welcome to the tidyverse. Journal of Open Source Software, 4(43), 1686, Año 2019 https://doi.org/10.21105/joss.01686</p>
-<p>Achim Zeileis, Torsten Hothorn. Diagnostic Checking in Regression Relationships. R News 2(3), 7-10. Año 2002. URL https://CRAN.R-project.org/doc/Rnews/</p>
-<p>Lüdecke et al., (2021). performance: An R Package for Assessment, Comparison and Testing of Statistical Models. Journal of Open Source Software, 6(60), 3139. https://doi.org/10.21105/joss.03139</p>
-<p>Sjoberg DD, Whiting K, Curry M, Lavery JA, Larmarange J. Reproducible summary tables with the gtsummary package. The R Journal 2021;13:570–80. https://doi.org/10.32614/RJ-2021-053.</p>
+<section id="bibliografía" class="level2 unnumbered">
+
+
 </section>
 
-</main>
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">Bibliografía</h2><div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
+<div id="ref-ballesterdíez2003" class="csl-entry" role="listitem">
+Ballester Díez, Ferrán, and José María Tenías Burillo. 2003. <em>Estudios Ecológicos</em>. Valencia : Escola Valenciana d<span>’</span>Estudis per a la Salut, 2003.
+</div>
+<div id="ref-daniel2002" class="csl-entry" role="listitem">
+Daniel, WAYNE W. 2002. <em>Bioestadística: Base Para El Análisis de Las Ciencias de La Salud</em>. 4th ed. Limusa Wiley.
+</div>
+<div id="ref-escuelanacionaldesanidad(ens).institutodesaludcarlosiii.ministeriodecienciaseinnovación.madrid2009" class="csl-entry" role="listitem">
+Escuela Nacional de Sanidad (ENS). Instituto de Salud Carlos III. Ministerio de Ciencias e Innovación. Madrid. 2009. <em>Manual Docente de La Escuela Nacional de Sanidad: Método Epidemiológico</em>.
+</div>
+<div id="ref-nortest" class="csl-entry" role="listitem">
+Gross, Juergen, and Uwe Ligges. 2015. <span>“Nortest: Tests for Normality.”</span> <a href="https://CRAN.R-project.org/package=nortest">https://CRAN.R-project.org/package=nortest</a>.
+</div>
+<div id="ref-hernández-ávila2011" class="csl-entry" role="listitem">
+Hernández-Ávila, Mauricio. 2011. <em>Epidemiología: diseño y análisis de estudios</em>. Buenos Aires: Editorial Médica Panamericana.
+</div>
+<div id="ref-performance" class="csl-entry" role="listitem">
+Lüdecke, Daniel, Mattan S. Ben-Shachar, Indrajeet Patil, Philip Waggoner, and Dominique Makowski. 2021. <span>“<span></span>Performance<span></span>: An <span></span>r<span></span> Package for Assessment, Comparison and Testing of Statistical Models”</span> 6: 3139. <a href="https://doi.org/10.21105/joss.03139">https://doi.org/10.21105/joss.03139</a>.
+</div>
+<div id="ref-RCoreTeam2021" class="csl-entry" role="listitem">
+R Core Team. 2024. <span>“R: A Language and Environment for Statistical Computing.”</span> <a href="https://www.r-project.org/">https://www.r-project.org/</a>.
+</div>
+<div id="ref-sheather2009" class="csl-entry" role="listitem">
+Sheather, Simon. 2009. <em>A Modern Approach to Regression with r</em>. Springer Science &amp; Business Media.
+</div>
+<div id="ref-gtsummary" class="csl-entry" role="listitem">
+Sjoberg, Daniel D., Karissa Whiting, Michael Curry, Jessica A. Lavery, and Joseph Larmarange. 2021. <span>“Reproducible Summary Tables with the Gtsummary Package”</span> 13: 570–80. <a href="https://doi.org/10.32614/RJ-2021-053">https://doi.org/10.32614/RJ-2021-053</a>.
+</div>
+<div id="ref-triola2009" class="csl-entry" role="listitem">
+Triola, Mario F. 2009. <em>ESTADÍSTICA Decima Edicion</em>. Pearson Educación de México, SA de CV.
+</div>
+<div id="ref-weisberg2005" class="csl-entry" role="listitem">
+Weisberg, Sanford. 2005. <em>Applied Linear Regression</em>. Vol. 528. John Wiley &amp; Sons.
+</div>
+<div id="ref-tidyverse" class="csl-entry" role="listitem">
+Wickham, Hadley, Mara Averick, Jennifer Bryan, Winston Chang, Lucy D’Agostino McGowan, Romain François, Garrett Grolemund, et al. 2019. <span>“Welcome to the <span></span>Tidyverse<span></span>”</span> 4: 1686. <a href="https://doi.org/10.21105/joss.01686">https://doi.org/10.21105/joss.01686</a>.
+</div>
+<div id="ref-zeileis2002" class="csl-entry" role="listitem">
+Zeileis, Achim, and Torsten Hothorn. 2002. <span>“Diagnostic Checking in Regression Relationships.”</span> <em>R News</em> 2 (3): 7–10.
+</div>
+</div></section></div></main>
 <!-- /main column -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
