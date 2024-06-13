@@ -12,10 +12,17 @@ nocite: |
 
 ```{r}
 #| echo: false
-knitr::opts_chunk$set(message = F, warning = F,
-                      fig.align = "center", dpi = 300)
+# opciones globales
+knitr::opts_chunk$set(
+  message = F,
+  warning = F,
+  fig.align = "center",
+  dpi = 300
+)
 
-### Carga paquetes
+showtext::showtext_opts(dpi = 300)
+
+# paquetes
 pacman::p_load(
   MASS,
   cowplot,
@@ -23,7 +30,7 @@ pacman::p_load(
   tidyverse
 )
 
-### paleta colorblind
+# paleta colorblind INE
 pal <- scico::scico(n = 12, palette = "navia")
 ```
 
